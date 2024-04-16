@@ -1,0 +1,70 @@
+
+.about{
+    /* width: 100%;
+    margin-top: 7%;
+    padding: 78px 0px; */
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.about img{
+    height: auto;
+    width: 61%;
+    margin-left: 20%;
+}
+
+.about-text{
+    width: 50%;
+}
+
+.about-text h2{
+    font-size: 2rem;
+    text-transform: capitalize;
+   
+ }
+
+ .about-text p{
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    line-height: 28px;
+     margin-top: 5%; 
+    /* margin-bottom: 45px; */
+ }
+.resume{
+    padding:2%;
+    margin-left: 75%;
+
+}
+.about-text h1 {
+    font-size: 3rem; 
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+
+.gameplay-programmer {
+    color: maroon; 
+    font-size: 2.5rem; 
+    margin-bottom: 2rem;
+}
+
+
+.about-text p {
+    color: white; 
+   
+}
+
+
+@media (max-width: 900px) {
+   
+    .about-text h1 {
+        font-size: 2.5rem; 
+    }
+
+    .gameplay-programmer {
+        font-size: 2rem; 
+    }
+
+   
+}
+

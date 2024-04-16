@@ -1,0 +1,173 @@
+.container2 {
+    background-color: #FFDA7E;
+    /* padding: 5px 20px 15px 20px;
+     */
+     /* padding-left:10%;
+     padding-right:10%; */
+   
+     /* margin-left: 20%;
+     margin-right:20%; */
+     padding-left: 2%;
+     padding-right: 2%;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+  }
+  
+  .container2 h2{
+    /* color:#FE036A; */
+    /* padding: 1.25em; */
+    margin-bottom:8%;
+   
+  }
+
+  .container2 h4{
+    /* padding:1em; */
+    /* padding-right: 1em;
+    padding-left: 1em; */
+    padding:0.25em;
+    font-weight: lighter;
+  }
+  
+  .divide1{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 2%;
+    /* margin-top: 2%; */
+    
+  }
+
+  .division{
+    box-sizing: border-box;
+    /* padding:0px 8px; */
+   
+    flex:50%;
+
+  }
+  .division #div2
+  {
+    font-size:5vh;
+    margin-left: 10%;;
+  }
+
+  .division h2{
+    font-size: 3.5rem;
+  }
+  .division h3{
+    font-size: 1.5rem;
+  }
+
+  /* Sub Working classes */
+  .Work{
+    margin-top:2%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+
+  }
+
+  .find{
+    /* margin-top: 10%; */
+    display:grid;
+    grid-template-columns: 50% 50%;
+    /* margin-right: 15%;
+    margin-right:15%; */
+    padding:5%;
+    padding-left:10%;
+    padding-right:10%;
+  }
+.find h3{
+    font-size:3rem;
+}
+  .find p{
+    margin-top:2%;
+  }
+/* Initial Ideas */
+.Ideas{
+    /* margin-top: 10%; */
+    display:grid;
+    grid-template-columns: 50% 50%;
+    /* margin-right: 15%;
+    margin-right:15%; */
+    padding:5%;
+    padding-left:10%;
+    padding-right:10%;
+  }
+  .Ideas h3{
+    font-size:3rem;
+  }
+  .Ideas p{
+    padding-top:2%;
+    width: 80%;
+  }
+  .Ideas .description3 img{
+    width:75%;
+
+  }
+
+  /* Process */
+  .process{
+    padding-left:16%;
+    padding-right:10%;
+    padding-top: 1%;
+
+    text-align: left;
+  }
+  .process .heading4 h3{
+    font-size: 3rem;
+  }
+  .process .description4 p{
+    margin-top:2%;
+    margin-bottom:2%;
+  }
+  .imageprocess{
+    width:100%;
+  }
+  /* Heuristics */
+  .Ideas1{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    padding-left:10%;
+    padding-right:10%;
+
+  }
+  .Ideas1 .imageHE1 img{
+    /* max-width: 100%; */
+    /* height:50%; */
+    width: 25%;
+    margin-left: 25%;
+  }
+  .Ideas1 .headingHE{
+    margin-left:15%;
+  }
+ .Ideas1 .headingHE h4{
+    font-size: 1.5rem;
+ }
+ .Ideas1 .headingHE p{
+   margin-top: 5%;
+   
+ }
+
+ @media(max-width:900px) {
+
+     .Ideas1 .headingHE h4{
+    font-size: smaller;
+ }
+
+ .find h3{
+    font-size:2rem;
+}
+.Ideas h3{
+    font-size:2rem;
+  }
+
+  .division h2{
+    font-size: 2.5rem;
+  }
+  .division h3{
+    font-size: 1rem;
+  }
+ }

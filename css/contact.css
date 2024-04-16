@@ -1,0 +1,86 @@
+body {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px;
+}
+
+.contact-container h2 {
+    margin-bottom: 20px;
+}
+
+.contact-container p {
+    margin-bottom: 40px;
+}
+
+.contact-container form {
+    display: grid;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border:2px solid maroon;
+    background-color: #333; /* Darker background for inputs */
+    color: #fff; /* White text for inputs */
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 2px solid maroon;
+    background-color: #333; /* Darker background for textarea */
+    color: #fff; /* White text for textarea */
+}
+
+button {
+    width: 200px;
+    padding: 10px;
+    margin: 0 auto;
+    border: none;
+    background-color: maroon; 
+    color: #fff; /* White text for the button */
+    border-radius: 20px; /* Rounded corners for the button */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: rgba(128, 0, 0, 0.411);
+}
+
+a {
+    color: maroon; /* Light blue for email link */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: maroon; /* Maroon border for the text fields when they are focused */
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+    .form-group {
+        flex-direction: column;
+    }
+}

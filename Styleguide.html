@@ -2,336 +2,137 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Drunk Pawn - Style Guide</title>
-    <link href="css/main.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Guide</title>
+
+    <link href="css/index.css" rel="stylesheet">
+
+    <link href="css/Project1.css" rel="stylesheet">
+    <link href="css/Project2.css" rel="stylesheet">
+    <link href="css/StyleGuide.css" rel="stylesheet">
+
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+    <!-- Section  Header Start -->
 
-    <header class="header">
-        <nav class="navbar">
-            <a href="Home.html">Home</a>
-            <a href="About.html">About</a>
-            <a href="Products.html">Projects</a>
-            <a href="Checkout.html">Resume</a>
-            <a href="Contact.html">Contact</a>
-        </nav>
-    </header>
+    <div class="container-navbar">
+        <div id="header-wrapper">
+            <header>
+                <div class="logo">
+                    <a href="index.html">
+                        <h2>Aman Singh </h2>
+                    </a>
 
- <!-- INTERACTIVE ELEMENTS SECTION -->
- <section id="styleguide">
- <div class="text-content">
-     <section id="interactive_elements">
-      <h2>Interactive Elements</h2>
-
-      <!-- In-text link -->
-      <section class="element">
-        <h3>In-text Link</h3>
-        <h4>CSS selector:</h4>
-        <p>.link-intext</p>
-        <h4>Sample code:</h4>
-        <code>&lt;a href="Services.html" class="link-intext"&gt;Explore Services&lt;/a&gt;</code>
-        <h4>Rendered element:</h4>
-        <a href="Services.html" class="link-intext">Explore Services</a>
-      </section>
-
-      <!-- Navigation Link -->
-      <section class="element">
-        <h3>Navigation Link</h3>
-        <h4>CSS selector:</h4>
-        <p>.link-nav</p>
-        <h4>Sample code:</h4>
-        <code>&lt;a href="classes.html" class="link-nav"&gt;Classes&lt;/a&gt;</code>
-        <h4>Rendered element:</h4>
-        <nav>
-          <a href="Home.html" class="link-nav">Classes</a>
-        </nav>
-      </section>
-
-
-      <!-- Submit/Reset Buttons -->
-    <section class="element">
-      <h3>Send Enquiry/Reset Buttons</h3>
-      <h4>CSS selector:</h4>
-      <p>.button-enquiry, .button-clear</p>
-      <h4>Sample code:</h4>
-      <code>&lt;input type="submit" class="button-enquiry" value="Send Enquiry"&gt;&lt;input type="reset" class="button-clear" value="Clear"&gt;</code>
-      <h4>Rendered element:</h4>
-      <form>
-        <input type="submit" class="button-enquiry" value="Send Enquiry">
-        <input type="reset" class="button-clear" value="Clear">
-      </form>
-    </section>
-
-    <!-- Text Input Field with Label -->
-    <section class="element">
-      <h3>Text Input Field with Label</h3>
-      <h4>CSS selector:</h4>
-      <p>.input-text</p>
-      <h4>Sample code:</h4>
-      <code>&lt;label for="emailField"&gt;Email:&lt;/label&gt;&lt;input type="email" id="emailField" class="input-text" name="email"&gt;</code>
-      <h4>Rendered element:</h4>
-      <label for="emailField">Email:</label>
-      <input type="email" id="emailField" class="input-text" name="email">
-    </section>
-
-    <!-- Radio Button with Label -->
-    <section class="element">
-      <h3>Radio Button with Label</h3>
-      <h4>CSS selector:</h4>
-      <p>.radio-button</p>
-      <h4>Sample code:</h4>
-      <code>&lt;input type="radio" id="membershipStandard" class="radio-button" name="membershipType" value="standard"&gt;&lt;label for="membershipStandard"&gt;Standard Membership&lt;/label&gt;</code>
-      <h4>Rendered element:</h4>
-      <input type="radio" id="membershipStandard" class="radio-button" name="membershipType" value="standard">
-      <label for="membershipStandard">Standard Membership</label>
-    </section>
-
-    <!-- Comprehensive Example: Services Form -->
-    <section class="element">
-      <h3>Comprehensive Example: Services Form</h3>
-       <section id="personal-training">
-        <h3>Enter Your Delivery Details</h3>
-        <form class="delivery-form">
-            <label for="emailField">Email:</label>
-            <input type="email" id="emailField" class="input-text" name="email" required>
-            <label for="fname">First Name:</label>
-            <input type="text" id="fname" class="input-text" name="fname" required>
-            <label for="lname">Last Name:</label>
-            <input type="text" id="lname" class="input-text" name="lname" required>
-            <label for="Address">Address:</label>
-            <input type="text" id="Address" class="input-text" name="Address" required>
-            <label for="City">City:</label>
-            <input type="text" id="City" class="input-text" name="City" required>
-            <label for="PostalCode">Postal Code:</label>
-            <input type="text" id="PostalCode" class="input-text" name="PostalCode" required>
-        </form>
-      </section>
-
-    </section>
-      <!-- Image as a Link -->
-      <section class="element">
-        <h3>Image as a Link</h3>
-        <h4>CSS selector:</h4>
-        <p>.image-link</p>
-        <h4>Sample code:</h4>
-        <code>&lt;a href="classes.html" class="image-link"&gt;&lt;img src="images/beer_chess.png" alt="Beer and chess"&gt;&lt;/a&gt;</code>
-        <h4>Rendered element:</h4>
-        <section class="element">
-          <h3>Beer and Chess</h3>
-          <img class="Images" src="images/beer_chess.png" alt="Beer and chess">
-        </section>
-
-    </section>
-
-    <div id="typography">
-      <section>
-        <h2>Text Styling</h2>
-        <p>We will have a 3 size heading structure for this website</p>
-        <h3>Fonts:[Poppins]</h3>
-
-        <p>I will use this font as the main font,
-          These fonts are playful, modern, natural and also they look professional which makes it good to use for a Fitness Website.
-          </p>
-          <h2 >Heading 1 : 48 Point with Color : #FB5F2A</h2>
-          <h3>Heading 2 : 32 Point with Color : #FFFFFF</h3>
-          <h4>Heading 3 : 16 Point with Color : #FFFFFF</h4>
-
-          <h2>Paragraph:</h2>
-          <p>This will be of a basic size which is 24px with Color : #FCCEA7.</p>
-          <h4>Eg:</h4>
-
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime laborum labore nulla, perspiciatis eum dolore saepe vel ratione architecto deserunt pariatur numquam dignissimos distinctio ea. Culpa consequatur corporis eligendi saepe dolor necessitatibus dicta quae.</p>
-      </section>
-         </div>  
-      <!-- Color Palettes -->
-      <section>
-        <h3>Colour Palettes</h3>
-        <p>This is the color palette I have selected for my website.  </p>
-        <svg width="200" height ="200">
-
-          <rect width="200" height="200" style="fill:white"/>
-      </svg>  
-      <svg width="200" height ="200">
-
-          <rect width="200" height="200" style="fill:black"/>
-      </svg> 
-      <svg width="200" height ="200">
-
-          <rect width="200" height="200" style="fill:#FCCEA7"/>
-      </svg>   
-      <svg width="200" height ="200">
-
-          <rect width="200" height="200" style="fill:#fb5f2a
-          "/>
-      </svg>  
-
-      </section>
-      <section id="main-navigation">
-      <h2>Combined Elements</h2>
-      <h3>Main Navigation</h3>
-      <!-- CSS Selector -->
-      <div>
-        <h4>CSS Selector</h4>
-        <p>.navbar, navbar a</p>
-      </div>
-
-      <!-- Sample Code -->
-      <div>
-        <h4>Sample code:</h4>
-        <code>
-          &lt;nav class="navbar"&gt;<br>
-          &nbsp;&nbsp;&lt;a href="Home.html" class="link-nav"&gt;Home&lt;/a&gt;<br>
-          &nbsp;&nbsp;&lt;a href="Styleguide.html" class="link-nav"&gt;Style Guide&lt;/a&gt;<br>
-          &nbsp;&nbsp;&lt;a href="Services.html" class="link-nav"&gt;Services&lt;/a&gt;<br>
-          &nbsp;&nbsp;&lt;a href="Checkout.html" class="link-nav"&gt;Checkout&lt;/a&gt;<br>
-          &nbsp;&nbsp;&lt;a href="Contact.html" class="link-nav"&gt;Contact Us&lt;/a&gt;<br>
-          &lt;/nav&gt;
-        </code>
-      </div>
-
-      <!-- Rendered Element -->
-      <div>
-        <h4>Rendered Element</h4>
-        <nav class="navbar">
-          <a href="Home.html" class="link-nav">Home</a>
-          <a href="Styleguide.html" class="link-nav">Style Guide</a>
-          <a href="Services.html" class="link-nav">Services</a>
-          <a href="Checkout.html" class="link-nav">Checkout</a>
-          <a href="Contact.html" class="link-nav">Contact Us</a>
-        </nav>
-      </div>
-    </section>
-
-        <!-- Product/Service Listing -->
-        <section id="services_flexbox_example">
-          <h3>Services Section Flexbox</h3>
-
-          <!-- CSS Selector -->
-          <section class="element">
-            <h4>CSS Selector</h4>
-            <p>.services-container, .service-box</p>
-          </section>
-
-          <!-- Sample Code -->
-          <section class="element">
-            <h4>Sample code:</h4>
-            <code>
-              &lt;div class="services-container"&gt;<br>
-              &lt;div class="service-box"&gt;<br>
-              &lt;h3&gt;Cardio Training&lt;/h3&gt;<br>
-              &lt;img class="Images" src="images/cardio-training.jpg" alt="Cardio Training"&gt;<br>
-              &lt;p&gt;Elevate your heart rate with our dynamic cardio training programs.&lt;/p&gt;<br>
-            </code>
-          </section>
-
-          <!-- Rendered Element -->
-          <section id="services">
-            <h4>Rendered Element</h4>
-<div class="services-container">
-                <!-- Event 1 - Beer Chess -->
-                <div class="service-box">
-                    <h2>Beer Chess (19+)</h2>
-                    <h3>March 15th: 5pm-9pm</h3>
-                    <a href="Beer_Chess_Event.html"><img class="Images" src="images/beer_chess.png" alt="glasses of beer as chess pieces on a wooden table"></a>
-                    <p>Playing chess and drinking beer is one thing, but playing chess with beer is a whole new type of fun. Bring a group of friends, pick your favourite beers, and sit down for a night you may forget!</p>
-                    <a class="button-enquiry" href="Beer_Chess_Event.html">Learn More</a>
                 </div>
 
-                <!-- Event 2 - Luxury Night -->
-                <div class="service-box">
-                    <h2>Luxury Night</h2>
-                    <h3>March 16th: 6pm-10pm</h3>
-                    <a href="Luxury_Night_Event.html"><img class="Images" src="images/chess_restaurant.png" alt="dimly lit room with marble chess board"></a>
-                    <p>Dress your best and enjoy the feeling of Luxury. Patrons will enjoy a game of chess on our finest boards with spectacular pieces, while enjoying a special cocktail from the limited menu only available on Luxury Night!</p>
-                    <a class="button-enquiry" href="Luxury_Night_Event.html">Learn More</a>
-                </div>
-
-                <!-- Event 3 - Beer Chess -->
-                <div class="service-box">
-                    <h2>Sober Sunday</h2>
-                    <h3>March 17th: 9am-3pm</h3>
-                    <a href="Sober_Sunday_Event.html"><img class="Images" src="images/sober_chess.png" alt="upclose chess pieces with a beam of light"></a>
-                    <p>Playing chess and drinking beer is one thing, but playing chess with beer is a whole new type of fun. Bring a group of friends, pick your favourite beers, and sit down for a night you may forget!</p>
-                    <a class="button-enquiry" href="Sober_Sunday_Event.html">Learn More</a>
-                </div>
-            </div>
-            </div>
-          </section>
-        </section>
-
-        <!-- Payment Form -->
-        <section class="element">
-          <h4>Payment Form</h4>
-          <h4>CSS Selector:</h4>
-    <p>.product-summary,</p>
-
-    <!-- Sample Code -->
-    <h4>Sample Code:</h4>
-    <code>&lt;div class="checkout-container"&gt;
-      &lt;section class="product-summary"&gt;  
-      &lt;/section&gt;
-      &lt;section class="delivery-details"&gt;    
-      &lt;/section&gt;
-      &lt;section class="payment-details"&gt;
-      &lt;/section&gt;s
-    &lt;/div&gt;</code></pre>
-
-    <!-- Rendered Element -->
-    <h4>Rendered Element:</h4>
-<aside class="order-summary">
-            <h3>Order Summary</h3>
-            <p><strong>Subtotal:</strong> $<span id="subtotal">79.00</span></p>
-            <p><strong>Tax:</strong> $<span id="tax">4.99</span></p>
-            <p><strong>Total:</strong> $<span id="total">83.99</span></p>
-            
-            <!-- Promo code section -->
-            <label for="promo-code">Promo Code:</label>
-            <input type="text" id="promo-code" name="promo-code" class="input-text">
-            <button class="button-enquiry" id="apply-promo">Apply</button>
-            
-            <!-- Bag summary section moved inside order-summary -->
-            <h3>Bag Summary</h3>
-            <div class="bag-item">
-                <img src="images/product_1.jpg" alt="Product Name" class="bag-image">
-                <div class="bag-item-details">
-                    <p><strong>Product Name:</strong> Tough Blunder Pale Ale (4PK)</p>
-                    <p><strong>Delivery Date:</strong> 5-6 Business days </p>
-                    <!-- Add more details as needed -->
-                </div>
-            </div>
-        </aside>
-     </div>
- </section>
-
-
-     <footer class="site-footer">
-        <div class="footer-social">
-            <!-- Social Icons -->
-            <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
-            <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
-            <a href="https://twitter.com/?lang=en" class="fab fa-twitter"></a>
-            <a href="https://www.youtube.com/watch?v=Z1GTqD0qYqc" class="fab fa-youtube"></a>
-            <a href="https://github.com/amanm007/P02-IAT-339-" class="fab fa-github"></a>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="game.html">Games</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
         </div>
-        <div class="footer-links">
-            <!-- Navigation Links -->
-            <a href="Home.html">Home</a>
-            <a href="Products.html">Products</a>
-            <a href="About.html">About Us</a>
-            <a href="Styleguide.html">Styleguide</a>
-            <a href="https://github.com/amanm007/P02-IAT-339-">Github</a>
-            <a href="Citations.html">Citations</a>
+    </div>
 
+    <h2>Style Guide</h2>
+
+    <section class="nav">
+        <h3>Nav Bar</h3>
+        <div class="container-navbar">
+            <div id="header-wrapper">
+                <header>
+                    <div class="logo">
+                        <a href="index.html">
+                            <h2>Aman Singh </h2>
+                        </a>
+
+                    </div>
+
+                    <nav class="navbar">
+                        <ul>
+                            <li><a href="about.html">Games</a></li>
+                        <li><a href="Project_1.html">About</a></li>
+                        <li><a href="Project_2.html">Contact</a></li>
+                    </ul>
+                    </nav>
+                </header>
+            </div>
         </div>
-        <div class="footer-bottom">
-            <a> &copy; 2024 The Drunk Pawn. All rights reserved.</a>
+    </section>
+
+    <!-- Block -->
+    <div style="background-color: #060606 ; padding: 2px;"></div>
+
+    <section class="font">
+        <h2 style="font-size:2rem;">Fonts Used: Poppins</h3>
+
+        <h2>Heading 1</h2>
+        <h3>Heading 2</h3>
+        <h4>Heading 3</h4>
+        <p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz </p>
+        <p>0 1 2 3 4 5 6 7 8 9</p>
+    </section>
+
+    <section class="Color">
+
+    </section>
+
+ <!-- Block -->
+ <div style="background-color: #060606 ; padding: 2px;"></div>
+
+<section class="buttons1">
+    <h3>Buttons</h3>
+    <form action="#">
+        <button>Go to project</button>
+    </form>
+</section>
+
+ <!-- Block -->
+ <div style="background-color: #060606 ; padding: 2px;"></div>
+
+
+
+
+
+    <!-- Footer Referred from https://www.youtube.com/watch?v=YOb67OKw62s -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>About Me</h4>
+                    <ul>
+                        <li>Aman Singh</li>
+                        <li>Simon Fraser University</li>
+                        <li>Interactive Arts and Technology</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4> Help</h4>
+                    <ul>
+                        <li><a href="about.html">About Me</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Important Links</h4>
+                    <ul>
+                        <li><a href="StyleGuide.html">Style Guide</a></li>
+                        <li><a href="https://github.com/amanm007/P03-IAT-339">Git Hub</a></li>
+                        <li><a href="Citation.html">Citations</a></li>
+
+                    </ul>
+                </div>
+
+            </div>
         </div>
     </footer>
-     
 </body>
+
 </html>

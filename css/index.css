@@ -1,0 +1,332 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header/Navbar */
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #000; /* black background */
+    color: #fff; /* white text */
+}
+.content {
+    margin-left: 15%;
+    max-width: 70%;
+}
+
+/* Additional styles for your latest work section */
+.latest-work h2 {
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.latest-work p {
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+.view-game {
+    display: inline-block; /* Makes it a clickable button */
+    padding: 10px 15px; /* Adjust padding as needed */
+    background-color: #fff; /* Button background */
+    color: #000; /* Button text color */
+    text-decoration: none; /* Removes underline from the link */
+    border-radius: 5px; /* Adjust as needed for rounded corners */
+}
+
+
+
+/* HEADER */
+#header-wrapper{
+    display: block;
+    width: 100%;
+    /* height: 150px; */
+    /* background-color: #ffffff; */
+    /* position: fixed; */
+    top: 0;
+    z-index: 3;
+    color: white;
+    background-color: black;
+}
+
+header{
+    width: 80%;
+    margin: 0 auto;
+    
+}
+
+#logo, span, nav{
+    text-transform: uppercase;
+}
+.navbar{
+    color:white;
+}
+.navbar ul{
+    overflow: auto;
+    text-align: right;
+}
+
+.navbar li{
+    display: inline-block;
+    list-style: none;
+    margin: 1% 1%;
+}
+.title {
+    color: maroon; 
+    font-size: 4rem; 
+}
+button{
+    background: maroon;
+    color: white;
+    text-decoration: none;
+    border: 3px solid maroon;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: .4s;
+ }
+ button:hover{
+    background: rgba(128, 0, 0, 0.411);
+    color: #fff;
+    text-decoration: none;
+ }
+ 
+ .footer
+
+ {
+    line-height: 1.5;
+    background-color: black;
+    color: white;
+    padding:2%;
+ }
+
+ .container{
+    max-width: 1170px;
+    /* background-color: red; */
+    margin: auto;
+
+}
+.footer ul{
+    list-style: none;
+}
+.footer .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-col{
+    width:25%;
+    padding:0px 10px;
+}
+
+.footer-col h4{
+    font-size:20px;
+    color: white ;
+    margin-bottom: 20px;
+    position: relative;
+}
+.footer-col h4::before{
+    content:'';
+    position:absolute;
+    bottom:-10px;
+    background-color: rgb(247, 117, 117);
+    height:2px;
+    width: 50px;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 1%;
+}
+.footer-col ul li  {
+    font-size:16px;
+    padding:2px;
+   
+}
+.footer-col ul li a {
+    font-size:16px;
+    text-decoration: none;
+    margin-bottom:5px;
+    color: #fff;
+
+}
+.footer-col ul li a:hover {
+  
+text-decoration: underline;
+}
+.role {
+    color: maroon; /* This sets the color of the h3 with the class to maroon */
+}
+
+
+@media(min-width:901px)
+{
+
+    .logo h2{
+        /* background: url(logo.png)no-repeat; no repeat-image shown only once */
+        max-width: 220px;
+        max-height: 100px;
+        background-size: contain;
+        margin:  2px 55px 45px -75px ;
+        position: absolute;
+        color: white;
+        /* text-indent: -99999px; */
+     }
+  
+    .navbar li a{
+        color: white;
+        text-decoration: none;
+        /* color: #313131; */
+        display: block;
+        /* padding: 1% 1%; */
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    
+    /* hover effect was adopted from this source, https://css-tricks.com/css-link-hover-effects/ */
+    .navbar a {
+        color: #313131;
+        position: relative;
+        text-decoration: none;
+      }
+    
+    
+    .navbar a::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        border-radius: 4px;
+        background-color: white;
+        bottom: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s ease-in-out;
+    }
+    
+    .navbar a:hover::before{
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+    .heading1{
+        margin-left: 20%;
+        margin-bottom: 2%;
+        
+    }
+    .heading1 h1{
+        font-size: 7vh;
+    }
+    .heading1 h2{
+        font-size: 5vh;
+        margin-top: 0%;
+    }
+    .home{
+        display:grid;
+        grid-template-columns: 45% 55%;
+    }
+    .home .headings{
+        padding:2rem;
+        /* width:70%; */
+        /* font-size: 0.5vm; */
+    }
+    .home .headings h1{
+        font-size: 2rem;
+    
+    }
+    .home .headings .butn{
+        margin-top:1rem;
+        /* font-size: medium; */
+    }
+    .home .headings .butn a{
+        font-size: medium;
+    }
+    
+    .home .about1_img{
+        margin-left:10%;
+        margin-top: auto;
+      
+    }
+    .home .about1_img img{
+        margin-left: 28%;
+        width: 70%;
+    
+    
+        
+    }
+}
+
+@media(max-width:900px)
+{
+    .navbar li a{
+        color: white;
+        text-decoration: none;
+        /* color: #313131; */
+        display: block;
+        /* padding: 1% 1%; */
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: small;
+        font-family: 'Poppins', sans-serif;
+    }
+    .logo  h2{
+        /* background: url(logo.png)no-repeat; no repeat-image shown only once */
+        max-width: 220px;
+        max-height: 100px;
+        background-size: contain;
+        margin:  2px 55px 45px -55px ;
+        position: absolute;
+        font-size: medium;
+        color: white;
+        /* text-indent: -99999px; */
+        
+     }
+     .home{
+        display:grid;
+        grid-template-columns: 45% 55%;
+    }
+    .heading1{
+        margin-left: 8%;
+        margin-bottom: 2%;
+        
+    }
+    .heading1 h1{
+        font-size: 7vh;
+    }
+    .heading1 h2{
+        font-size: 5vh;
+        margin-top: 0%;
+    }
+    .home .headings{
+        padding:2rem;
+        font-size: small;
+        /* width:70%; */
+        /* font-size: 0.5vm; */
+    }
+    .home .headings h1{
+        font-size: 2rem;
+
+    }
+    .home .headings .butn{
+        margin-top:1rem;
+        /* font-size: medium; */
+    }
+    .home .headings .butn a{
+        font-size: medium;
+    }
+    
+    .home .about1_img{
+        margin-left:10%;
+      
+    }
+    .home .about1_img img{
+        margin-left: 28%;
+        width: 70%;
+        margin-bottom: 2%;
+    
+    }
+    .content {
+        margin-left: 5%;
+        max-width: 90%;
+    }
+
+}
