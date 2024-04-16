@@ -3,6 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Send to back */
+}
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black; 
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    z-index: -1; /* Send to back */
+  }
 
 /* Header/Navbar */
 body{
@@ -10,27 +26,141 @@ body{
     background-color: #000; /* black background */
     color: #fff; /* white text */
 }
-.content {
-    margin-left: 15%;
-    max-width: 70%;
+#header-wrapper {
+    border-bottom: 2px solid white; /* Adjust color and thickness as needed */
 }
 
+.content {
+    margin-left: 5%; /* Align with A.S. logo */
+    max-width: 90%;
+}
+.content .title {
+    font-size: 1.5rem; /* Adjust to match your reference */
+    margin-top: -20px;
+
+}
+.intro {
+    text-align: left; /* Align text to the left */
+}
+
+.content h1 {
+    font-size: 4.5rem; /* Adjust to match your reference */
+    line-height: 1.5; /* Keeps the spacing tight between lines */
+    margin-top: 5px;
+}
+.content p {
+    max-width: 40%; /* Adjust to match the reference */
+    margin-bottom: 1rem; /* Adds some space below the paragraph */
+}
+.content h6 {
+    max-width: 40%; /* Adjust to match the reference */
+    margin-bottom: 1rem; /* Adds some space below the paragraph */
+}
 /* Additional styles for your latest work section */
 .latest-work h2 {
-    margin-top: 20px; /* Adjust as needed */
+    font-size: 2.5rem; /* Adjust size to match the reference */
+    color: white; /* Or any color you prefer */
+}
+.latest-work-container {
+    display: flex; /* Align items in a row */
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Space between image and text */
+    margin-top: 50%;
 }
 
-.latest-work p {
-    margin-bottom: 10px; /* Adjust as needed */
+.latest-work img {
+    width: 100px; /* Adjust based on your preference */
+    height: auto; /* Maintain aspect ratio */
+}
+.latest-work-info h3 {
+    margin: 0;
+    font-size: 1.5rem; /* Adjust to match your reference */
+    color: #ffffff; /* Or any color you prefer */
+}
+.latest-work {
+    margin-top: 40px; /* Space from the content above */
+    padding-left: 15%; /* Align with the content above */
+    text-align: left; /* Align text to the left */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+}
+.latest-work-section {
+    margin-top: 20%;
+
+    background-color: #222; /* Or any background color you prefer */
+    padding: 20px;
+   
+    max-width: 40%; /* Sets the max width of the section */
+
 }
 
-.view-game {
-    display: inline-block; /* Makes it a clickable button */
-    padding: 10px 15px; /* Adjust padding as needed */
-    background-color: #fff; /* Button background */
-    color: #000; /* Button text color */
-    text-decoration: none; /* Removes underline from the link */
-    border-radius: 5px; /* Adjust as needed for rounded corners */
+.latest-work-title {
+    font-size: 2.5rem; /* Big, bold font for the section title */
+    margin-bottom: 20px; /* Spacing between title and content */
+   
+    color: #fff; /* White text color */
+}
+
+.latest-work-content {
+    display: flex;
+    align-items: center; /* Align the items vertically */
+    justify-content: space-between; /* Spread out the items */
+}
+
+.latest-work-image {
+    flex: 1; /* Allows the image to grow and take space */
+    max-width: 200px; /* Set a max-width for the image if necessary */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.latest-work-image img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+.latest-work-details {
+    flex: 2; /* Allows the text to take double the space of the image */
+    text-align: left; /* Align the text to the left */
+}
+.latest-work-details h3 {
+    font-size: 1.5rem; /* Adjust to the size you want for the project title */
+    color: #fff; /* White text color */
+    margin-bottom: 10px; /* Spacing between project title and button */
+}
+
+.latest-work-info {
+    text-align: left; /* Align the text to the left */
+}
+
+.latest-work-info h3 {
+    font-size: 1.5rem; /* Adjust to the size you want for the project title */
+    margin-bottom: 10px; /* Spacing between project title and button */
+    color: #fff; /* White text color */
+}
+
+
+.latest-work .butn button {
+    background: maroon; /* Background color */
+    color: white; /* Text color */
+    text-decoration: none; /* Removes underline */
+    border: 2px solid maroon; /* Border color */
+    font-size: 1rem; /* Adjust font size as needed */
+    font-weight: bold; /* Bold text */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 25px; /* Rounded corners */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.latest-work .butn button:hover {
+    background: rgba(128, 0, 0, 0.8); /* Slightly lighter maroon on hover */
+    color: #fff; /* Keep text color white */
+    text-decoration: none; /* No underline on hover */
+}
+
+/* Ensure the button is displayed as a block element within the latest work info */
+.latest-work .butn {
+    margin-top: 10px; /* Space from the title above */
+    text-align: left; /* Align the button to the left */
 }
 
 
@@ -155,6 +285,17 @@ text-decoration: underline;
     color: maroon; /* This sets the color of the h3 with the class to maroon */
 }
 
+@media screen and (max-width: 600px) {
+    /* Responsive adjustments for mobile */
+    .latest-work-content {
+        flex-direction: column; /* Stack the image and text on top of each other */
+    }
+
+    .latest-work-image {
+        margin-right: 0; /* Remove the margin right on mobile */
+        margin-bottom: 20px; /* Add space below the image */
+    }
+}
 
 @media(min-width:901px)
 {

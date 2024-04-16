@@ -8,6 +8,7 @@
 
     <title>Portfolio </title>
     <link href="css/index.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,7 +16,8 @@
 
 <body>
     <!-- Section  Header Start -->
-
+    <canvas id="drawingCanvas"></canvas>
+    <div id="particles-js"></div>
     <div class="container-navbar">
         <div id="header-wrapper">
             <header>
@@ -40,22 +42,27 @@
    
 
     <div class="content">
-        <h1>Aman Singh</h1>
-        <p class="title">Game Developer</p>
-        <p>Hey! I'm a passionate game developer, with experience in gameplay programming. Currently based in Vancouver, B.C.</p>
-        <!-- Add your 'Latest Work' section here -->
-    <!----
-        <div class="latest-work">
-            <h2>Latest Work</h2>
-            <p>Description of your latest project...</p>
-            <form action="#">
-                <button>Go to project</button>
-            </form>
+        <div class="intro">
+            <h1>Aman Singh</h1>
+            <p class="title">GAME DEVELOPER</p>
+            <p>Hey! I'm a passionate game developer, with experience in gameplay programming. Currently based in Vancouver, B.C.</p>
         </div>
-       -->
-    </div>
-
-    <div class="home">
+        <!-- Add your 'Latest Work' section here -->
+        <div class="latest-work-section">
+            <h2 class="latest-work-title">Latest Work</h2>
+            <div class="latest-work-content">
+                <div class="latest-work-image">
+                    <img src="images/slowsteady1.png" alt="Slow and Steady">
+                </div>
+                <div class="latest-work-details">
+                    <h3>Slow and Steady | Unity | Jan - April 2024</h3>
+                    <form action="slowandsteady.html"> 
+                        <button>Go to project</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <!-- <div class="home">
         <div class="about1_img">
             <img src="images/slowsteady1.png" alt="Slow and Steady">
         </div>
@@ -74,7 +81,7 @@
             </div>
             <div class="butn">
                 <!-- <a href="products.html"><button type="button">Order now</button></a> -->
-                <form action="game.html">
+                <!-- <form action="game.html">
                     <button>Go to project</button>
                 </form>
             </div>
@@ -100,14 +107,16 @@
                        and variety in its play styles</p>
             </div>
             <div class="butn">
-                <!-- <a href="products.html"><button type="button">Order now</button></a> -->
-                <form action="game.html">
+                <a href="products.html"><button type="button">Order now</button></a> -->
+                <!-- <form action="game.html">
                     <button>Go to project</button>
                 </form>
             </div>
 
         </div>
-    </div>
+    </div> --> 
+
+
 
     
     
@@ -142,7 +151,118 @@
         </div>
     </footer>
 
-
+    <script>
+     particlesJS('particles-js', {
+    particles: {
+      number: {
+        value: 80,
+        density: {
+          enable: true,
+          value_area: 800
+        }
+      },
+      color: {
+        value: '#800000' // Particle color
+      },
+      shape: {
+        type: 'circle',
+        stroke: {
+          width: 6,
+          color: '#800000'
+        },
+        polygon: {
+          nb_sides: 5
+        },
+        image: {
+          src: 'img/github.svg',
+          width: 100,
+          height: 100
+        }
+      },
+      opacity: {
+        value: 0.5,
+        random: false,
+        anim: {
+          enable: false,
+          speed: 1,
+          opacity_min: 0.1,
+          sync: false
+        }
+      },
+      size: {
+        value: 5,
+        random: true,
+        anim: {
+          enable: false,
+          speed: 40,
+          size_min: 0.1,
+          sync: false
+        }
+      },
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: '#800000', // Line color
+        opacity: 0.8,
+        width: 5
+      },
+      move: {
+        enable: true,
+        speed: 6,
+        direction: 'none',
+        random: false,
+        straight: false,
+        out_mode: 'out',
+        bounce: false,
+        attract: {
+          enable: false,
+          rotateX: 600,
+          rotateY: 1200
+        }
+      }
+    },
+    interactivity: {
+      detect_on: 'canvas',
+      events: {
+        onhover: {
+          enable: true,
+          mode: 'repulse'
+        },
+        onclick: {
+          enable: true,
+          mode: 'push'
+        },
+        resize: true
+      },
+      modes: {
+        grab: {
+          distance: 400,
+          line_linked: {
+            opacity: 1
+          }
+        },
+        bubble: {
+          distance: 400,
+          size: 40,
+          duration: 2,
+          opacity: 8,
+          speed: 3
+        },
+        repulse: {
+          distance: 200,
+          duration: 0.4
+        },
+        push: {
+          particles_nb: 4
+        },
+        remove: {
+          particles_nb: 2
+        }
+      }
+    },
+    retina_detect: true
+  });
+    </script>
 
 </body>
 

@@ -1,0 +1,152 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex; /* Use flex to center children */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically if there is space */
+    padding: 20px;
+    text-align: center; /* Center text inside each section */
+}
+
+#game-section, #game-details {
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Maximum width of the content */
+    margin: auto; /* Auto margins for centering within the body */
+}
+.game-description {
+    margin-bottom: 20px; /* Adjust the spacing below the game description text */
+}
+
+.video-wrapper {
+    margin-top: 10%; /* Adds space above the video */
+    width: 100%; /* Sets the width of the video to match the width of the game-description container */
+    margin-bottom: 10%;
+}
+
+.video-wrapper video {
+    display: block; /* Ensures that the video is block level so margin can be applied */
+    margin-left: auto;
+    margin-right: auto; /* Centers the video */
+}
+
+/* Additional styles for individual sections, if needed */
+
+.game-info-wrapper,
+.game-image-wrapper,
+.game-description,
+.game-mechanics,
+.Process,
+.contribution-summary,
+.reflection {
+    width: 100%; /* Full width of the parent */
+    max-width: 800px; /* Maximum width of the content */
+    margin-bottom: 40px; /* Space between sections */
+}
+
+.game-image {
+    width: auto;
+    height: auto;
+    max-height: 250px; /* This sets the max height of the image */
+    max-width: 100%; /* Ensures image is responsive */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .game-info-wrapper, .game-image-wrapper {
+        flex-basis: 100%; /* Full width on small screens */
+    }
+
+    .game-image {
+        max-height: 200px; /* Smaller image on mobile */
+    }
+}
+
+.games-section {
+    background-color: #000; 
+    color: #fff; 
+    text-align: center; 
+}
+.game-description-title {
+    margin-bottom: 5%; /* Adjust the space below the title */
+    color: maroon; 
+}
+
+.game-description-text {
+    margin-bottom: 5%; /* Adjust the space below the title */
+    letter-spacing:3px;
+    line-height: 40px;
+}
+
+.games-section h1 {
+    font-size: 4rem; 
+    margin-bottom: 2rem; 
+}
+
+.game {
+    margin: 2rem; 
+}
+
+.game-image {
+    width: 100%; 
+    height: auto; 
+    margin-bottom: 1rem; 
+}
+
+.game h2 {
+    color: maroon; 
+    font-size: 2rem; 
+}
+
+.game p {
+    font-size: 1rem; 
+    padding: 0 20%; 
+}
+.games-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #000; 
+}
+
+.game-box {
+    width: 600px; 
+    cursor: pointer;
+    border: 2px solid maroon; 
+    border-radius: 10px; 
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.game-box:hover {
+    transform: scale(1.05);
+}
+
+.game-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.game-info {
+    padding: 10px;
+    background-color: #111; 
+    color: #fff; 
+}
+
+.game-info h3 {
+    color: maroon; 
+}
+
+.game-info p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
