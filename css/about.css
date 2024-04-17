@@ -5,6 +5,7 @@
     padding: 78px 0px; */
     display: grid;
     grid-template-columns: 40% 60%;
+    margin-top:5%;
 }
 
 .about img{
@@ -67,4 +68,12 @@
 
    
 }
+
+@media (max-width: 768px) {
+    .footer-social,
+    .footer-links {
+        flex-direction: column;
+    }
+}
+
 

@@ -9,6 +9,7 @@
     <link href="css/about.css" rel="stylesheet">
     <link href="css/game.css" rel="stylesheet">
     <link href="css/slowandsteady.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
 
 
@@ -100,7 +101,42 @@
                 and collision detection, ensuring every shot delivered a satisfying experience for the player. 
                 This was further amplified by the addition of bullet tracing effects, enhancing both the game's
                  visual appeal and the shooting experience.</p>
-
+                 <div id="video-slider">
+                    <!-- Buttons for navigation -->
+                    <button class="slide-arrow prev-arrow" onclick="slide(-1)">&#10094;</button>
+                    <button class="slide-arrow next-arrow" onclick="slide(1)">&#10095;</button>
+                  
+                    <!-- Video slides -->
+                    <div class="video-slide">
+                        <div class="video-title">Game Mechanics</div>
+                      <video width="100%" height="auto" autoplay muted loop controls>
+                        <source src="videos/slowandsteady_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <div class="video-slide">
+                        <div class="video-title">Enemy AI</div>
+                      <video width="100%" height="auto" autoplay muted loop controls>
+                        <source src="videos/enemyai_slowandsteady.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <div class="video-slide">
+                        <div class="video-title">Enenmy Types</div>
+                      <video width="100%" height="auto" autoplay muted loop controls>
+                        <source src="videos/enemy_types.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <div class="video-slide">
+                        <div class="video-title">Slow down mechanic and Health system</div>
+                      <video width="100%" height="auto" autoplay muted loop controls>
+                        <source src="videos/slowdownandhealth.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <!-- ... add more video slides as needed -->
+                  </div>
 
                  <p class="game-description-text"> <strong>Health Systems and Progressive Challenges:</strong>
                     As the game's depth expanded, I developed a versatile enemy health system that accommodated varying enemy types and
@@ -116,36 +152,38 @@
                  
                  
     </div>
-    <div id="video-slider">
-        <!-- Buttons for navigation -->
-        <button class="slide-arrow prev-arrow" onclick="slide(-1)">&#10094;</button>
-        <button class="slide-arrow next-arrow" onclick="slide(1)">&#10095;</button>
-      
-        <!-- Video slides -->
-        <div class="video-slide">
-            <div class="video-title">Game Mechanics</div>
-          <video width="100%" height="auto" autoplay muted loop controls>
-            <source src="videos/slowandsteady_video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div class="video-slide">
-          <video width="100%" height="auto" autoplay muted loop controls>
-            <source src="videos/wasd_slowandsteady.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <!-- ... add more video slides as needed -->
-      </div>
+  
     <div class="Process">
-        <h2>Process</h2>
-        <!-- Contribution details -->
+        <h2 class="game-description-title">Process</h2>
+        <div class="image-wrapper">
+            <img src="images/progress_slowandsteady.png" alt="Process">
+        </div>
+        <p class="game-description-text"> In the creation of "Slow and Steady," our development journey focused on delivering an immersive and strategic gameplay experience. Early stages involved laying foundational mechanics such as responsive player movement and precise aiming systems. As development progressed, we refined enemy AI, introducing complex behaviors and intelligent pathfinding to enhance the interactive challenges. We also implemented a robust health system and dynamic enemy encounters to keep the gameplay engaging. Key advancements included the integration of visual and shooting mechanics that provide immediate feedback and intensify the action. Our final efforts concentrated on optimizing performance through projectile pooling and designing a compelling boss battle with the "Cybertruck," featuring a multi-stage fight that tests player adaptability. Collaborative efforts from every team member, especially in areas like pixel art and UI programming, were crucial in bringing the intricate details of our game to life, making "Slow and Steady" a game that challenges the mind and excites the senses.</p>
     </div>
 
     <div class="reflection">
-        <h2>Reflection</h2>
-        <!-- Reflection content -->
+        <h2 class="game-description-title">Reflection</h2>
+        <p class="game-description-text"> Developing "Slow and Steady" has been a profoundly rewarding experience that pushed the boundaries of our creativity and technical skills.
+             Throughout the development process, we tackled various challenges, from fine-tuning the fluidit
+             y of player movements to enhancing the complexity of enemy AI for more engaging combat scenarios.
+              Significant achievements included the implementation of a versatile enemy health system and a
+               strategic wave spawner that heightened the game's challenge and replay value.
+                Our focus on visual feedback and dynamic shooting mechanics also played a crucial role in elevating the player's immersive experience.
+                Reflecting on this journey, the collaboration and relentless dedication of our team were instrumental in transforming our initial concepts into a thrilling and 
+                cohesive gaming experience that we hope will resonate deeply with players.</p>
     </div>
+
+    <div class="link-build ">
+        <h2 class="game-description-title">Download the link to play the game</h2>
+        <div class="image-wrapper">
+            <img src="images/build.png" alt="Process">
+        </div>
+        <a href="https://drive.google.com/file/d/1o5jFIiQ6I_ci3OrAE2x0_9EJ7R-bpdkr/view" download class="game-download-link">Click Here</a>
+       
+    </div>
+
+
+  
 </section>
    
 
@@ -155,35 +193,29 @@
 
 
      <!-- Footer Referred from https://www.youtube.com/watch?v=YOb67OKw62s -->
-     <footer class="footer">
-       <div class="container">
-           <div class="row">
-               <div class="footer-col">
-                   <h4>About Me</h4>
-                   <ul>
-                       <li>Aman Singh</li>
-                       <li>Simon Fraser University</li>
-                       <li>Interactive Arts and Technology</li>
-                   </ul>
-               </div>
-               <div class="footer-col">
-                   <h4> Help</h4>
-                   <ul>
-                       <li><a href="#">About Me</a></li>
-                   </ul>
-               </div>
-               <div class="footer-col">
-                   <h4>Important Links</h4>
-                   <ul>
-                       <li><a href="StyleGuide.html">Style Guide</a></li>
-                       <li><a href="https://github.com/amanm007/P03-IAT-339">Git Hub</a></li>
-
-                   </ul>
-               </div>
-
-           </div>
-       </div>
-   </footer>
+     <footer class="site-footer">
+        <div class="footer-social">
+            <!-- Social Icons -->
+            <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+            <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+            <a href="https://twitter.com/?lang=en" class="fab fa-twitter"></a>
+            <a href="https://www.youtube.com/watch?v=Z1GTqD0qYqc" class="fab fa-youtube"></a>
+            <a href="https://github.com/amanm007/P02-IAT-339-" class="fab fa-github"></a>
+        </div>
+        <div class="footer-links">
+            <!-- Navigation Links -->
+            <a href="index.html">Home</a>
+            <a href="game.html">Games</a>
+            <a href="About.html">About Me</a>
+            <a href="Styleguide.html">Styleguide</a>
+            <a href="Citations.html">Contact</a>
+            
+            
+        </div>
+        <div class="footer-bottom">
+            <a>  Aman Singh &copy; Simon Fraser University  |  School of Interactive Arts and Technology </a>
+        </div>
+    </footer>
    <script>
     var slideIndex = 0; // start with the first slide
     
