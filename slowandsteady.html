@@ -88,8 +88,55 @@
 
     <div class="contribution-summary">
         <h2 class="game-description-title">Summary of Contributions</h2>
-        <!-- Contribution details -->
+        <p class="game-description-text"> <strong>Core Gameplay Mechanics and Responsive Design: </strong>
+            The initial development weeks saw a strong focus on foundational mechanics. I spearheaded the creation of a responsive 
+            control system, enabling fluid player movement through intuitive WASD and arrow key integration. 
+            The precision aiming system was particularly pivotal, as it aligned player character aiming with 
+            the mouse cursor for accurate, directional shooting. This served to deepen player engagement and
+             elevate the interactive experience of "Slow and Steady."</p>
+
+             <p class="game-description-text"> <strong>Enhanced Shooting Dynamics:</strong>
+                To bolster the shooting mechanics, I integrated immediate hit feedback through bullet physics 
+                and collision detection, ensuring every shot delivered a satisfying experience for the player. 
+                This was further amplified by the addition of bullet tracing effects, enhancing both the game's
+                 visual appeal and the shooting experience.</p>
+
+
+                 <p class="game-description-text"> <strong>Health Systems and Progressive Challenges:</strong>
+                    As the game's depth expanded, I developed a versatile enemy health system that accommodated varying enemy types and
+                     introduced a wave spawner system. This not only diversified combat but also structured the 
+                     encounters, escalating the difficulty and requiring strategic survival tactics from the player.</p>
+
+
+                <p class="game-description-text"> <strong> Enemy Advanced AI and Tactical Depth:</strong>
+                    Later weeks saw the introduction of new enemy AI types with unique behaviors, adding to the tactical depth of
+                     the game. The implementation of a reload bar as a visual cue for the shooting cooldown added 
+                     strategic pacing to combat scenarios.</p>
+
+                 
+                 
     </div>
+    <div id="video-slider">
+        <!-- Buttons for navigation -->
+        <button class="slide-arrow prev-arrow" onclick="slide(-1)">&#10094;</button>
+        <button class="slide-arrow next-arrow" onclick="slide(1)">&#10095;</button>
+      
+        <!-- Video slides -->
+        <div class="video-slide">
+            <div class="video-title">Game Mechanics</div>
+          <video width="100%" height="auto" autoplay muted loop controls>
+            <source src="videos/slowandsteady_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-slide">
+          <video width="100%" height="auto" autoplay muted loop controls>
+            <source src="videos/wasd_slowandsteady.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <!-- ... add more video slides as needed -->
+      </div>
     <div class="Process">
         <h2>Process</h2>
         <!-- Contribution details -->
@@ -137,7 +184,33 @@
            </div>
        </div>
    </footer>
-
+   <script>
+    var slideIndex = 0; // start with the first slide
+    
+    // Function to change slide
+    function slide(moveStep) {
+      var slides = document.getElementsByClassName("video-slide");
+      slideIndex += moveStep;
+      
+      if (slideIndex >= slides.length) {
+        slideIndex = 0; // go back to first slide
+      }
+      if (slideIndex < 0) {
+        slideIndex = slides.length - 1; // go to last slide
+      }
+    
+      // Hide all slides
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      // Show the new slide
+      slides[slideIndex].style.display = "block";
+    }
+    
+    // Initialize the slider by showing the first slide
+    slide(0);
+    </script>
 
 </body>
 </html>

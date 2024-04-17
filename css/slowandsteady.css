@@ -150,3 +150,59 @@ section {
     font-size: 0.9rem;
     margin-top: 5px;
 }
+
+#video-slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Maximum width of the video */
+    margin: auto;
+    overflow: hidden;
+  }
+  .video-slide {
+    position: relative; /* Needed to position the title absolutely */
+    display: none; /* Hide all slides by default */
+    width: 100%;
+  }
+  
+  .video-slide {
+    display: none; /* Hide all slides by default */
+    width: 100%;
+  }
+  
+  .slide-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .video-title {
+    position: absolute;
+    top: 0; /* Position at the top of the video */
+    left: 50%; /* Start at the horizontal center */
+    transform: translateX(-50%); /* Shift to the left by half of its own width to center it */
+    width: auto;
+    padding: 5px 10px;
+    background-color: maroon; /* Semi-transparent background */
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em; /* Adjust size as needed */
+    z-index: 2; /* Make sure it's above the video */
+  }
+  .prev-arrow {
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+  .next-arrow {
+    right: 0;
+    transform: translateY(-50%);
+  }
+  
+  /* Making the first slide display by default */
+  .video-slide:first-child {
+    display: block;
+  }
