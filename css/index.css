@@ -286,18 +286,18 @@ button{
 text-decoration: underline;
 }
 .role {
-    color: maroon; /* This sets the color of the h3 with the class to maroon */
+    color: maroon; 
 }
 
 @media screen and (max-width: 600px) {
-    /* Responsive adjustments for mobile */
+    
     .latest-work-content {
-        flex-direction: column; /* Stack the image and text on top of each other */
+        flex-direction: column; 
     }
 
     .latest-work-image {
-        margin-right: 0; /* Remove the margin right on mobile */
-        margin-bottom: 20px; /* Add space below the image */
+        margin-right: 0; 
+        margin-bottom: 20px; 
     }
 }
 
@@ -305,7 +305,7 @@ text-decoration: underline;
 {
 
     .logo h2{
-        /* background: url(logo.png)no-repeat; no repeat-image shown only once */
+        
         max-width: 220px;
         max-height: 100px;
         background-size: contain;
@@ -414,7 +414,7 @@ text-decoration: underline;
         font-family: 'Poppins', sans-serif;
     }
     .logo  h2{
-        /* background: url(logo.png)no-repeat; no repeat-image shown only once */
+        
         max-width: 220px;
         max-height: 100px;
         background-size: contain;
@@ -504,7 +504,7 @@ site-footer {
     color: maroon; 
 }
 
-/* Style for Font Awesome icons */
+
 .footer-social .fab {
     font-size: 32px; 
     margin: 0 20px; 
@@ -525,4 +525,10 @@ site-footer {
     .footer-links {
         flex-direction: column;
     }
+}
+
+.game-description-text {
+    margin-bottom: 5%; 
+    letter-spacing:4px;
+    line-height: 40px;
 }

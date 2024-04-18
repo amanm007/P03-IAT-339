@@ -8,7 +8,9 @@
     <link href="css/index.css" rel="stylesheet">
     <link href="css/about.css" rel="stylesheet">
     <link href="css/game.css" rel="stylesheet">
-    <link href="css/storge.css" rel="stylesheet">
+    <link href="css/slowandsteady.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
 
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -57,37 +59,209 @@
      
    
 
+<section id="game-details">
+   
+
+    <div class="game-description">
+        <h2 class="game-description-title">What is Storge?</h2>
+        <p class="game-description-text">Storge was created for senior level narrative based course, IAT 313, at SFU. The project brief was to create an multi-media project based on a narrative script, where the script formed the spine of the story and our game intend to engage as the medium for engagement. </p>
+            <div class="video-wrapper">
+                <video width="100%" height="auto" autoplay muted loop controls>
+                    <source src="videos/storge_playthrough.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p class="game-description-text">Storge is a 2D pixel survival horror game in which the player takes on the role of
+                June, a detective who must uncover the truth of the mysterious disappearances of her
+                old orphanage. Taking inspiration from games such as Ib, the game involves exploration,
+                simple puzzles, and avoiding enemies. The game mainly takes place in the Veil, which is
+                an alternate nightmarish realm within the orphanage. </p>
+
+        <!-- Video or image showcase -->
+    </div>
+
+    <div class="game-mechanics">
+        <h2 class="game-description-title">Mechanics and Gameplay</h2>
+        <div class="video-wrapper">
+            <video width="100%" height="auto" autoplay muted loop controls>
+                <source src="videos/storge_overview.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <div class="contribution-summary">
+        <h2 class="game-description-title">Summary of Contributions</h2>
+        <p class="game-description-text"> <strong>Core Gameplay Mechanics; Player and NPCS: </strong>
+             Utilized Unity’s Rigidbody2D to create fluid, responsive player movements responsive to arrow keys or other input controls, including diagonal movement with speed consistency.</p>
+            <p class="game-description-text"> <strong>Animations: </strong>
+                Developed animations for walking and idle states, enhancing visual appeal by flipping the sprite when changing directions.</p>
+           
+                <p class="game-description-text"> <strong>Health System: </strong>
+                    Implemented a robust health system with a dynamic health bar UI, updating in real-time as the player takes damage, enhancing gameplay realism and feedback.</p>
+
+                 <div id="video-slider">
+                    <!-- Buttons for navigation -->
+                    <button class="slide-arrow prev-arrow" onclick="slide(-1)">&#10094;</button>
+                    <button class="slide-arrow next-arrow" onclick="slide(1)">&#10095;</button>
+                  
+                    <!-- Video slides -->
+                    <div class="video-slide">
+                        <div class="video-title">Enemy AI</div>
+                      <video width="100%" height="auto" autoplay muted loop controls>
+                        <source src="videos/Enemy_storge.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <div class="video-slide">
+                        <div class="video-title">Animations and Item Collector</div>
+                      <video width="100%" height="auto" autoplay muted loop controls>
+                        <source src="videos/Animations and Item Collector_ IAT 313-storge.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <div class="video-slide">
+                        <div class="video-title">Hallway 3</div>
+                      <video width="100%" height="auto" autoplay muted loop controls>
+                        <source src="videos/Hallway 3-storge.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <div class="video-slide">
+                        <div class="video-title">SFX and The Beast</div>
+                      <video width="100%" height="auto" autoplay muted loop controls>
+                        <source src="videos/SoundEffects and Enemy Damage-storge.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <!-- ... add more video slides as needed -->
+                  </div>
+
+                 <p class="game-description-text"> <strong>The Beast/Antagonist/Enemy :</strong>
+                    Engineered a sophisticated AI system allowing The Beast to patrol using predefined waypoints, with dynamic obstacle avoidance and pathfinding.
+                    Integrated sensors for player detection triggering behavior changes from patrolling to chasing, enhancing the game’s challenge.
+                    Configured the enemy to inflict damage upon contact, with a continuous damage system when the player remains in proximity, intensifying survival strategies.
+                    Incorporated methods for controlling sound effect pitch and volume, allowing for immersive audio experiences.
+
+
+                </p>
+
+
+                <p class="game-description-text"> <strong> Sound Effects: </strong>
+                    Implemented varied footstep sound effects and synchronized damage sounds with player-enemy interactions, enhancing auditory feedback.
+                    Added rich background music and state-specific sounds for The Beast, contributing to an immersive audio landscape.
+
+                </p>
+
+                 
+                 
+    </div>
+  
+    <div class="Process">
+        <h2 class="game-description-title">Process</h2>
+        <div class="image-wrapper">
+            <img src="images/process_storge.png" alt="Process">
+        </div>
+        <p class="game-description-text"> After adapting the script, our team set out to design the characters and game
+            world. We settled on using a 32x32 size for our pixel art, as it is a size that allows for
+            both simplicity and detail depending on what is being drawn. Characters were designed
+            using concept art drawn for the original script, and then reimagined in pixel form. This
+            involved simplifying some of the original details as well as creating a dedicated colour
+            pallet for each of the characters. This also gave us the opportunity to make sure that the
+            characters matched the setting’s identified time period: the 80’s. Most of the character
+            designs remained similar to the original concept images, however changes were made
+            to the Beast and new concepts were made for supporting characters to fit the new script
+            while keeping the established world of a small North American town in the 80’s. We also
+            took the opportunity to add symbolic elements to the character designs (such as flowers
+            with symbolic meanings) to further tie them into the story.</p>
+    </div>
+
+    <div class="reflection">
+        <h2 class="game-description-title">Reflection</h2>
+        <p class="game-description-text"> In the course of developing "The Storge", I embarked on a journey
+            that not only expanded my technical skills but also deepened my
+            understanding of game development as a whole. This immersive experience
+            allowed me to grasp the intricacies of player interaction, sound design, and
+            health management within a game. The implementation of player
+            movement, complete with animations and footsteps, brought life to my
+            virtual world, offering players a responsive and engaging gameplay
+            experience.This project has not only honed my Unity skills but also
+            deepened my passion for game development. It has been a remarkable
+            journey of creativity, problem-solving, and continuous learning, leaving me
+            eager to explore and create even more captivating game experiences in the
+            future.</p>
+    </div>
+
+    <div class="link-build ">
+        <h2 class="game-description-title">Download the link to play the game</h2>
+        <div class="image-wrapper">
+            <img src="images/storge1.png" alt="Process">
+        </div>
+        <a href="https://frogsoft.itch.io/storge" download class="game-download-link">Click Here</a>
+       
+    </div>
+
+
+  
+</section>
+   
+
+
+     
+   
+
 
      <!-- Footer Referred from https://www.youtube.com/watch?v=YOb67OKw62s -->
-     <footer class="footer">
-       <div class="container">
-           <div class="row">
-               <div class="footer-col">
-                   <h4>About Me</h4>
-                   <ul>
-                       <li>Aman Singh</li>
-                       <li>Simon Fraser University</li>
-                       <li>Interactive Arts and Technology</li>
-                   </ul>
-               </div>
-               <div class="footer-col">
-                   <h4> Help</h4>
-                   <ul>
-                       <li><a href="#">About Me</a></li>
-                   </ul>
-               </div>
-               <div class="footer-col">
-                   <h4>Important Links</h4>
-                   <ul>
-                       <li><a href="StyleGuide.html">Style Guide</a></li>
-                       <li><a href="https://github.com/amanm007/P03-IAT-339">Git Hub</a></li>
-
-                   </ul>
-               </div>
-
-           </div>
-       </div>
-   </footer>
+     <footer class="site-footer">
+        <div class="footer-social">
+            <!-- Social Icons -->
+            <a href="https://www.artstation.com/sssn1pee" class="fab fa-artstation"></a>
+            <a href="https://www.linkedin.com/in/aman-singh-aa985a195/" class="fab fa-linkedin"></a>
+            <a href="https://twitter.com/AmanSin86175493" class="fab fa-twitter"></a>
+            <a href="https://www.youtube.com/@amanmatharu24/videos" class="fab fa-youtube"></a>
+            <a href="https://github.com/amanm007/P03-IAT-339" class="fab fa-github"></a>
+        </div>
+        <div class="footer-links">
+            <!-- Navigation Links -->
+            <a href="index.html">Home</a>
+            <a href="game.html">Games</a>
+            <a href="About.html">About Me</a>
+            <a href="Styleguide.html">Styleguide</a>
+            <a href="contact.html">Contact</a>
+            
+            
+        </div>
+        <div class="footer-bottom">
+            <a>  Aman Singh &copy; Simon Fraser University  |  School of Interactive Arts and Technology </a>
+        </div>
+    </footer>
+   <script>
+    var slideIndex = 0; // start with the first slide
+    
+    // Function to change slide
+    function slide(moveStep) {
+      var slides = document.getElementsByClassName("video-slide");
+      slideIndex += moveStep;
+      
+      if (slideIndex >= slides.length) {
+        slideIndex = 0; // go back to first slide
+      }
+      if (slideIndex < 0) {
+        slideIndex = slides.length - 1; // go to last slide
+      }
+    
+      // Hide all slides
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      // Show the new slide
+      slides[slideIndex].style.display = "block";
+    }
+    
+    // Initialize the slider by showing the first slide
+    slide(0);
+    </script>
 
 
 </body>

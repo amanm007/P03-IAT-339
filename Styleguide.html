@@ -8,129 +8,215 @@
     <title>Style Guide</title>
 
     <link href="css/index.css" rel="stylesheet">
+    <link href="css/about.css" rel="stylesheet">
+    <link href="css/contact.css" rel="stylesheet">
+    <link href="css/game.css" rel="stylesheet">
+    
+    
 
-    <link href="css/Project1.css" rel="stylesheet">
-    <link href="css/Project2.css" rel="stylesheet">
     <link href="css/StyleGuide.css" rel="stylesheet">
-
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
+<div class="container-navbar">
+    <div id="header-wrapper">
+        <header>
+            <div class="logo">
+                <a href="index.html">
+                    <h2>A.S. </h2>
+                </a>
 
-<body>
-    <!-- Section  Header Start -->
-
-    <div class="container-navbar">
-        <div id="header-wrapper">
-            <header>
-                <div class="logo">
-                    <a href="index.html">
-                        <h2>Aman Singh </h2>
-                    </a>
-
-                </div>
-
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="game.html">Games</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
-    </div>
-
-    <h2>Style Guide</h2>
-
-    <section class="nav">
-        <h3>Nav Bar</h3>
-        <div class="container-navbar">
-            <div id="header-wrapper">
-                <header>
-                    <div class="logo">
-                        <a href="index.html">
-                            <h2>Aman Singh </h2>
-                        </a>
-
-                    </div>
-
-                    <nav class="navbar">
-                        <ul>
-                            <li><a href="about.html">Games</a></li>
-                        <li><a href="Project_1.html">About</a></li>
-                        <li><a href="Project_2.html">Contact</a></li>
-                    </ul>
-                    </nav>
-                </header>
             </div>
-        </div>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="game.html">Games</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+</div>
+<!-- INTERACTIVE ELEMENTS SECTION -->
+
+<section id="styleguide">
+    <!-- Typography -->
+    <section class="element">
+      <h3>Headings and Paragraphs</h3>
+      <h4>CSS selector:</h4>
+      <p>h1, h2, h3, p</p>
+      <h4>Sample code:</h4>
+      <code>&lt;h1&gt;Heading 1&lt;/h1&gt;&lt;h2&gt;Heading 2&lt;/h2&gt;&lt;h3&gt;Heading 3&lt;/h3&gt;&lt;p&gt;Paragraph text&lt;/p&gt;</code>
+      <h4>Rendered element:</h4>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <p>Paragraph text</p>
+    </section>
+  
+    <!-- Navigation Bar -->
+    <section class="element">
+      <h3>Navigation Bar</h3>
+      <h4>CSS selector:</h4>
+      <p>.navbar, .navbar ul, .navbar li, .navbar a</p>
+      <h4>Sample code:</h4>
+      <code>
+        &lt;nav class="navbar"&gt;<br>
+        &nbsp;&nbsp;&lt;ul&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;<br>
+        &nbsp;&nbsp;&lt;/ul&gt;<br>
+        &lt;/nav&gt;
+      </code>
+      <h4>Rendered element:</h4>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </section>
+    <section class="game-box-section">
+        <h2>Game Box</h2>
+        <p>The game box is used to feature games on the portfolio. It includes an image of the game, the game title, and some details about the project.</p>
+        
+        <div class="element">
+            <h3>Example Game Box</h3>
+            <div class="game-box" onclick="location.href='storge.html';">
+                <img src="images/storge1.png" alt="The Storge">
+                <div class="game-info">
+                    <h3>Storge (2023)</h3>
+                    <p>Duration: September 2023-January 2024</p>
+                    <p>Type: University Project</p>
+                    <p>Role: Lead mechanics gameplay programmer and SFX designer</p>
+                    <p>Engine and Tools: Unity </p>
+                </div>
+            </div>
+    
+            <h4>Sample Code:</h4>
+            <code>
+                &lt;div class="game-box" onclick="location.href='storge.html';"&gt;
+                    &lt;img src="images/storge1.png" alt="The Storge"&gt;
+                    &lt;div class="game-info"&gt;
+                        &lt;h3&gt;Storge (2023)&lt;/h3&gt;
+                        &lt;p&gt;Duration: September 2023-January 2024&lt;/p&gt;
+                        &lt;p&gt;Type: University Project&lt;/p&gt;
+                        &lt;p&gt;Role: Lead mechanics gameplay programmer and SFX designer&lt;/p&gt;
+                        &lt;p&gt;Engine and Tools: Unity &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            </code>
     </section>
 
-    <!-- Block -->
-    <div style="background-color: #060606 ; padding: 2px;"></div>
-
-    <section class="font">
-        <h2 style="font-size:2rem;">Fonts Used: Poppins</h3>
-
-        <h2>Heading 1</h2>
-        <h3>Heading 2</h3>
-        <h4>Heading 3</h4>
-        <p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz </p>
-        <p>0 1 2 3 4 5 6 7 8 9</p>
+    <section class="video-slider-section">
+        <h2>Video Slider</h2>
+        <p>The video slider is used to showcase various video clips of games, providing a dynamic visual representation of gameplay, mechanics, and other features.</p>
+        
+        <div class="element">
+            <h3>Example Video Slider</h3>
+            <div id="video-slider">
+                <!-- Buttons for navigation -->
+                <button class="slide-arrow prev-arrow" onclick="slide(-1)">&#10094;</button>
+                <button class="slide-arrow next-arrow" onclick="slide(1)">&#10095;</button>
+                
+                <!-- Video slides -->
+                <div class="video-slide">
+                    <div class="video-title">Game Mechanics</div>
+                    <video width="100%" height="auto" autoplay muted loop controls>
+                        <source src="videos/slowandsteady_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- ... more video slides can be added here -->
+            </div>
+    
+            <h4>Sample Code:</h4>
+            <code>
+                &lt;div id="video-slider"&gt;
+                    &lt;button class="slide-arrow prev-arrow" onclick="slide(-1)"&gt;&#10094;&lt;/button&gt;
+                    &lt;button class="slide-arrow next-arrow" onclick="slide(1)"&gt;&#10095;&lt;/button&gt;
+                    &lt;div class="video-slide"&gt;
+                        &lt;div class="video-title"&gt;Game Mechanics&lt;/div&gt;
+                        &lt;video width="100%" height="auto" autoplay muted loop controls&gt;
+                            &lt;source src="videos/slowandsteady_video.mp4" type="video/mp4"&gt;
+                            Your browser does not support the video tag.
+                        &lt;/video&gt;
+                    &lt;/div&gt;
+                    &lt;!-- ... more video slides can be added here --&gt;
+                &lt;/div&gt;
+            </code>
     </section>
-
-    <section class="Color">
-
+  
+    <!-- Buttons -->
+    <section class="element">
+      <h3>Buttons</h3>
+      <h4>CSS selector:</h4>
+      <p>button, .button-primary, .button-secondary</p>
+      <h4>Sample code:</h4>
+      <code>&lt;button class="button-primary"&gt;Primary Button&lt;/button&gt;&lt;button class="button-secondary"&gt;Secondary Button&lt;/button&gt;</code>
+      <h4>Rendered element:</h4>
+      <button class="button-primary">Primary Button</button>
+      
     </section>
-
- <!-- Block -->
- <div style="background-color: #060606 ; padding: 2px;"></div>
-
-<section class="buttons1">
-    <h3>Buttons</h3>
-    <form action="#">
-        <button>Go to project</button>
-    </form>
-</section>
-
- <!-- Block -->
- <div style="background-color: #060606 ; padding: 2px;"></div>
-
-
-
-
+  
+    <!-- Form Elements -->
+    <section class="element">
+      <h3>Form Elements</h3>
+      <h4>CSS selector:</h4>
+      <p>input[type="text"], input[type="email"], textarea</p>
+      <h4>Sample code:</h4>
+      <code>
+        &lt;input type="text" placeholder="Text Input" class="input-text"/&gt;<br>
+        &lt;input type="email" placeholder="Email Input" class="input-email"/&gt;<br>
+        &lt;textarea placeholder="Textarea"&gt;&lt;/textarea&gt;
+      </code>
+      <h4>Rendered element:</h4>
+     
+      <textarea placeholder="Textarea"></textarea>
+    </section>
+  
+    <!-- Color Palette -->
+    <section class="element">
+      <h3>Color Palette</h3>
+      <h4>Colors used:</h4>
+      <div class="color-palette">
+        <div class="color-swatch" style="background-color: maroon;"></div>
+        <div class="color-swatch" style="background-color: black;"></div>
+        <div class="color-swatch" style="background-color: white;"></div>
+        <!-- Add more color swatches as needed -->
+      </div>
+    </section>
+  </section>
+<body>
+  
 
     <!-- Footer Referred from https://www.youtube.com/watch?v=YOb67OKw62s -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>About Me</h4>
-                    <ul>
-                        <li>Aman Singh</li>
-                        <li>Simon Fraser University</li>
-                        <li>Interactive Arts and Technology</li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4> Help</h4>
-                    <ul>
-                        <li><a href="about.html">About Me</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Important Links</h4>
-                    <ul>
-                        <li><a href="StyleGuide.html">Style Guide</a></li>
-                        <li><a href="https://github.com/amanm007/P03-IAT-339">Git Hub</a></li>
-                        <li><a href="Citation.html">Citations</a></li>
-
-                    </ul>
-                </div>
-
-            </div>
+    <footer class="site-footer">
+        <div class="footer-social">
+            <!-- Social Icons -->
+            <a href="https://www.artstation.com/sssn1pee" class="fab fa-artstation"></a>
+        <a href="https://www.linkedin.com/in/aman-singh-aa985a195/" class="fab fa-linkedin"></a>
+        <a href="https://twitter.com/AmanSin86175493" class="fab fa-twitter"></a>
+        <a href="https://www.youtube.com/@amanmatharu24/videos" class="fab fa-youtube"></a>
+        <a href="https://github.com/amanm007/P03-IAT-339" class="fab fa-github"></a>
+        </div>
+        <div class="footer-links">
+            <!-- Navigation Links -->
+            <a href="index.html">Home</a>
+            <a href="game.html">Games</a>
+            <a href="About.html">About Me</a>
+            <a href="Styleguide.html">Styleguide</a>
+            <a href="contact.html">Contact</a>
+            
+            
+        </div>
+        <div class="footer-bottom">
+            <a>  Aman Singh &copy; Simon Fraser University  |  School of Interactive Arts and Technology </a>
         </div>
     </footer>
 </body>

@@ -10,3 +10,127 @@
 .buttons1{
     padding:2%;
 }
+
+
+  .video-slide {
+    position: relative; 
+     
+    width: 100%;
+  }
+  
+  .video-slide {
+     
+    width: 30%;
+  }
+  
+  .section {
+    margin-bottom: 40px; 
+    padding: 20px; 
+    background-color: #fff; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+}
+
+
+.video-slider-section {
+    margin-bottom: 60px; 
+}
+
+/* Additional styles */
+.element {
+    margin-bottom: 20px; 
+    background-color: #f8f8f8; 
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.color-palette {
+    display: flex;
+    gap: 10px; 
+    margin-top: 10px; 
+}
+
+.color-swatch {
+    width: 50px; 
+    height: 50px;
+    display: inline-block;
+    border: 1px solid #ccc; 
+}
+
+
+.site-footer {
+    margin-top: 60px; 
+}
+
+/* Navigation Bar */
+.navbar {
+    margin-bottom: 30px; 
+}
+
+
+.game-box img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 5px; 
+}
+
+
+.video-slide video {
+    width: 100%; 
+    height: auto; 
+}
+
+
+#styleguide > section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+#styleguide .element {
+    margin-bottom: 20px;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+#header-wrapper {
+    background-color: black; 
+    width: 100%;
+    padding: 1rem 0; 
+    position: fixed;
+    top: 0;
+    z-index: 10; 
+}
+
+
+body {
+    padding-top: 100px; 
+    background-color: #000; 
+    color: #fff; 
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+
+#styleguide > section:first-child {
+    padding-top: 100px; 
+}
+
+
+.content, .main, .games-container, .contact-container {
+    margin-top: 20px; 
+}
+
+
+.navbar {
+    margin-top: 1rem; 
+}
+
+
+.navbar + .section {
+    padding-top: 2rem; 
+}

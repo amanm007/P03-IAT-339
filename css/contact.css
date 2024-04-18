@@ -35,8 +35,8 @@ body {
     width: 100%;
     padding: 10px;
     border:2px solid maroon;
-    background-color: #333; /* Darker background for inputs */
-    color: #fff; /* White text for inputs */
+    background-color: #333; 
+    color: #fff; 
 }
 
 textarea {
@@ -44,8 +44,8 @@ textarea {
     height: 150px;
     padding: 10px;
     border: 2px solid maroon;
-    background-color: #333; /* Darker background for textarea */
-    color: #fff; /* White text for textarea */
+    background-color: #333; 
+    color: #fff; 
 }
 
 button {
@@ -54,8 +54,8 @@ button {
     margin: 0 auto;
     border: none;
     background-color: maroon; 
-    color: #fff; /* White text for the button */
-    border-radius: 20px; /* Rounded corners for the button */
+    color: #fff; 
+    border-radius: 20px; 
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -65,7 +65,7 @@ button:hover {
 }
 
 a {
-    color: maroon; /* Light blue for email link */
+    color: maroon; 
     text-decoration: none;
 }
 
@@ -76,7 +76,7 @@ a:hover {
 .form-group input[type="email"]:focus,
 textarea:focus {
     outline: none;
-    border-color: maroon; /* Maroon border for the text fields when they are focused */
+    border-color: maroon; 
 }
 
 /* Add responsiveness */
