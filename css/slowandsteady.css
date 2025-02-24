@@ -35,6 +35,12 @@ section {
     margin-left: auto;
     margin-right: auto; 
 }
+.video-wrapper iframe {
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    border: none; /* Remove iframe border */
+}
+
 .image-wrapper {
     margin-top: 10%; 
     width: 100%; 
@@ -47,10 +53,75 @@ section {
     height: auto; 
     margin-left: auto;
     margin-right: auto; 
-    
 }
 
+/* Image Slider Styles */
+.image-slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
 
+.image-slide {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+.image-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+.image-title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    padding: 5px 10px;
+    background-color: maroon;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    z-index: 2;
+    margin-top: 10px; /* Adjust as needed */
+}
+.image-slide:first-child {
+    display: block;
+}
+
+.slide-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    cursor: pointer;
+    background-color: maroon;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.slide-arrow:hover {
+    background-color: #a94442;
+}
+
+.prev-arrow {
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.next-arrow {
+    right: 0;
+    transform: translateY(-50%);
+}
 
 .game-info-wrapper,
 .game-image-wrapper,
@@ -238,5 +309,3 @@ section {
     background-color: #a94442; 
     color: #fff;
 }
-  
-  
