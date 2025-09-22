@@ -66,7 +66,8 @@ body{
     display: flex; /* Align items in a row */
     align-items: center; /* Center items vertically */
     gap: 20px; /* Space between image and text */
-    margin-top: 50%;
+    margin-top: 50%0;
+    
 }
 
 .latest-work img {
@@ -79,6 +80,7 @@ body{
     color: #ffffff; /* Or any color you prefer */
 }
 .latest-work {
+    gap: 16px;
     margin-top: 40px; /* Space from the content above */
     padding-left: 15%; /* Align with the content above */
     text-align: left; /* Align text to the left */
@@ -86,12 +88,21 @@ body{
     flex-direction: column; /* Stack elements vertically */
 }
 .latest-work-section {
-    margin-top: 20%;
+    margin-top: 4%;
 
     background-color: #222; /* Or any background color you prefer */
     padding: 20px;
    
     max-width: 40%; /* Sets the max width of the section */
+    
+    background: rgba(255, 255, 255, 0.1); /* translucent white */
+    backdrop-filter: blur(12px);          /* blur background behind */
+    -webkit-backdrop-filter: blur(12px);  /* Safari support */
+    padding: 20px;
+    max-width: 40%;
+    border-radius: 16px;                  /* rounded edges for glass look */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* subtle glass border */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37); /* soft shadow for depth */
 
 }
 
