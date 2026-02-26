@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jetpack FPS</title>
+    <meta name="description" content="Jetpack FPS project breakdown: movement systems, Unreal Engine 5 implementation, and gameplay engineering process.">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/about.css" rel="stylesheet">
+    <link href="css/game.css" rel="stylesheet">
+    <link href="css/slowandsteady.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <!-- Section  Header Start -->
+
+    <div class="container-navbar">
+       <div id="header-wrapper">
+           <header>
+               <div class="logo">
+                   <a href="index.html">
+                       <h2>A.S. </h2>
+                   </a>
+
+               </div>
+
+               <nav class="navbar">
+                   <ul>
+                    <li><a href="game.html">Games</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                   </ul>
+               </nav>
+           </header>
+       </div>
+   </div>
+   <section class="games-container">
+    <a class="game-box" href="jetpackfps.html" aria-label="Jetpack FPS project overview">
+        <img src="images/jetpackfps.png" alt="Jetpack FPS" decoding="async">
+        <div class="game-info">
+            <h3>Jetpack FPS (2025)</h3>
+            <p><strong>Duration:</strong> October 2025 – Present</p>
+            <p><strong>Type:</strong> Personal Project</p>
+            <p><strong>Role:</strong> Gameplay Programmer</p>
+            <p><strong>Engine and Tools:</strong> Unreal Engine 5, C++ & Blueprints</p>
+            <!-- Add more details here -->
+        </div>
+    </a>
+</section>
+<section id="game-details">
+   
+
+    <div class="game-description">
+        <h2 class="game-description-title">What is Jetpack FPS?</h2>
+        <p class="game-description-text">Jetpack FPS is a self-directed personal project built in Unreal Engine 5 using C++ and Blueprints. Inspired by the fast, expressive movement systems in games like Black Ops 3, the goal was to engineer a prototype that captures the feeling of fluid, momentum-based traversal — where every movement state flows naturally into the next.</p>
+            <div class="video-wrapper">
+                <iframe width="100%" height="auto" style="aspect-ratio:16/9" src="https://www.youtube.com/embed/l49dprzF_OA" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="game-description-text">This is a movement-focused prototype — no enemies, no objectives. The entire scope of the project is dedicated to getting traversal right: how it feels to sprint, slide, wallrun, and jetpack through a space. Movement is the soul of an FPS, and this project is built around proving that.</p>
+
+        <!-- Video or image showcase -->
+    </div>
+
+    <div class="game-mechanics">
+        <h2 class="game-description-title">Mechanics and Gameplay</h2>
+        <div class="video-wrapper">
+            <iframe width="100%" height="auto" style="aspect-ratio:16/9" src="https://www.youtube.com/embed/l49dprzF_OA" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="contribution-summary">
+        <h2 class="game-description-title">Summary of Contributions</h2>
+        <p class="game-description-text"><strong>Multi-State Locomotion Architecture:</strong> Designed a modular state machine with 8 locomotion states — Walk, Sprint, Crouch, Slide, WallRun, Jetpack, Prone, and Airborne. Each state transition is centralized through a single SetMovementState function with an OnMovementStateChange callback, handling side effects like capsule resizing, gravity scaling, and jump count resets. Conflict resolution logic prevents overlapping systems from fighting each other — for example, ADS cancelling auto-sprint, or jetpack cancelling an active ledge slide.</p>
+        <p class="game-description-text"><strong>Analog Jetpack System:</strong> Implemented a curve-driven jetpack where thrust intensity ramps up based on how long the player holds the input — using a CurveFloat sampled from HoldAlpha (HoldDuration / MaxHoldDuration). Fuel drain is scaled per tick by thrust intensity so short taps consume almost nothing while sustained holds drain quickly. Timer-based update loops (rather than per-frame Tick) ensure the fuel behavior is frame-rate independent. Identified and resolved a synchronization bug where micro-tap thrust applied before the first drain tick, causing fuel to never decrement on short presses.</p>
+        <p class="game-description-text"><strong>Custom C++ Async Root Motion Plugin:</strong> Extended a Blueprint async action plugin in C++ to wrap Unreal's FRootMotionSource_ConstantForce, exposing cancellable curve-driven movement forces to Blueprint workflows with OnComplete and OnFail delegates. This replaced LaunchCharacter impulse calls — which felt snappy and disconnected — with forces that build, sustain, and bleed off naturally, giving the jetpack and slide a momentum-based feel. The plugin stores a RootMotionSourceID for clean lifecycle management and cancellation.</p>
+        <p class="game-description-text"><strong>FPS Animation Integration:</strong> Integrated an FPS animation pack into a third-person character Blueprint using interface-driven component access — decoupling the character from the animation components (CameraAnimator, ViewmodelController, GAIT locomotion) through Blueprint interfaces. This enables seamless first-person viewmodel transitions across all locomotion states with layered ADS, recoil, FOV, and camera tilt effects without the character Blueprint needing direct references to animation components.</p>
+        <p class="game-description-text"><strong>UE4 to UE5 Migration:</strong> Migrated the Unreal Engine 4 ShooterGame template to Unreal Engine 5.5 via C++, resolving numerous deprecated API breakages and updating the codebase to use modern UE5 conventions. Enabled Lumen Global Illumination, Virtual Shadow Maps, Nanite, and Temporal Super Resolution — repurposing the HighRise level from the template as the playable demo environment for this project.</p>
+
+                 
+                 
+    </div>
+  
+    <div class="Process">
+        <h2 class="game-description-title">Process</h2>
+        <p class="game-description-text">The project started with a simple question: what makes FPS movement feel good? I began by building the state machine foundation — getting clean transitions between basic locomotion states before adding complexity. The jetpack system went through multiple iterations: starting with AddForce calls, moving to LaunchCharacter, and finally landing on root motion sources after identifying that impulse-based approaches couldn't produce the sustained, controllable feel I was after. The C++ plugin was written to solve a specific problem — Blueprint had no clean way to apply a cancellable, duration-based force with completion callbacks. Debugging the timer synchronization bug in the fuel system was a key learning moment: matching the drain timer interval to the thrust timer interval (both at 0.02s) fixed a subtle edge case where micro-taps never triggered a drain tick. The UE5 migration came later, once the core systems were stable, and unlocked the Lumen lighting and Nanite geometry that give the demo its final visual quality.</p>
+    </div>
+
+    <div class="reflection">
+        <h2 class="game-description-title">Reflection</h2>
+        <p class="game-description-text">Building this prototype taught me more about game feel engineering than any course I've taken. The gap between 'technically correct' and 'feels right' is enormous — and closing that gap requires iterating on things that are hard to quantify: does the jetpack feel weighty enough? Does the slide feel committed without feeling punishing? Working at both the Blueprint and C++ level in the same project gave me a much clearer picture of when each layer is the right tool. The C++ plugin in particular was a step outside my comfort zone and one of the most valuable things I built — it forced me to understand Unreal's movement architecture at a deeper level than Blueprints alone would allow.</p>
+    </div>
+
+    <div class="link-build ">
+        <h2 class="game-description-title">Watch the Prototype Demo</h2>
+        <a href="https://www.youtube.com/watch?v=l49dprzF_OA" target="_blank" class="game-download-link">Watch on YouTube</a>
+       
+    </div>
+
+
+  
+</section>
+   
+
+
+     
+   
+
+
+     <!-- Footer Referred from https://www.youtube.com/watch?v=YOb67OKw62s -->
+     <footer class="site-footer">
+        <div class="footer-social">
+            <!-- Social Icons -->
+            <a href="https://www.artstation.com/sssn1pee" class="fab fa-artstation" aria-label="ArtStation profile"></a>
+            <a href="https://www.linkedin.com/in/aman-singh-aa985a195/" class="fab fa-linkedin" aria-label="LinkedIn profile"></a>
+            <a href="https://twitter.com/AmanSin86175493" class="fab fa-twitter" aria-label="Twitter profile"></a>
+            <a href="https://www.youtube.com/@amanmatharu24/videos" class="fab fa-youtube" aria-label="YouTube channel"></a>
+            <a href="https://github.com/amanm007/P03-IAT-339" class="fab fa-github" aria-label="GitHub repository"></a>
+        </div>
+        <div class="footer-links">
+            <!-- Navigation Links -->
+            <a href="index.html">Home</a>
+            <a href="game.html">Games</a>
+            <a href="about.html">About Me</a>
+            <a href="Styleguide.html">Styleguide</a>
+            <a href="contact.html">Contact</a>
+            <a href="citations.html">Citations</a>
+            
+            
+        </div>
+        <div class="footer-bottom">
+            <a>  Aman Singh &copy; Simon Fraser University  |  School of Interactive Arts and Technology </a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,7 +1,7 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #000;
-    color: #fff;
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    color: var(--color-text);
     margin: 0;
     padding: 0;
 }
@@ -85,8 +85,8 @@ section {
     transform: translateX(-50%);
     width: auto;
     padding: 5px 10px;
-    background-color: maroon;
-    color: #fff;
+    background-color: var(--color-accent);
+    color: var(--color-text);
     text-align: center;
     font-size: 1.5em;
     z-index: 2;
@@ -101,16 +101,18 @@ section {
     top: 50%;
     z-index: 10;
     cursor: pointer;
-    background-color: maroon;
+    background-color: var(--color-accent);
     border: none;
-    color: white;
+    color: var(--color-text);
     padding: 10px;
     font-size: 18px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(var(--color-cyan-rgb), 0.55);
 }
 
 .slide-arrow:hover {
-    background-color: #a94442;
+    background-color: var(--color-accent-hover);
+    box-shadow: 0 0 14px rgba(var(--color-accent-rgb), 0.35), 0 0 8px rgba(var(--color-cyan-rgb), 0.28);
 }
 
 .prev-arrow {
@@ -156,13 +158,13 @@ section {
 }
 
 .games-section {
-    background-color: #000; 
-    color: #fff; 
+    background-color: var(--color-bg);
+    color: var(--color-text);
     text-align: center; 
 }
 .game-description-title {
     margin-bottom: 5%; 
-    color: maroon; 
+    color: var(--color-accent);
 }
 
 .game-description-text {
@@ -187,7 +189,7 @@ section {
 }
 
 .game h2 {
-    color: maroon; 
+    color: var(--color-accent);
     font-size: 2rem; 
 }
 
@@ -201,20 +203,25 @@ section {
     justify-content: center;
     gap: 20px;
     padding: 20px;
-    background-color: #000; 
+    background-color: var(--color-bg);
 }
 
 .game-box {
+    display: block;
     width: 600px; 
-    cursor: pointer;
-    border: 2px solid maroon; 
+    border: 1px solid rgba(var(--color-cyan-rgb), 0.58);
     border-radius: 10px; 
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    color: inherit;
+    text-decoration: none;
+    box-shadow: 0 0 0 1px rgba(var(--color-accent-rgb), 0.4), 0 0 16px rgba(var(--color-accent-rgb), 0.18);
 }
 
 .game-box:hover {
     transform: scale(1.05);
+    border-color: rgba(var(--color-cyan-rgb), 0.9);
+    box-shadow: 0 0 0 1px rgba(var(--color-cyan-rgb), 0.7), 0 0 22px rgba(var(--color-accent-rgb), 0.4);
 }
 
 .game-box img {
@@ -225,12 +232,13 @@ section {
 
 .game-info {
     padding: 10px;
-    background-color: #111; 
-    color: #fff; 
+    background-color: var(--color-surface);
+    color: var(--color-text);
 }
 
 .game-info h3 {
-    color: maroon; 
+    color: var(--color-accent);
+    text-shadow: 0 0 10px rgba(var(--color-accent-rgb), 0.32);
 }
 
 .game-info p {
@@ -261,7 +269,7 @@ section {
     top: 50%;
     z-index: 10;
     cursor: pointer;
-    background-color: maroon;
+    background-color: var(--color-accent);
     border: none;
     transition: transform 0.3s ease;
   }
@@ -273,11 +281,13 @@ section {
     transform: translateX(-50%); 
     width: auto;
     padding: 5px 10px;
-    background-color: maroon; 
-    color: #fff;
+    background-color: var(--color-accent);
+    color: var(--color-text);
     text-align: center;
     font-size: 1.5em; 
     z-index: 2; 
+    border: 1px solid rgba(var(--color-cyan-rgb), 0.45);
+    box-shadow: 0 0 14px rgba(var(--color-accent-rgb), 0.3);
   }
   .prev-arrow {
     left: 0;
@@ -295,17 +305,19 @@ section {
   }
   .game-download-link {
     display: inline-block;
-    background-color: maroon;
-    color: white;
+    background: linear-gradient(90deg, rgba(var(--color-accent-rgb), 0.95), rgba(var(--color-accent-rgb), 0.62));
+    color: var(--color-text);
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
+    border: 1px solid rgba(var(--color-cyan-rgb), 0.55);
     margin-top: 20px;
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
 .game-download-link:hover {
-    background-color: #a94442; 
-    color: #fff;
+    background: linear-gradient(90deg, rgba(var(--color-accent-rgb), 1), rgba(var(--color-accent-rgb), 0.74));
+    box-shadow: 0 0 20px rgba(var(--color-accent-rgb), 0.45), 0 0 10px rgba(var(--color-cyan-rgb), 0.35);
+    color: var(--color-text);
 }

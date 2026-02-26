@@ -23,10 +23,10 @@
     width: 30%;
   }
   
-  .section {
+.section {
     margin-bottom: 40px; 
     padding: 20px; 
-    background-color: #fff; 
+    background-color: var(--color-text);
     border-radius: 5px; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
 }
@@ -39,7 +39,7 @@
 /* Additional styles */
 .element {
     margin-bottom: 20px; 
-    background-color: #f8f8f8; 
+    background-color: var(--color-bg);
     padding: 10px;
     border-radius: 5px;
 }
@@ -85,7 +85,7 @@
 #styleguide > section {
     margin-bottom: 40px;
     padding: 20px;
-    background-color: black;
+    background-color: var(--color-bg);
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
@@ -93,12 +93,12 @@
 
 #styleguide .element {
     margin-bottom: 20px;
-    background-color: black;
+    background-color: var(--color-bg);
     padding: 10px;
     border-radius: 5px;
 }
 #header-wrapper {
-    background-color: black; 
+    background-color: var(--color-bg);
     width: 100%;
     padding: 1rem 0; 
     position: fixed;
@@ -109,9 +109,9 @@
 
 body {
     padding-top: 100px; 
-    background-color: #000; 
-    color: #fff; 
-    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-primary);
     margin: 0;
 }
 

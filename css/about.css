@@ -1,104 +1,92 @@
-
-.about{
-    /* width: 100%;
-    margin-top: 7%;
-    padding: 78px 0px; */
+.about {
     display: grid;
-    grid-template-columns: 40% 60%;
-    margin-top:5%;
+    grid-template-columns: minmax(260px, 420px) minmax(320px, 1fr);
+    gap: clamp(2rem, 4vw, 4rem);
+    max-width: 1200px;
+    margin: clamp(6rem, 10vh, 8rem) auto 2.5rem;
+    padding: 0 clamp(1rem, 4vw, 2.5rem);
+    align-items: start;
+}
+
+.main {
+    width: 100%;
 }
 
 .about img {
-    width: 100%; 
-    max-width: 600px; 
-    height: auto;
-    margin-left: auto; 
-    margin-right: auto; 
-    display: block; 
-}
-.about-text{
-    width: 50%;
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 18px;
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
 }
 
-.about-text h2{
-    font-size: 2rem;
-    text-transform: capitalize;
-   
- }
-
- .about-text p{
-    text-transform: capitalize;
-    letter-spacing: 3px;
-    line-height: 28px;
-     margin-top: 5%; 
-    /* margin-bottom: 45px; */
- }
-.resume{
-    padding:2%;
-    margin-left: -2%;
-
+.about-text {
+    width: 100%;
+    max-width: 720px;
+    padding: 0.5rem 0;
 }
+
 .about-text h1 {
-    font-size: 3rem; 
-    color: white;
-    margin-bottom: 0.5rem;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.1;
+    color: var(--color-text);
+    margin-bottom: 0.4rem;
 }
-
 
 .gameplay-programmer {
-    color: maroon; 
-    font-size: 2.5rem; 
-    margin-bottom: 2rem;
+    color: var(--color-accent);
+    font-size: clamp(1.5rem, 3.2vw, 2.4rem);
+    margin-bottom: 1.6rem;
 }
 
+.about-text h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+}
 
 .about-text p {
-    color: white; 
-   
+    color: var(--color-text);
+    text-transform: none;
+    letter-spacing: 0.01em;
+    line-height: 1.8;
+    margin-top: 1.2rem;
+    max-width: 62ch;
 }
 
-
-@media (max-width: 900px) {
-   
-    .about-text h1 {
-        font-size: 2.5rem; 
-    }
-
-    .gameplay-programmer {
-        font-size: 2rem; 
-    }
-
-   
-}
-
-@media (max-width: 768px) {
-    .footer-social,
-    .footer-links {
-        flex-direction: column;
-    }
-}
 .resume {
-    margin-top: 1rem; /* Adjust the margin to control spacing */
-    padding: 2%;
+    margin-top: 1.8rem;
 }
 
 .resume h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem; /* Space between heading and link */
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
 }
 
 .resume a {
-    display: inline-block; /* Allows margin and padding to be applied */
-    background-color: maroon;
-    color: white;
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-text);
     text-decoration: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: var(--radius-sm);
     transition: background-color 0.3s ease;
 }
 
 .resume a:hover {
-    background-color: #a94442; /* Lighter maroon on hover */
+    background-color: var(--color-accent-hover);
 }
 
+@media (max-width: 900px) {
+    .about {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        margin-top: 6rem;
+    }
 
+    .about-text {
+        text-align: left;
+    }
+}

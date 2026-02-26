@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>Contact | Aman Singh</title>
+    <meta name="description" content="Contact Aman Singh for gameplay programming opportunities and collaborations.">
     <link href="css/index.css" rel="stylesheet">
     <link href="css/about.css" rel="stylesheet">
     <link href="css/contact.css" rel="stylesheet">
@@ -44,13 +45,18 @@
         
         <form action="your-server-side-script" method="POST">
             <div class="form-group">
-                <input type="text" id="first-name" name="first_name" placeholder="First Name">
-                <input type="text" id="last-name" name="last_name" placeholder="Last Name">
+                <label class="sr-only" for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first_name" placeholder="First Name" autocomplete="given-name">
+                <label class="sr-only" for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last_name" placeholder="Last Name" autocomplete="family-name">
             </div>
             <div class="form-group">
-                <input type="email" id="email" name="email" placeholder="Email" required>
+                <label class="sr-only" for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" autocomplete="email" required>
+                <label class="sr-only" for="subject">Subject</label>
                 <input type="text" id="subject" name="subject" placeholder="Subject">
             </div>
+            <label class="sr-only" for="message">Message</label>
             <textarea id="message" name="message" placeholder="Leave me a message..."></textarea>
             <button type="submit">Submit</button>
         </form>
@@ -61,17 +67,17 @@
       <footer class="site-footer">
         <div class="footer-social">
             <!-- Social Icons -->
-            <a href="https://www.artstation.com/sssn1pee" class="fab fa-artstation"></a>
-            <a href="https://www.linkedin.com/in/aman-singh-aa985a195/" class="fab fa-linkedin"></a>
-            <a href="https://twitter.com/AmanSin86175493" class="fab fa-twitter"></a>
-            <a href="https://www.youtube.com/@amanmatharu24/videos" class="fab fa-youtube"></a>
-            <a href="https://github.com/amanm007/P03-IAT-339" class="fab fa-github"></a>
+            <a href="https://www.artstation.com/sssn1pee" class="fab fa-artstation" aria-label="ArtStation profile"></a>
+            <a href="https://www.linkedin.com/in/aman-singh-aa985a195/" class="fab fa-linkedin" aria-label="LinkedIn profile"></a>
+            <a href="https://twitter.com/AmanSin86175493" class="fab fa-twitter" aria-label="Twitter profile"></a>
+            <a href="https://www.youtube.com/@amanmatharu24/videos" class="fab fa-youtube" aria-label="YouTube channel"></a>
+            <a href="https://github.com/amanm007/P03-IAT-339" class="fab fa-github" aria-label="GitHub repository"></a>
         </div>
         <div class="footer-links">
             <!-- Navigation Links -->
             <a href="index.html">Home</a>
             <a href="game.html">Games</a>
-            <a href="About.html">About Me</a>
+            <a href="about.html">About Me</a>
             <a href="Styleguide.html">Styleguide</a>
             <a href="contact.html">Contact</a>
             <a href="citations.html">Citations</a>

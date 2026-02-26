@@ -3,6 +3,26 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --color-bg: #000;
+    --color-surface: #111;
+    --color-surface-elevated: #222;
+    --color-text: #fff;
+    --color-accent: #7f4dff;
+    --color-accent-hover: #9a75ff;
+    --color-accent-rgb: 127, 77, 255;
+    --color-accent-glow: rgba(127, 77, 255, 0.38);
+    --color-cyan-edge: #79ecff;
+    --color-cyan-rgb: 121, 236, 255;
+    --color-bloom-soft: 0 0 22px rgba(var(--color-accent-rgb), 0.34);
+    --color-border: #fff;
+    --font-primary: "Poppins", sans-serif;
+    --radius-sm: 5px;
+    --radius-md: 10px;
+    --radius-pill: 25px;
+}
+
 canvas {
     position: absolute;
     top: 0;
@@ -13,21 +33,21 @@ canvas {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: black; 
+    background-color: var(--color-bg);
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     z-index: -1; /* Send to back */
-  }
-
+}
 /* Header/Navbar */
 body{
-    font-family: 'Poppins', sans-serif;
-    background-color: #000; /* black background */
-    color: #fff; /* white text */
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    color: var(--color-text);
 }
 #header-wrapper {
-    border-bottom: 2px solid white; /* Adjust color and thickness as needed */
+    border-bottom: 1px solid rgba(var(--color-cyan-rgb), 0.52);
+    box-shadow: 0 1px 14px rgba(var(--color-accent-rgb), 0.24);
 }
 
 .content {
@@ -60,13 +80,13 @@ body{
 /* Additional styles for your latest work section */
 .latest-work h2 {
     font-size: 2.5rem; /* Adjust size to match the reference */
-    color: white; /* Or any color you prefer */
+    color: var(--color-text);
 }
 .latest-work-container {
     display: flex; /* Align items in a row */
     align-items: center; /* Center items vertically */
     gap: 20px; /* Space between image and text */
-    margin-top: 50%0;
+    margin-top: 50px;
     
 }
 
@@ -77,7 +97,7 @@ body{
 .latest-work-info h3 {
     margin: 0;
     font-size: 1.5rem; /* Adjust to match your reference */
-    color: #ffffff; /* Or any color you prefer */
+    color: var(--color-text);
 }
 .latest-work {
     gap: 16px;
@@ -90,7 +110,7 @@ body{
 .latest-work-section {
     margin-top: 4%;
 
-    background-color: #222; /* Or any background color you prefer */
+    background-color: var(--color-surface-elevated);
     padding: 20px;
    
     max-width: 40%; /* Sets the max width of the section */
@@ -101,8 +121,8 @@ body{
     padding: 20px;
     max-width: 40%;
     border-radius: 16px;                  /* rounded edges for glass look */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* subtle glass border */
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37); /* soft shadow for depth */
+    border: 1px solid rgba(var(--color-cyan-rgb), 0.42);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37), var(--color-bloom-soft);
 
 }
 
@@ -110,7 +130,7 @@ body{
     font-size: 2.5rem; /* Big, bold font for the section title */
     margin-bottom: 20px; /* Spacing between title and content */
    
-    color: #fff; /* White text color */
+    color: var(--color-text);
 }
 
 .latest-work-content {
@@ -135,7 +155,7 @@ body{
 }
 .latest-work-details h3 {
     font-size: 1.5rem; /* Adjust to the size you want for the project title */
-    color: #fff; /* White text color */
+    color: var(--color-text);
     margin-bottom: 10px; /* Spacing between project title and button */
 }
 
@@ -146,15 +166,15 @@ body{
 .latest-work-info h3 {
     font-size: 1.5rem; /* Adjust to the size you want for the project title */
     margin-bottom: 10px; /* Spacing between project title and button */
-    color: #fff; /* White text color */
+    color: var(--color-text);
 }
 
 
 .latest-work .butn button {
-    background: maroon; /* Background color */
-    color: white; /* Text color */
+    background: linear-gradient(90deg, rgba(var(--color-accent-rgb), 0.95), rgba(var(--color-accent-rgb), 0.62));
+    color: var(--color-text);
     text-decoration: none; /* Removes underline */
-    border: 2px solid maroon; /* Border color */
+    border: 1px solid rgba(var(--color-cyan-rgb), 0.5);
     font-size: 1rem; /* Adjust font size as needed */
     font-weight: bold; /* Bold text */
     padding: 10px 20px; /* Padding inside the button */
@@ -164,8 +184,9 @@ body{
 }
 
 .latest-work .butn button:hover {
-    background: rgba(128, 0, 0, 0.8); /* Slightly lighter maroon on hover */
-    color: #fff; /* Keep text color white */
+    background: linear-gradient(90deg, rgba(var(--color-accent-rgb), 1), rgba(var(--color-accent-rgb), 0.74));
+    box-shadow: 0 0 20px rgba(var(--color-accent-rgb), 0.45), 0 0 10px rgba(var(--color-cyan-rgb), 0.35);
+    color: var(--color-text);
     text-decoration: none; /* No underline on hover */
 }
 
@@ -186,8 +207,8 @@ body{
     /* position: fixed; */
     top: 0;
     z-index: 3;
-    color: white;
-    background-color: black;
+    color: var(--color-text);
+    background-color: var(--color-bg);
     position: fixed;
    
    
@@ -203,7 +224,7 @@ header{
     text-transform: uppercase;
 }
 .navbar{
-    color:white;
+    color: var(--color-text);
 }
 .navbar ul{
     overflow: auto;
@@ -216,32 +237,33 @@ header{
     margin: 1% 1%;
 }
 .title {
-    color: maroon; 
+    color: var(--color-accent);
     font-size: 4rem; 
 }
 button{
-    background: maroon;
-    color: white;
+    background: linear-gradient(90deg, rgba(var(--color-accent-rgb), 0.95), rgba(var(--color-accent-rgb), 0.62));
+    color: var(--color-text);
     text-decoration: none;
-    border: 3px solid maroon;
+    border: 1px solid rgba(var(--color-cyan-rgb), 0.5);
     font-size: 18px;
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 25px;
-    transition: .4s;
+    transition: .35s;
  }
  button:hover{
-    background: rgba(128, 0, 0, 0.411);
-    color: #fff;
+    background: linear-gradient(90deg, rgba(var(--color-accent-rgb), 0.78), rgba(var(--color-accent-rgb), 0.48));
+    box-shadow: 0 0 18px var(--color-accent-glow), 0 0 10px rgba(var(--color-cyan-rgb), 0.28);
+    color: var(--color-text);
     text-decoration: none;
  }
  
- .footer
+.footer
 
  {
     line-height: 1.5;
-    background-color: black;
-    color: white;
+    background-color: var(--color-bg);
+    color: var(--color-text);
     padding:2%;
  }
 
@@ -265,7 +287,7 @@ button{
 
 .footer-col h4{
     font-size:20px;
-    color: white ;
+    color: var(--color-text);
     margin-bottom: 20px;
     position: relative;
 }
@@ -273,7 +295,7 @@ button{
     content:'';
     position:absolute;
     bottom:-10px;
-    background-color: rgb(247, 117, 117);
+    background: linear-gradient(90deg, rgba(var(--color-accent-rgb), 0.95), rgba(var(--color-accent-rgb), 0.4));
     height:2px;
     width: 50px;
 }
@@ -289,7 +311,7 @@ button{
     font-size:16px;
     text-decoration: none;
     margin-bottom:5px;
-    color: #fff;
+    color: var(--color-text);
 
 }
 .footer-col ul li a:hover {
@@ -297,7 +319,7 @@ button{
 text-decoration: underline;
 }
 .role {
-    color: maroon; 
+    color: var(--color-accent);
 }
 
 @media screen and (max-width: 600px) {
@@ -352,7 +374,7 @@ text-decoration: underline;
         width: 100%;
         height: 3px;
         border-radius: 4px;
-        background-color: white;
+        background: linear-gradient(90deg, rgba(var(--color-cyan-rgb), 0.95), rgba(var(--color-accent-rgb), 0.65));
         bottom: 0;
         left: 0;
         transform-origin: right;
@@ -486,11 +508,12 @@ text-decoration: underline;
     }
 
 }
-site-footer {
-    background-color: black; 
-    color: white;
+.site-footer {
+    background-color: var(--color-bg);
+    color: var(--color-text);
     padding: 1rem 0;
     text-align: center;
+    box-shadow: 0 -1px 16px rgba(var(--color-accent-rgb), 0.16);
    
 }
 
@@ -498,28 +521,29 @@ site-footer {
 .footer-links {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
     padding: 0.5rem 0;
 }
 
 .footer-social a,
 .footer-links a {
-    color: white;
+    color: var(--color-text);
     padding: 0.5rem;
     text-decoration: none;
-    margin: 0 40px;
-    margin-top: 5rem;
+    margin: 0;
 }
 
 .footer-social a:hover,
 .footer-links a:hover {
-    color: maroon; 
+    color: var(--color-cyan-edge);
+    text-shadow: 0 0 12px rgba(var(--color-cyan-rgb), 0.45);
 }
 
 
 .footer-social .fab {
     font-size: 32px; 
-    margin: 0 20px; 
-    margin-top: 5rem;
+    margin: 0;
 }
 
 .footer-bottom {
@@ -527,7 +551,7 @@ site-footer {
   width: 100%;
   margin-top: 10px;
   padding-top: 20px;
-  border-top: 1px solid #fff; 
+  border-top: 1px solid rgba(var(--color-cyan-rgb), 0.45);
   
 }
 
@@ -542,4 +566,24 @@ site-footer {
     margin-bottom: 5%; 
     letter-spacing:4px;
     line-height: 40px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-cyan-edge);
+    outline-offset: 3px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
