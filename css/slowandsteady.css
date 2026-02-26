@@ -204,6 +204,7 @@ section {
     gap: 20px;
     padding: 20px;
     background-color: var(--color-bg);
+    margin-top: 5%;
 }
 
 .game-box {
