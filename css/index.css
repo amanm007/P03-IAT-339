@@ -641,10 +641,9 @@ text-decoration: underline;
 
     .intro {
         margin-top: 0;
-        min-height: calc(100vh - 230px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        min-height: auto;
+        display: block;
+        padding-top: 8px;
     }
 
     .content h1 {
