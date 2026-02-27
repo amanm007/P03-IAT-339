@@ -80,6 +80,10 @@
 }
 
 @media (max-width: 700px) {
+    .games-container {
+        margin-top: calc(82px + env(safe-area-inset-top));
+    }
+
     .game-box {
         width: 100%;
         max-width: 95vw;
