@@ -59,6 +59,9 @@ body{
 .content {
     margin-left: 5%; /* Align with A.S. logo */
     max-width: 90%;
+    min-height: calc(100vh - 220px);
+    display: flex;
+    flex-direction: column;
 }
 .content .title {
     font-size: 1.5rem; /* Adjust to match your reference */
@@ -114,7 +117,8 @@ body{
     flex-direction: column; /* Stack elements vertically */
 }
 .latest-work-section {
-    margin-top: 4%;
+    margin-top: auto;
+    align-self: flex-start;
 
     background-color: var(--color-surface-elevated);
     padding: 20px;
@@ -610,6 +614,84 @@ text-decoration: underline;
 }
 
 @media (max-width: 768px) {
+    header {
+        min-height: 62px;
+        padding: 0 10px;
+    }
+
+    .navbar ul {
+        gap: 6px;
+    }
+
+    .navbar li a {
+        font-size: 0.66rem;
+    }
+
+    .logo h2 {
+        font-size: 1.5rem;
+    }
+
+    .content {
+        margin: 0 auto;
+        max-width: calc(100% - 24px);
+        padding: 0 12px;
+        min-height: auto;
+    }
+
+    .intro {
+        margin-top: 1.2rem;
+    }
+
+    .content h1 {
+        font-size: clamp(2.2rem, 11vw, 3.1rem);
+        line-height: 1.12;
+    }
+
+    .content .title {
+        margin-top: 0.2rem;
+        font-size: clamp(1rem, 4.8vw, 1.25rem);
+    }
+
+    .content p,
+    .content h6,
+    .game-description-text {
+        max-width: 100%;
+        line-height: 1.62;
+        letter-spacing: 0.02em;
+    }
+
+    .latest-work-section {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 1rem;
+        padding: 14px;
+    }
+
+    .latest-work-title {
+        font-size: clamp(1.5rem, 7.2vw, 2rem);
+        margin-bottom: 0.8rem;
+    }
+
+    .latest-work-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.85rem;
+    }
+
+    .latest-work-image {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .latest-work-details {
+        width: 100%;
+    }
+
+    .latest-work-details h3 {
+        font-size: clamp(1.02rem, 4.2vw, 1.18rem);
+    }
+
     .footer-social,
     .footer-links {
         flex-direction: column;
@@ -620,6 +702,14 @@ text-decoration: underline;
     margin-bottom: 5%; 
     letter-spacing:4px;
     line-height: 40px;
+}
+
+@media (max-width: 768px) {
+    .game-description-text {
+        letter-spacing: 0.02em;
+        line-height: 1.62;
+        margin-bottom: 1rem;
+    }
 }
 
 a:focus-visible,

@@ -46,6 +46,75 @@
 <!-- INTERACTIVE ELEMENTS SECTION -->
 
 <section id="styleguide">
+    <section class="element">
+      <h3>Current System Updates (Feb 2026)</h3>
+      <p>This style guide now reflects the latest portfolio updates implemented across the site.</p>
+      <ul class="style-notes">
+        <li><strong>Header:</strong> logo left, nav right, with scanline sweep and energy underline hover treatment.</li>
+        <li><strong>Backgrounds:</strong> index uses interactive spider + particles; all other pages use particles-only background.</li>
+        <li><strong>Cards:</strong> game-detail containers use frosted glass with dual glow border and hover elevation.</li>
+        <li><strong>Landing Layout:</strong> Latest Work card is anchored bottom-left on desktop and stacks naturally on mobile.</li>
+        <li><strong>Mobile Pass:</strong> index hero text/spacing becomes fluid at <=768px, and spider tap/pounce supports touchstart.</li>
+      </ul>
+    </section>
+
+    <section class="element">
+      <h3>Header Interaction Pattern</h3>
+      <h4>CSS selectors:</h4>
+      <p>#header-wrapper::after, .navbar a::before, .navbar a:hover::before</p>
+      <h4>Sample code:</h4>
+      <code>
+        #header-wrapper::after { animation: header-scanline 4.6s ease-in-out infinite; }<br>
+        .navbar a::before { transform: scaleX(0); }<br>
+        .navbar a:hover::before { transform: scaleX(1); }
+      </code>
+      <h4>Rendered element:</h4>
+      <p>The live header at the top of this page uses the same interaction treatment.</p>
+    </section>
+
+    <section class="element">
+      <h3>Frosted Glass Card Pattern</h3>
+      <h4>Selectors used in project pages:</h4>
+      <p>.game-description, .game-mechanics, .contribution-summary, .Process, .reflection, .link-build</p>
+      <h4>Sample code:</h4>
+      <code>
+        .card {<br>
+        &nbsp;&nbsp;backdrop-filter: blur(26px) saturate(190%) contrast(118%) brightness(112%);<br>
+        &nbsp;&nbsp;border: 1px solid rgba(255,255,255,.22);<br>
+        &nbsp;&nbsp;transition: transform .28s ease, box-shadow .28s ease;<br>
+        }<br>
+        .card:hover { transform: translateY(-2px); }
+      </code>
+      <h4>Rendered element:</h4>
+      <div class="sg-glass-card">
+        <h4>Glass Card Demo</h4>
+        <p>Frosted panel, layered sheen, dual glow border, and subtle hover elevation match the current game page containers.</p>
+      </div>
+    </section>
+
+    <section class="element">
+      <h3>Background Behavior Rules</h3>
+      <h4>JavaScript sources:</h4>
+      <p><code>js/spider-bg.js</code> (index only), <code>js/particles-bg.js</code> (all other pages)</p>
+      <h4>Notes:</h4>
+      <ul class="style-notes">
+        <li>Spider uses cursor/touch tracking, pounce on click/touchstart, and roaming when idle.</li>
+        <li>Particles-only variant keeps visual consistency without interaction overhead on interior pages.</li>
+      </ul>
+    </section>
+
+    <section class="element">
+      <h3>Index Mobile Layout Rules</h3>
+      <h4>Breakpoints:</h4>
+      <p><code>@media (max-width: 768px)</code></p>
+      <h4>Applied behavior:</h4>
+      <ul class="style-notes">
+        <li>Hero content width becomes fluid and spacing is tightened.</li>
+        <li>Body text line-height and tracking are normalized for readability.</li>
+        <li>Latest Work section switches to full-width stacked layout.</li>
+      </ul>
+    </section>
+
     <!-- Typography -->
     <section class="element">
       <h3>Headings and Paragraphs</h3>

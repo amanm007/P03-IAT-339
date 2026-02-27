@@ -4,6 +4,8 @@ body {
     color: var(--color-text);
     margin: 0;
     padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 section {
@@ -16,9 +18,9 @@ section {
 }
 
 #game-section, #game-details {
-    width: 100%; 
-    max-width: 1200px; 
-    margin: auto; 
+    width: min(1200px, calc(100% - 2rem));
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .game-description {
     margin-bottom: 20px; 
@@ -135,8 +137,116 @@ section {
 .link-build 
 {
     width: 100%; 
-    max-width: 800px; 
-    margin-bottom: 40px; 
+    max-width: 900px; 
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+      linear-gradient(150deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.06) 34%, rgba(20, 22, 34, 0.42) 100%),
+      linear-gradient(180deg, rgba(24, 24, 30, 0.54), rgba(12, 12, 18, 0.48));
+    backdrop-filter: blur(26px) saturate(190%) contrast(118%) brightness(112%);
+    -webkit-backdrop-filter: blur(26px) saturate(190%) contrast(118%) brightness(112%);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 14px;
+    padding: clamp(1.2rem, 2.2vw, 1.8rem) clamp(1rem, 2.4vw, 2rem);
+    box-shadow:
+      0 16px 38px rgba(0, 0, 0, 0.44),
+      0 0 0 1px rgba(var(--color-accent-rgb), 0.28),
+      0 0 24px rgba(var(--color-accent-rgb), 0.24),
+      0 0 34px rgba(var(--color-cyan-rgb), 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.28),
+      inset 0 -12px 22px rgba(7, 10, 20, 0.16);
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease, background 0.28s ease;
+}
+
+.game-info-wrapper::before,
+.game-image-wrapper::before,
+.game-description::before,
+.game-mechanics::before,
+.Process::before,
+.contribution-summary::before,
+.reflection::before,
+.link-build::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 0;
+    background: linear-gradient(130deg, rgba(255, 255, 255, 0.16) 0%, rgba(var(--color-cyan-rgb), 0.12) 36%, rgba(var(--color-accent-rgb), 0.08) 62%, rgba(255, 255, 255, 0.02) 100%);
+    opacity: 0.95;
+}
+
+.game-info-wrapper::after,
+.game-image-wrapper::after,
+.game-description::after,
+.game-mechanics::after,
+.Process::after,
+.contribution-summary::after,
+.reflection::after,
+.link-build::after {
+    content: "";
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    top: 0;
+    height: 34%;
+    border-radius: 0 0 28px 28px;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(120% 95% at 50% 0%, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.12) 40%, rgba(255, 255, 255, 0.02) 100%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.02));
+    opacity: 0.62;
+}
+
+/* Keep card content above glass overlays */
+.game-info-wrapper > *,
+.game-image-wrapper > *,
+.game-description > *,
+.game-mechanics > *,
+.Process > *,
+.contribution-summary > *,
+.reflection > *,
+.link-build > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Tone down top sheen for media-heavy sections where it can look like a hard bar */
+.game-mechanics::after,
+.contribution-summary::after {
+    left: 12%;
+    right: 12%;
+    height: 24%;
+    opacity: 0.34;
+}
+
+.game-info-wrapper:hover,
+.game-image-wrapper:hover,
+.game-description:hover,
+.game-mechanics:hover,
+.Process:hover,
+.contribution-summary:hover,
+.reflection:hover,
+.link-build:hover,
+.game-info-wrapper:focus-within,
+.game-image-wrapper:focus-within,
+.game-description:focus-within,
+.game-mechanics:focus-within,
+.Process:focus-within,
+.contribution-summary:focus-within,
+.reflection:focus-within,
+.link-build:focus-within {
+    transform: translateY(-2px);
+    border-color: rgba(var(--color-cyan-rgb), 0.6);
+    box-shadow:
+      0 20px 42px rgba(0, 0, 0, 0.48),
+      0 0 0 1px rgba(var(--color-accent-rgb), 0.42),
+      0 0 30px rgba(var(--color-accent-rgb), 0.34),
+      0 0 40px rgba(var(--color-cyan-rgb), 0.32),
+      inset 0 1px 0 rgba(255, 255, 255, 0.34);
 }
 
 .game-image {
@@ -163,14 +273,16 @@ section {
     text-align: center; 
 }
 .game-description-title {
-    margin-bottom: 5%; 
+    margin-bottom: 1.2rem;
     color: var(--color-accent);
 }
 
 .game-description-text {
-    margin-bottom: 5%; 
-    letter-spacing:3px;
-    line-height: 40px;
+    margin: 0 auto 1.25rem auto;
+    max-width: 65ch;
+    letter-spacing: 0.02em;
+    line-height: 1.8;
+    text-align: left;
 }
 
 .games-section h1 {
@@ -202,14 +314,15 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
+    width: min(1200px, calc(100% - 2rem));
+    padding: 20px 0;
     background-color: var(--color-bg);
-    margin-top: 5%;
+    margin: 5% auto 0 auto;
 }
 
 .game-box {
     display: block;
-    width: 600px; 
+    width: min(760px, 100%);
     border: 1px solid rgba(var(--color-cyan-rgb), 0.58);
     border-radius: 10px; 
     overflow: hidden;
@@ -247,7 +360,12 @@ section {
     margin-top: 5px;
 }
 
-#video-slider {
+#video-slider,
+#slider-mechanics,
+#slider-locomotion,
+#slider-jetpack,
+#slider-slide,
+#slider-wallrun {
     position: relative;
     width: 100%;
     max-width: 800px; 
@@ -301,9 +419,29 @@ section {
   }
   
   
-  .video-slide:first-child {
+.video-slide:first-child {
     display: block;
   }
+
+.contribution-summary > .game-description-text {
+    margin-bottom: 1rem;
+}
+
+.contribution-summary > .game-description-text strong {
+    color: var(--color-text);
+    text-shadow: 0 0 10px rgba(var(--color-accent-rgb), 0.28);
+}
+
+#slider-locomotion,
+#slider-jetpack,
+#slider-slide,
+#slider-wallrun {
+    margin: 0 auto 1.8rem auto;
+}
+
+.game-mechanics #slider-mechanics {
+    margin: 0 auto 0.8rem auto;
+}
   .game-download-link {
     display: inline-block;
     background: linear-gradient(90deg, rgba(var(--color-accent-rgb), 0.95), rgba(var(--color-accent-rgb), 0.62));

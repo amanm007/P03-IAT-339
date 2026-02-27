@@ -284,6 +284,13 @@
   window.addEventListener("touchmove", (e) => {
     if (e.touches && e.touches[0]) setPointerTarget(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener("touchstart", (e) => {
+    if (!e.touches || !e.touches[0]) return;
+    const t = e.touches[0];
+    setPointerTarget(t.clientX, t.clientY);
+    pounceTo(t.clientX, t.clientY);
+    burstSparks(t.clientX, t.clientY);
+  }, { passive: true });
   window.addEventListener("click", (e) => {
     setPointerTarget(e.clientX, e.clientY);
     pounceTo(e.clientX, e.clientY);
