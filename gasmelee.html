@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAS Melee Combat System</title>
+    <meta name="description" content="GAS Melee Combat System project breakdown: Gameplay Ability System combat, enemy AI, and reactive UI built solo in Unreal Engine 5.">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/about.css" rel="stylesheet">
+    <link href="css/game.css" rel="stylesheet">
+    <link href="css/slowandsteady.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <canvas id="drawingCanvas"></canvas>
+
+    <!-- Section  Header Start -->
+
+    <div class="container-navbar">
+       <div id="header-wrapper">
+           <header>
+               <div class="logo">
+                   <a href="index.html">
+                       <h2>A.S. </h2>
+                   </a>
+
+               </div>
+
+               <nav class="navbar">
+                   <ul>
+                    <li><a href="game.html">Games</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                   </ul>
+               </nav>
+           </header>
+       </div>
+   </div>
+   <section class="games-container">
+    <a class="game-box" href="gasmelee.html" aria-label="GAS Melee Combat System project overview">
+        <video width="100%" height="auto" controls muted playsinline poster="images/gasmeele.png">
+            <source src="videos/Sonic_GAS_FinalDraft.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="game-info">
+            <h3>GAS Melee Combat System (2026)</h3>
+            <p><strong>Duration:</strong> April 2026 - June 2026</p>
+            <p><strong>Type:</strong> Personal Project</p>
+            <p><strong>Role:</strong> Gameplay Programmer</p>
+            <p><strong>Engine and Tools:</strong> Unreal Engine 5, Gameplay Ability System, C++ & Blueprints</p>
+            <!-- Add more details here -->
+        </div>
+    </a>
+</section>
+<section id="game-details">
+
+
+    <div class="game-description">
+        <h2 class="game-description-title">What is the GAS Melee Combat System?</h2>
+        <p class="game-description-text">This is a solo-built, character-action melee combat prototype in Unreal Engine 5, built entirely on the Gameplay Ability System (GAS) using both Blueprints and C++. Locomotion comes from Epic's Game Animation Sample, extended with the community GASPALS plugin for weapon-pose overlay layering; everything on top of that - the combat, the enemy AI, and the UI - is my own architecture and implementation. The goal was not a collection of isolated feature demos, but one integrated system where combat, AI, and UI all react to a single attribute and event pipeline.</p>
+            <p class="game-description-text">The shipped feature set: 6-hit light-attack combo chains with escalating stamina costs, hold-to-charge heavy attacks with a sprint-triggered slam-dunk variant, hold-to-block with a 0.4-second perfect-parry window that rewards counter-damage and slow motion, directional root-motion hit reactions, motion-warping combat magnetism that keeps combos connected, a five-state enemy AI driven by Behavior Trees and EQS, and a fully event-driven reactive HUD - health and stamina bars with a delayed-drain "ghost bar" damage indicator, and an ability bar that builds itself from granted abilities.</p>
+
+        <div class="video-wrapper">
+            <video width="100%" height="auto" muted loop controls>
+                <source src="videos/Sonic_GAS_FinalDraft.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <div class="game-mechanics">
+        <h2 class="game-description-title">Mechanics and Gameplay</h2>
+        <div id="slider-mechanics">
+            <!-- Buttons for navigation -->
+            <button class="slide-arrow prev-arrow" onclick="slide('slider-mechanics', -1)">&#10094;</button>
+            <button class="slide-arrow next-arrow" onclick="slide('slider-mechanics', 1)">&#10095;</button>
+
+            <!-- Video slides -->
+            <div class="video-slide">
+                <div class="video-title">Light Attacks - 6-Hit Combo Chain</div>
+                <video width="100%" height="auto" autoplay muted loop controls poster="images/gasmeele.png">
+                    <source src="videos/LightAttacks.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-slide">
+                <div class="video-title">Heavy Attacks - Charged &amp; Slam-Dunk Variant</div>
+                <video width="100%" height="auto" autoplay muted loop controls poster="images/gasmeele.png">
+                    <source src="videos/HeavyAttacks.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-slide">
+                <div class="video-title">Block &amp; Perfect Parry - The 0.4s Window</div>
+                <video width="100%" height="auto" autoplay muted loop controls poster="images/gasmeele.png">
+                    <source src="videos/BlockandParry.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-slide">
+                <div class="video-title">Enemy AI - Behavior Tree Debug View</div>
+                <video width="100%" height="auto" autoplay muted loop controls poster="images/gasmeele.png">
+                    <source src="videos/EnemyAI.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-slide">
+                <div class="video-title">Motion Warping - Combat Magnetism</div>
+                <video width="100%" height="auto" autoplay muted loop controls poster="images/gasmeele.png">
+                    <source src="videos/MotionWarping.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <div class="contribution-summary">
+        <h2 class="game-description-title">Summary of Contributions</h2>
+        <p class="game-description-text"><strong>Centralized Damage Pipeline (C++):</strong> Damage is a meta-attribute, not a direct health modifier - every damage source in the game funnels through one C++ function (PostGameplayEffectExecute) before Health ever changes. That single interception point handles block-checking (a blocked hit early-returns into the block pipeline and never touches health), dispatches hit reactions via payload-carrying Gameplay Events, and reports damage to AI perception. Because the logic is centralized, the perfect-parry counter-hit staggers enemies correctly with zero special-casing - it's just another damage event flowing through the same pipe.</p>
+        <div id="slider-damage">
+            <!-- Buttons for navigation -->
+            <button class="slide-arrow prev-arrow" onclick="slide('slider-damage', -1)">&#10094;</button>
+            <button class="slide-arrow next-arrow" onclick="slide('slider-damage', 1)">&#10095;</button>
+
+            <!-- Video slides -->
+            <div class="video-slide">
+                <div class="video-title">PostGameplayEffectExecute - Damage Interception</div>
+                <img src="images/PostGameplayEffect1.png" alt="PostGameplayEffectExecute damage interception" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
+            <div class="video-slide">
+                <div class="video-title">PostGameplayEffectExecute - Hit Reaction Dispatch</div>
+                <img src="images/PostGameplayEffect2.png" alt="PostGameplayEffectExecute hit reaction dispatch" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
+            <div class="video-slide">
+                <div class="video-title">Gameplay Tag Taxonomy</div>
+                <img src="images/Tags Taxonomy.png" alt="Gameplay tag taxonomy" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
+        </div>
+
+        <p class="game-description-text"><strong>Combo &amp; Ability Architecture:</strong> All attacks share a single parent ability that owns the combo state machine - children only configure data. Light attacks cycle a montage array with an escalating stamina cost per hit in the chain, so the basic attack is itself a resource-management decision. Sprint attack variations (a full alternate combo set, plus a slam-dunk heavy) were added with zero new abilities, effects, or tags: one Sprinting boolean cached at ability activation drives a Select node between montage arrays. Because abilities are instanced per execution, the sprint state is naturally snapshotted - a combo chain never switches movesets mid-swing.</p>
+        <div id="slider-combo">
+            <!-- Buttons for navigation -->
+            <button class="slide-arrow prev-arrow" onclick="slide('slider-combo', -1)">&#10094;</button>
+            <button class="slide-arrow next-arrow" onclick="slide('slider-combo', 1)">&#10095;</button>
+
+            <!-- Video slides -->
+            <div class="video-slide">
+                <div class="video-title">GA_MeleeAttack_Base - Shared Combo Logic</div>
+                <img src="images/GA_MeeleBase.png" alt="GA_MeleeAttack_Base shared combo logic" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
+            <div class="video-slide">
+                <div class="video-title">GA_MeleeAttack_Base - Sprint Bool Caching</div>
+                <img src="images/GA_MeeleBase_2.png" alt="GA_MeleeAttack_Base sprint bool caching" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
+            <div class="video-slide">
+                <div class="video-title">GA_Sword_1 - 6-Hit Combo Array</div>
+                <img src="images/GA_Sword_LightAttacks.png" alt="GA_Sword_1 six-hit combo array" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
+            <div class="video-slide">
+                <div class="video-title">GA_Sword_1 - Sprint Variant Select</div>
+                <img src="images/GA_Sword_LightAttacks_2.png" alt="GA_Sword_1 sprint variant montage selection" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
+        </div>
+
+        <p class="game-description-text"><strong>Perfect Parry as a Timestamp, Not a State Machine:</strong> The parry is a timing variant of blocking, so it lives inside the block ability instead of being its own system: the block ability records the game time when it activates, and a hit arriving within 0.4 seconds branches into counter-damage plus a slow-motion window. No separate ability, no extra tags, no desync risk between block and parry state. The block pose itself reuses the character's existing animation-overlay state machine rather than a dedicated montage - the overlay system already knew how to blend an upper-body pose over locomotion, so building a parallel system would have been pure duplication.</p>
+        <div id="slider-parry">
+            <!-- Buttons for navigation -->
+            <button class="slide-arrow prev-arrow" onclick="slide('slider-parry', -1)">&#10094;</button>
+            <button class="slide-arrow next-arrow" onclick="slide('slider-parry', 1)">&#10095;</button>
+
+            <!-- Video slides -->
+            <div class="video-slide">
+                <div class="video-title">GA_Block - Parry Window Branch</div>
+                <img src="images/Parry Logic.png" alt="GA_Block parry window branch logic" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
+            <div class="video-slide">
+                <div class="video-title">Block Break &amp; Stamina Gating</div>
+                <img src="images/Block and Stamina Gated.png" alt="Block break and stamina gating logic" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
+        </div>
+
+        <p class="game-description-text"><strong>Enemy AI - Behavior Trees, Perception, and EQS:</strong> Enemies run a five-state machine (Passive, Attacking, Investigating, Stunned, Dead) on a Behavior Tree and Blackboard, fed by three perception senses - sight, hearing, and damage. EQS-driven strafing scores positions around the player by path validity and distance, which keeps multiple enemies from clustering on the same spot. Enemy attacks synchronize with the tree through a gameplay-event handshake - the ability fires an event on every exit path so the tree task knows exactly when to resume. A dedicated Stunned state halts navigation the instant a hit reaction plays, so root-motion staggers and pathfinding never fight over the capsule.</p>
+        <div id="slider-ai">
+            <!-- Buttons for navigation -->
+            <button class="slide-arrow prev-arrow" onclick="slide('slider-ai', -1)">&#10094;</button>
+            <button class="slide-arrow next-arrow" onclick="slide('slider-ai', 1)">&#10095;</button>
+
+            <!-- Video slides -->
+            <div class="video-slide">
+                <div class="video-title">BT_Enemy_Base - Full Tree Structure</div>
+                <img src="images/Enemy_BT.png" alt="BT_Enemy_Base behavior tree structure" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
+            <div class="video-slide">
+                <div class="video-title">EQS Strafe Query - Anti-Clustering</div>
+                <img src="images/EQS_Strafe.png" alt="EQS strafe query anti-clustering logic" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
+        </div>
+
+        <p class="game-description-text"><strong>Reactive UI with Zero Tick Polling:</strong> Every UI element binds to GAS attribute-change and tag-count-change events instead of polling on Tick - the HUD only does work when something actually changes. The health bar snaps immediately on damage while an orange "ghost bar" holds the previous value and drains down after a beat, visually showing exactly how much damage was taken. The ability bar builds itself from whatever abilities are currently granted, with per-ability cooldown overlays driven by cooldown-tag events. The same directional arrow components on each enemy serve two systems at once - motion-warping landing positions and hit-reaction direction detection - one set of spatial math, two consumers.</p>
+
+
+    </div>
+
+    <div class="Process">
+        <h2 class="game-description-title">Process</h2>
+        <p class="game-description-text">The project ran on a decision log - over fifty architecture decisions recorded with reasoning and reversibility, which kept the system coherent as it grew. The most valuable discipline turned out to be scope control: a fully-designed aerial juggle-lock system (new ability, new gameplay effect, enemy-side tick logic) was scrapped mid-design once it became clear the actual authored animation was a ground slam, not an airborne combo - the shipped version achieves the same visual payoff with a single Select node on existing infrastructure. The same principle drove the block system (reuse the existing overlay state machine instead of building a montage pipeline) and the dual-purpose arrow components. Architecture should follow the content that actually exists, not assumptions about what it might be.</p>
+    </div>
+
+    <div class="reflection">
+        <h2 class="game-description-title">Reflection</h2>
+        <p class="game-description-text">GAS has a reputation for being opaque, and this project taught me why - and how to work with it anyway. The lessons that cost the most hours are now standing rules: Set By Caller magnitudes silently read as zero during cost checks, so cost effects must use baked values; tag-based ability activation carries no event payload, so anything that needs to know who hit it or how hard must be triggered through a Gameplay Event with populated data; Execute and Add GameplayCue are not interchangeable. The single best debugging story was an editor that froze on every second play session - the root cause, found by copying the log file out of a frozen process and reading the last lines before silence, was duplicate MetaSound assets sharing an internal GUID from being file-copied instead of editor-duplicated. Building combat, AI, and UI against one shared pipeline - rather than as three separate features - is the thing I'd carry into any production codebase.</p>
+    </div>
+
+    <div class="link-build ">
+        <h2 class="game-description-title">Watch the Combat Demo</h2>
+        <a href="https://www.youtube.com/@amanmatharu24/videos" target="_blank" class="game-download-link">Demo Coming Soon - YouTube</a>
+
+    </div>
+
+
+
+</section>
+
+
+
+
+
+
+
+     <!-- Footer Referred from https://www.youtube.com/watch?v=YOb67OKw62s -->
+     <footer class="site-footer">
+        <div class="footer-social">
+            <!-- Social Icons -->
+            <a href="https://www.artstation.com/sssn1pee" class="fab fa-artstation" aria-label="ArtStation profile"></a>
+            <a href="https://www.linkedin.com/in/aman-singh-aa985a195/" class="fab fa-linkedin" aria-label="LinkedIn profile"></a>
+            <a href="https://twitter.com/AmanSin86175493" class="fab fa-twitter" aria-label="Twitter profile"></a>
+            <a href="https://www.youtube.com/@amanmatharu24/videos" class="fab fa-youtube" aria-label="YouTube channel"></a>
+            <a href="https://github.com/amanm007/P03-IAT-339" class="fab fa-github" aria-label="GitHub repository"></a>
+        </div>
+        <div class="footer-links">
+            <!-- Navigation Links -->
+            <a href="index.html">Home</a>
+            <a href="game.html">Games</a>
+            <a href="about.html">About Me</a>
+            <a href="Styleguide.html">Styleguide</a>
+            <a href="contact.html">Contact</a>
+            <a href="citations.html">Citations</a>
+
+
+        </div>
+        <div class="footer-bottom">
+            <a>  Aman Singh &copy; Simon Fraser University  |  School of Interactive Arts and Technology </a>
+        </div>
+    </footer>
+    <script>
+    var sliderIndexes = {};
+
+    // Function to change slide
+    function slide(sliderId, moveStep) {
+      var slider = document.getElementById(sliderId);
+      if (!slider) return;
+      var slides = slider.getElementsByClassName("video-slide");
+      if (!slides.length) return;
+
+      if (typeof sliderIndexes[sliderId] !== "number") {
+        sliderIndexes[sliderId] = 0;
+      }
+      sliderIndexes[sliderId] += moveStep;
+
+      if (sliderIndexes[sliderId] >= slides.length) {
+        sliderIndexes[sliderId] = 0; // go back to first slide
+      }
+      if (sliderIndexes[sliderId] < 0) {
+        sliderIndexes[sliderId] = slides.length - 1; // go to last slide
+      }
+
+      // Hide all slides
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      // Show the new slide
+      slides[sliderIndexes[sliderId]].style.display = "block";
+    }
+
+    function initSlider(sliderId) {
+      var slider = document.getElementById(sliderId);
+      if (!slider) return;
+      var slides = slider.getElementsByClassName("video-slide");
+      if (!slides.length) return;
+      sliderIndexes[sliderId] = 0;
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[0].style.display = "block";
+    }
+
+    // Initialize sliders by showing the first slide
+    initSlider("slider-mechanics");
+    initSlider("slider-damage");
+    initSlider("slider-combo");
+    initSlider("slider-parry");
+    initSlider("slider-ai");
+    </script>
+    <script src="js/slider-enhance.js?v=2"></script>
+    <script src="js/particles-bg.js"></script>
+</body>
+</html>
