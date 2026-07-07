@@ -16,52 +16,44 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=NTR&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/redesign.css" rel="stylesheet">
+    <link href="css/project.css" rel="stylesheet">
 </head>
 <body>
-    <canvas id="drawingCanvas"></canvas>
     
     <!-- Section  Header Start -->
 
-    <div class="container-navbar">
-       <div id="header-wrapper">
-           <header>
-               <div class="logo">
-                   <a href="index.html">
-                       <h2>A.S. </h2>
-                   </a>
-
-               </div>
-
-               <nav class="navbar">
-                   <ul>
-                    <li><a href="game.html">Games</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                   </ul>
-               </nav>
-           </header>
-       </div>
-   </div>
-   <section class="games-container">
-    <a class="game-box" href="paradoxrift.html" aria-label="Paradox Rift project overview">
-        <img src="images/Paradox_Title.png" alt="Paradox Rift" decoding="async">
-        <div class="game-info">
-            <h3>Paradox Rift (2023)</h3>
-            <p><strong>Duration:</strong> September 2023-January 2024</p>
-            <p><strong>Team:</strong> Aman, John, Nick, Oscar, Jonathan</p>
-            <p><strong>Type:</strong> Univeristy Project</p>
-            <p><strong>Role:</strong> VR Interaction Developer and Programmer </p>
-            <p><strong>Engine and Tools:</strong> Unity </p>
-            <!-- Add more details here -->
+    <nav class="rd-nav" aria-label="Primary">
+        <div class="rd-nav-logo">
+            <a href="index.html" aria-label="Home">A.S.</a>
         </div>
-    </a>
-</section>
+        <ul class="rd-nav-links">
+            <li><a href="index.html#about"><span class="nav-num">01.</span> about</a></li>
+            <li><a href="index.html#experience"><span class="nav-num">02.</span> experience</a></li>
+            <li><a href="index.html#projects"><span class="nav-num">03.</span> projects</a></li>
+            <li><a href="index.html#contact"><span class="nav-num">04.</span> contact</a></li>
+            <li><a class="rd-resume-btn" href="documents/AmanSingh_Resume-feb2026.pdf" target="_blank" rel="noopener noreferrer">resume</a></li>
+        </ul>
+    </nav>
+   <div class="pl-top">
+        <a class="pl-back" href="index.html#projects"><span class="arrow" aria-hidden="true">&larr;</span> <span class="slash">/</span> project log</a>
+    </div>
+    <header class="pl-header">
+        <h1 class="pl-title">Paradox Rift</h1>
+        <div class="pl-hero">
+            <img src="images/Paradox_Title.png" alt="Paradox Rift" decoding="async">
+        </div>
+        <p class="pl-sub">A VR puzzle game built on one rule: objects moved in the past move to the same place in the present.</p>
+        <p class="pl-date">September 2023 &mdash; January 2024</p>
+        <p class="pl-meta">University Project (Team of 5) &bull; VR Interaction Developer &bull; Unity / VR &amp; XR</p>
+    </header>
 <section id="game-details">
    
 
     <div class="game-description">
         <h2 class="game-description-title">What is Paradox Rift?</h2>
-        <p class="game-description-text">Paradox Rift is a time-bending, mind-bending VR puzzle game about portals and time travel. In an abandoned spaceship, far into the future, time rifts have started appearing, bridging the gap between the past and the present. Any objects you move in the past move them to that same location in the future. Use your wits, your spatial, and your temporal thinking skills to make your way to the other end of the ship and save the future.
+        <p class="game-description-text">Paradox Rift is a VR puzzle game built around a single rule: any object moved in the past moves to the same location in the present. Set on an abandoned spaceship where time rifts have started tearing through the hull, the player has to exploit that past-present link to navigate and solve puzzles across both timelines.
         </p>
         <div class="video-wrapper">
             <iframe 
@@ -74,7 +66,7 @@
                 allowfullscreen>
             </iframe>
         </div>
-            <p class="game-description-text">In Paradox Rift, you play as an explorer in the far future, entering a spaceship that has long been abandoned. Your job is to use the time rifts that have started appearing throughout the ship to go back and forth through the past and the present to make your way to the end of the ship and change the future. The core interaction involves going through time portals between the past and the present, manipulating the various elements on the ship in both time periods to get to the next part of the ship. Any object the player moves within the past will move to the same location in the future, and this principle must be exploited to beat the game. </p>
+            <p class="game-description-text">Traversal alternates between the past and present timeline through in-world time portals. Puzzles are built around the causal link between them &mdash; an object repositioned in the past appears in that same spot in the present, so solving a room usually means figuring out which timeline to manipulate an object in before crossing over.</p>
 
         <!-- Video or image showcase -->
     </div>
@@ -92,11 +84,11 @@
     <div class="contribution-summary">
         <h2 class="game-description-title">Summary of Contributions</h2>
         <p class="game-description-text"> <strong>XR Rig Configuration </strong>
-            Configured XR Rig for immersive player movement and navigation within the VR environment, enabling both teleportation and direct locomotion.
+            Configured the XR Rig to support both teleportation and smooth locomotion, letting players pick a comfort mode without level design needing to account for only one movement type.
             </p>
 
              <p class="game-description-text"> <strong>VR Input Systems</strong>
-                Implemented intuitive VR input systems to handle complex player actions, including object manipulation and environment interaction.</p>
+                Built VR input handling for object grabbing and environment interaction using Unity's XR Interaction Toolkit, mapping controller input to context-specific actions depending on what the player is pointing at or holding.</p>
                  <div id="video-slider">
                     <!-- Buttons for navigation -->
                     <button class="slide-arrow prev-arrow" onclick="slide(-1)">&#10094;</button>
@@ -122,14 +114,14 @@
                   </div>
 
                  <p class="game-description-text"> <strong>Character Controller Development:</strong>
-                    Developed a responsive character controller, integrating collision detection and physics-based movement for a realistic VR experience.</p>
+                    Built the VR character controller with collision detection and physics-based movement, tuned to avoid the disorientation and clipping issues common in first-person VR locomotion.</p>
 
 
                 <p class="game-description-text"> <strong> Grabbable Object System </strong>
-                    Scripted a grabbable object system, allowing players to interact with items in the game naturally, enhancing the immersive experience.</p>
+                    Built the grabbable-object system every puzzle interaction routes through &mdash; pickup, hold, and release logic shared across every interactable object instead of reimplemented per object.</p>
 
                 <p class="game-description-text"> <strong>Teleportation System</strong>
-                    Crafted a teleportation system with custom triggers and anchors, enabling seamless navigation through virtual spaces.</p>
+                    Built a teleportation system using custom trigger volumes and anchor points, giving level designers control over exactly where players can and can't teleport within a puzzle room.</p>
 
 
 
@@ -173,19 +165,12 @@
             </div>
             <!-- Add more images as needed -->
         </div>
-        <p class="game-description-text"> As with every game, it started with an idea. We started with brain dumping ideas for what we wanted to do in a Miro board, and worked together to isolate everything we wanted to focus on. Doing this allowed us to all be on the same page and hone in on the key features that would make our game unique. From there, we began sketching out some preliminary concept levels and establishing the rules of our game, which we would use as the basis for everything else in future development.
-            Once we had these rules established, we began prototyping and developing every single mechanic in the game in test worlds, to ensure everything we wanted would work first before we started building the full game. At the same time, we started doing level design properly, sketching out the planned levels and outlining their solutions. Once the level design was done and we had all the puzzle mechanics working, we blocked out all of the levels based on the design sketches in Unity, to make sure all the puzzles would actually work.
-            Once these level layouts were done, we downloaded some 3D models and began decorating the level layouts with these assets. We managed to finish two level layouts before the first showcase. During the showcase, we got some feedback about the level layouts, particularly for the second level, and for how the level layouts should be. We took that feedback and fixed our existing levels, and tried to implement it in our remaining levels too. We also added sound effects and better feedback to all puzzle elements for the final iteration of our project.
-            
-
-
-
-        </p>
+        <p class="game-description-text">We started by dumping ideas onto a Miro board and narrowing down to the mechanics that made the game unique, then sketched concept levels and locked the core rules, which became the basis for everything after. Once the rules were set, we prototyped every mechanic in isolated test scenes before building any real levels, then moved into level design and blockouts in Unity to confirm the puzzles actually worked before investing in art. After finishing two level layouts for the first showcase, playtester feedback on level 2's layout led us to rework it and apply the same fixes across the remaining levels, along with adding sound effects and better interaction feedback for the final pass.</p>
     </div>
 
     <div class="reflection">
         <h2 class="game-description-title">Reflection</h2>
-        <p class="game-description-text"> One of our primary challenges was effectively teaching players the game's core mechanics, particularly the cause-and-effect relationship between actions in the past and present, which initially confused many testers. Early playtests revealed that players struggled to grasp the mechanics without direct explanation, and the lack of audio feedback further compounded their confusion. To address this, we implemented a diegetic voice-over in each level to introduce and explain key mechanics in a way that tied into the narrative, ensuring players understood the rules before tackling puzzles. Additionally, we added audio cues and visual guides, such as lines connecting player actions to their effects, to provide immediate and clear feedback. We also redesigned levels to reduce visual clutter and repositioned time portals onto walls, making them more prominent and improving navigation. These changes not only enhanced player understanding but also created a more intuitive and enjoyable experience.</p>
+        <p class="game-description-text">The main challenge was teaching the past-present mechanic without breaking immersion with a tutorial popup. Early playtests showed most players couldn't parse the cause-and-effect link between timelines, especially with no audio feedback confirming an action had worked. We fixed this with in-world diegetic voice-over introducing each mechanic through the narrative, plus visual guide lines connecting an action in one timeline to its effect in the other. We also moved portals from floating mid-air to wall-mounted positions and reduced visual clutter around them, which fixed a navigation problem we'd seen in every single early playtester.</p>
     </div>
 
     <div class="link-build ">
@@ -208,29 +193,8 @@
 
 
      <!-- Footer Referred from https://www.youtube.com/watch?v=YOb67OKw62s -->
-     <footer class="site-footer">
-        <div class="footer-social">
-            <!-- Social Icons -->
-            <a href="https://www.artstation.com/sssn1pee" class="fab fa-artstation" aria-label="ArtStation profile"></a>
-            <a href="https://www.linkedin.com/in/aman-singh-aa985a195/" class="fab fa-linkedin" aria-label="LinkedIn profile"></a>
-            <a href="https://twitter.com/AmanSin86175493" class="fab fa-twitter" aria-label="Twitter profile"></a>
-            <a href="https://www.youtube.com/@amanmatharu24/videos" class="fab fa-youtube" aria-label="YouTube channel"></a>
-            <a href="https://github.com/amanm007/P03-IAT-339" class="fab fa-github" aria-label="GitHub repository"></a>
-        </div>
-        <div class="footer-links">
-            <!-- Navigation Links -->
-            <a href="index.html">Home</a>
-            <a href="game.html">Games</a>
-            <a href="about.html">About Me</a>
-            <a href="Styleguide.html">Styleguide</a>
-            <a href="contact.html">Contact</a>
-            <a href="citations.html">Citations</a>
-            
-            
-        </div>
-        <div class="footer-bottom">
-            <a>  Aman Singh &copy; Simon Fraser University  |  School of Interactive Arts and Technology </a>
-        </div>
+     <footer class="rd-footer">
+        <p>Designed &amp; built by Aman Singh</p>
     </footer>
    <script>
     var slideIndex = 0; // start with the first slide
@@ -288,7 +252,7 @@
     </script>
 
     <script src="js/slider-enhance.js?v=2"></script>
-    <script src="js/particles-bg.js"></script>
+    <script src="js/cursor.js"></script>
 </body>
 </html>
 

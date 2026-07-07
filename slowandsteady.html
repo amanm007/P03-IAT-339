@@ -16,65 +16,54 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=NTR&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/redesign.css" rel="stylesheet">
+    <link href="css/project.css" rel="stylesheet">
 </head>
 <body>
-    <canvas id="drawingCanvas"></canvas>
     
     <!-- Section  Header Start -->
 
-    <div class="container-navbar">
-       <div id="header-wrapper">
-           <header>
-               <div class="logo">
-                   <a href="index.html">
-                       <h2>A.S. </h2>
-                   </a>
-
-               </div>
-
-               <nav class="navbar">
-                   <ul>
-                    <li><a href="game.html">Games</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                   </ul>
-               </nav>
-           </header>
-       </div>
-   </div>
-   <section class="games-container">
-    <a class="game-box" href="slowandsteady.html" aria-label="Slow and Steady project overview">
-        <img src="images/slowsteady1.png" alt="Slow and Steady" decoding="async">
-        <div class="game-info">
-            <h3>Slow and Steady (2024)</h3>
-            <p><strong>Duration:</strong> January 2024-April 2024</p>
-            <p><strong>Team:</strong> Aman, Simon, Tori, Derian</p>
-            <p><strong>Type:</strong> Univeristy Project</p>
-            <p><strong>Role:</strong> Lead mechanics gameplay programmer </p>
-            <p><strong>Engine and Tools:</strong> Unity </p>
-            <!-- Add more details here -->
+    <nav class="rd-nav" aria-label="Primary">
+        <div class="rd-nav-logo">
+            <a href="index.html" aria-label="Home">A.S.</a>
         </div>
-    </a>
-</section>
+        <ul class="rd-nav-links">
+            <li><a href="index.html#about"><span class="nav-num">01.</span> about</a></li>
+            <li><a href="index.html#experience"><span class="nav-num">02.</span> experience</a></li>
+            <li><a href="index.html#projects"><span class="nav-num">03.</span> projects</a></li>
+            <li><a href="index.html#contact"><span class="nav-num">04.</span> contact</a></li>
+            <li><a class="rd-resume-btn" href="documents/AmanSingh_Resume-feb2026.pdf" target="_blank" rel="noopener noreferrer">resume</a></li>
+        </ul>
+    </nav>
+   <div class="pl-top">
+        <a class="pl-back" href="index.html#projects"><span class="arrow" aria-hidden="true">&larr;</span> <span class="slash">/</span> project log</a>
+    </div>
+    <header class="pl-header">
+        <h1 class="pl-title">Slow and Steady</h1>
+        <div class="pl-hero">
+            <img src="images/slowsteady1.png" alt="Slow and Steady" decoding="async">
+        </div>
+        <p class="pl-sub">A horde-based twin-stick shooter built around a slow-motion mechanic tied to hit accuracy, five enemy archetypes, and a multi-phase boss.</p>
+        <p class="pl-date">January &mdash; April 2024</p>
+        <p class="pl-meta">University Capstone (Team of 4) &bull; Lead Mechanics Gameplay Programmer &bull; Unity / C#</p>
+    </header>
 <section id="game-details">
    
 
     <div class="game-description">
         <h2 class="game-description-title">What is Slow and Steady?</h2>
-        <p class="game-description-text">Slow and Steady was created for senior level game development course, IAT 410, at SFU. The project brief was to create an engaging 2D game from the scratch. Our team chose to make a 2D shooting horde based game as it was the genre that excited every team member.</p>
+        <p class="game-description-text">Slow and Steady was built for IAT 410, SFU's senior game development capstone. The brief was open-ended: build a complete 2D game from scratch as a four-person team. We picked a horde-based twin-stick shooter, which gave us room to focus on combat feel and enemy variety.</p>
             <div class="video-wrapper">
                 <video width="100%" height="auto" autoplay muted loop controls>
                     <source src="https://media.githubusercontent.com/media/amanm007/P03-IAT-339/Feb2026/videos/wasd_slowandsteady.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <p class="game-description-text">Our goal was to create an engaging horde-based 2D shooting game with 
-                interesting gameplay mechanics. Key features include interesting shooting mechanics,
-                 challenging enemy types, and progressive waves of enemies. Player strategy
-                  and skill progression are central to the game's design, 
-                  providing a satisfying and replayable gaming experience.
-                  We aimed for a game that would not only captivate but also offer depth
-                   and variety in its play styles.</p>
+            <p class="game-description-text">The core loop centers on precision aiming, a slow-motion mechanic tied to hit
+                accuracy, and escalating enemy waves that force the player to adapt strategy as encounters
+                scale. Five enemy archetypes plus a multi-phase boss give the later waves distinct tactical
+                problems instead of just higher numbers.</p>
 
         <!-- Video or image showcase -->
     </div>
@@ -92,17 +81,14 @@
     <div class="contribution-summary">
         <h2 class="game-description-title">Summary of Contributions</h2>
         <p class="game-description-text"> <strong>Core Gameplay Mechanics and Responsive Design: </strong>
-            The initial development weeks saw a strong focus on foundational mechanics. I spearheaded the creation of a responsive 
-            control system, enabling fluid player movement through intuitive WASD and arrow key integration. 
-            The precision aiming system was particularly pivotal, as it aligned player character aiming with 
-            the mouse cursor for accurate, directional shooting. This served to deepen player engagement and
-             elevate the interactive experience of "Slow and Steady."</p>
+            Built the core movement and aiming systems: WASD/arrow-key movement decoupled from mouse-driven
+            aim direction, so the player can strafe and shoot independently &mdash; the foundation every
+            other combat system in the game builds on.</p>
 
              <p class="game-description-text"> <strong>Enhanced Shooting Dynamics:</strong>
-                To bolster the shooting mechanics, I integrated immediate hit feedback through bullet physics 
-                and collision detection, ensuring every shot delivered a satisfying experience for the player. 
-                This was further amplified by the addition of bullet tracing effects, enhancing both the game's
-                 visual appeal and the shooting experience.</p>
+                Implemented hitscan-style shooting with physics-based collision detection and bullet tracers,
+                giving immediate visual confirmation on every shot without waiting on projectile travel
+                time.</p>
                  <div id="video-slider">
                     <!-- Buttons for navigation -->
                     <button class="slide-arrow prev-arrow" onclick="slide(-1)">&#10094;</button>
@@ -141,15 +127,15 @@
                   </div>
 
                  <p class="game-description-text"> <strong>Health Systems and Progressive Challenges:</strong>
-                    As the game's depth expanded, I developed a versatile enemy health system that accommodated varying enemy types and
-                     introduced a wave spawner system. This not only diversified combat but also structured the 
-                     encounters, escalating the difficulty and requiring strategic survival tactics from the player.</p>
+                    Built a shared enemy health system that scales across archetypes without per-enemy
+                    special-casing, plus a wave spawner that ramps difficulty and enemy composition over time
+                    rather than just raw enemy count.</p>
 
 
                 <p class="game-description-text"> <strong> Enemy Advanced AI and Tactical Depth:</strong>
-                    Later weeks saw the introduction of new enemy AI types with unique behaviors, adding to the tactical depth of
-                     the game. The implementation of a reload bar as a visual cue for the shooting cooldown added 
-                     strategic pacing to combat scenarios.</p>
+                    Added new enemy AI archetypes with distinct behaviors on top of the shared health/state
+                    system, and a reload-bar UI element that turns weapon cooldown into a visible pacing
+                    decision instead of a hidden timer.</p>
 
                  
                  
@@ -160,19 +146,12 @@
         <div class="image-wrapper">
             <img src="images/progress_slowandsteady.png" alt="Process">
         </div>
-        <p class="game-description-text"> In the creation of "Slow and Steady," our development journey focused on delivering an immersive and strategic gameplay experience. Early stages involved laying foundational mechanics such as responsive player movement and precise aiming systems. As development progressed, we refined enemy AI, introducing complex behaviors and intelligent pathfinding to enhance the interactive challenges. We also implemented a robust health system and dynamic enemy encounters to keep the gameplay engaging. Key advancements included the integration of visual and shooting mechanics that provide immediate feedback and intensify the action. Our final efforts concentrated on optimizing performance through projectile pooling and designing a compelling boss battle with the "Cybertruck," featuring a multi-stage fight that tests player adaptability. Collaborative efforts from every team member, especially in areas like pixel art and UI programming, were crucial in bringing the intricate details of our game to life, making "Slow and Steady" a game that challenges the mind and excites the senses.</p>
+        <p class="game-description-text">Development started with the core movement and aiming loop, then layered in enemy AI with A* pathfinding, a health/damage system shared across enemy types, and a wave spawner to structure encounters. The slow-motion mechanic and its accuracy-based recharge came later, once the base combat loop was solid enough to build a skill-expression system on top of. Final weeks went into performance work (projectile pooling) and the Cybertruck boss fight, a multi-phase encounter built to stress-test every system built up to that point. Art, UI, and audio were built in parallel by the rest of the team.</p>
     </div>
 
     <div class="reflection">
         <h2 class="game-description-title">Reflection</h2>
-        <p class="game-description-text"> Developing "Slow and Steady" has been a profoundly rewarding experience that pushed the boundaries of our creativity and technical skills.
-             Throughout the development process, we tackled various challenges, from fine-tuning the fluidit
-             y of player movements to enhancing the complexity of enemy AI for more engaging combat scenarios.
-              Significant achievements included the implementation of a versatile enemy health system and a
-               strategic wave spawner that heightened the game's challenge and replay value.
-                Our focus on visual feedback and dynamic shooting mechanics also played a crucial role in elevating the player's immersive experience.
-                Reflecting on this journey, the collaboration and relentless dedication of our team were instrumental in transforming our initial concepts into a thrilling and 
-                cohesive gaming experience that we hope will resonate deeply with players.</p>
+        <p class="game-description-text">The biggest technical lesson was keeping combat systems modular enough that a late addition &mdash; the slow-motion mechanic &mdash; could plug into player movement, camera, and enemy AI without a rewrite of any of them. That meant designing the original systems with hooks for time-scale changes from the start, before slow-motion was even a confirmed feature. Debugging combat feel was mostly about instrumentation: the hit-marker and kill-confirmation audio came directly out of watching playtesters and noticing they couldn't tell when a shot had landed without it.</p>
     </div>
 
     <div class="link-build ">
@@ -195,29 +174,8 @@
 
 
      <!-- Footer Referred from https://www.youtube.com/watch?v=YOb67OKw62s -->
-     <footer class="site-footer">
-        <div class="footer-social">
-            <!-- Social Icons -->
-            <a href="https://www.artstation.com/sssn1pee" class="fab fa-artstation" aria-label="ArtStation profile"></a>
-            <a href="https://www.linkedin.com/in/aman-singh-aa985a195/" class="fab fa-linkedin" aria-label="LinkedIn profile"></a>
-            <a href="https://twitter.com/AmanSin86175493" class="fab fa-twitter" aria-label="Twitter profile"></a>
-            <a href="https://www.youtube.com/@amanmatharu24/videos" class="fab fa-youtube" aria-label="YouTube channel"></a>
-            <a href="https://github.com/amanm007/P03-IAT-339" class="fab fa-github" aria-label="GitHub repository"></a>
-        </div>
-        <div class="footer-links">
-            <!-- Navigation Links -->
-            <a href="index.html">Home</a>
-            <a href="game.html">Games</a>
-            <a href="about.html">About Me</a>
-            <a href="Styleguide.html">Styleguide</a>
-            <a href="contact.html">Contact</a>
-            <a href="citations.html">Citations</a>
-            
-            
-        </div>
-        <div class="footer-bottom">
-            <a>  Aman Singh &copy; Simon Fraser University  |  School of Interactive Arts and Technology </a>
-        </div>
+     <footer class="rd-footer">
+        <p>Designed &amp; built by Aman Singh</p>
     </footer>
    <script>
     var slideIndex = 0; // start with the first slide
@@ -248,7 +206,7 @@
     </script>
 
     <script src="js/slider-enhance.js?v=2"></script>
-    <script src="js/particles-bg.js"></script>
+    <script src="js/cursor.js"></script>
 </body>
 </html>
 

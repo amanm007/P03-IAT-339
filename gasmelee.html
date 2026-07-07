@@ -16,48 +16,41 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=NTR&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/redesign.css" rel="stylesheet">
+    <link href="css/project.css" rel="stylesheet">
 </head>
 <body>
-    <canvas id="drawingCanvas"></canvas>
 
     <!-- Section  Header Start -->
 
-    <div class="container-navbar">
-       <div id="header-wrapper">
-           <header>
-               <div class="logo">
-                   <a href="index.html">
-                       <h2>A.S. </h2>
-                   </a>
-
-               </div>
-
-               <nav class="navbar">
-                   <ul>
-                    <li><a href="game.html">Games</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                   </ul>
-               </nav>
-           </header>
-       </div>
-   </div>
-   <section class="games-container">
-    <a class="game-box" href="gasmelee.html" aria-label="GAS Melee Combat System project overview">
-        <video width="100%" height="auto" controls muted playsinline poster="images/gasmeele.png">
-            <source src="videos/Sonic_GAS_FinalDraft.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="game-info">
-            <h3>GAS Melee Combat System (2026)</h3>
-            <p><strong>Duration:</strong> April 2026 - June 2026</p>
-            <p><strong>Type:</strong> Personal Project</p>
-            <p><strong>Role:</strong> Gameplay Programmer</p>
-            <p><strong>Engine and Tools:</strong> Unreal Engine 5, Gameplay Ability System, C++ & Blueprints</p>
-            <!-- Add more details here -->
+    <nav class="rd-nav" aria-label="Primary">
+        <div class="rd-nav-logo">
+            <a href="index.html" aria-label="Home">A.S.</a>
         </div>
-    </a>
-</section>
+        <ul class="rd-nav-links">
+            <li><a href="index.html#about"><span class="nav-num">01.</span> about</a></li>
+            <li><a href="index.html#experience"><span class="nav-num">02.</span> experience</a></li>
+            <li><a href="index.html#projects"><span class="nav-num">03.</span> projects</a></li>
+            <li><a href="index.html#contact"><span class="nav-num">04.</span> contact</a></li>
+            <li><a class="rd-resume-btn" href="documents/AmanSingh_Resume-feb2026.pdf" target="_blank" rel="noopener noreferrer">resume</a></li>
+        </ul>
+    </nav>
+   <div class="pl-top">
+        <a class="pl-back" href="index.html#projects"><span class="arrow" aria-hidden="true">&larr;</span> <span class="slash">/</span> project log</a>
+    </div>
+    <header class="pl-header">
+        <h1 class="pl-title">GAS Melee Combat System</h1>
+        <div class="pl-hero">
+            <video width="100%" height="auto" controls muted playsinline poster="images/gasmeele.png">
+                <source src="videos/Sonic_GAS_FinalDraft.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <p class="pl-sub">A character-action melee combat system on Unreal Engine 5's Gameplay Ability System &mdash; combo chains, a 0.4-second perfect parry, motion-warping magnetism, and Behavior Tree enemy AI on one attribute pipeline.</p>
+        <p class="pl-date">April &mdash; June 2026</p>
+        <p class="pl-meta">Personal Project &bull; Gameplay Programmer &bull; Unreal Engine 5 / GAS / C++ &amp; Blueprints</p>
+    </header>
 <section id="game-details">
 
 
@@ -219,7 +212,7 @@
 
     <div class="link-build ">
         <h2 class="game-description-title">Watch the Combat Demo</h2>
-        <a href="https://www.youtube.com/@amanmatharu24/videos" target="_blank" class="game-download-link">Demo Coming Soon - YouTube</a>
+        <a href="https://www.youtube.com/@amanmatharu24/videos" target="_blank" class="game-download-link">See more on my YouTube channel</a>
 
     </div>
 
@@ -234,29 +227,8 @@
 
 
      <!-- Footer Referred from https://www.youtube.com/watch?v=YOb67OKw62s -->
-     <footer class="site-footer">
-        <div class="footer-social">
-            <!-- Social Icons -->
-            <a href="https://www.artstation.com/sssn1pee" class="fab fa-artstation" aria-label="ArtStation profile"></a>
-            <a href="https://www.linkedin.com/in/aman-singh-aa985a195/" class="fab fa-linkedin" aria-label="LinkedIn profile"></a>
-            <a href="https://twitter.com/AmanSin86175493" class="fab fa-twitter" aria-label="Twitter profile"></a>
-            <a href="https://www.youtube.com/@amanmatharu24/videos" class="fab fa-youtube" aria-label="YouTube channel"></a>
-            <a href="https://github.com/amanm007/P03-IAT-339" class="fab fa-github" aria-label="GitHub repository"></a>
-        </div>
-        <div class="footer-links">
-            <!-- Navigation Links -->
-            <a href="index.html">Home</a>
-            <a href="game.html">Games</a>
-            <a href="about.html">About Me</a>
-            <a href="Styleguide.html">Styleguide</a>
-            <a href="contact.html">Contact</a>
-            <a href="citations.html">Citations</a>
-
-
-        </div>
-        <div class="footer-bottom">
-            <a>  Aman Singh &copy; Simon Fraser University  |  School of Interactive Arts and Technology </a>
-        </div>
+     <footer class="rd-footer">
+        <p>Designed &amp; built by Aman Singh</p>
     </footer>
     <script>
     var sliderIndexes = {};
@@ -309,6 +281,6 @@
     initSlider("slider-ai");
     </script>
     <script src="js/slider-enhance.js?v=2"></script>
-    <script src="js/particles-bg.js"></script>
+    <script src="js/cursor.js"></script>
 </body>
 </html>

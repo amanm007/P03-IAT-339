@@ -1,177 +1,342 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aman Singh's gameplay programming portfolio featuring projects, demo reel, and game development work.">
-
-    <title>Portfolio </title>
-    <link href="css/index.css" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Aman Singh</title>
+    <meta name="description" content="Aman Singh — gameplay programmer building combat systems, traversal mechanics, and AI in Unreal Engine 5 and Unity. Based in Vancouver, B.C.">
+    <meta name="theme-color" content="#0f0a1f">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=NTR&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
-
+    <link href="css/redesign.css" rel="stylesheet">
 </head>
-
 <body>
-    <!-- Section  Header Start -->
-    <canvas id="drawingCanvas"></canvas>
-    <div class="container-navbar">
-        <div id="header-wrapper">
-            <header>
-                <div class="logo">
-                    <a href="index.html">
-                        <h2>A.S. </h2>
-                    </a>
 
+    <!-- ================= Navbar ================= -->
+    <nav class="rd-nav" id="rd-nav" aria-label="Primary">
+        <div class="rd-nav-logo">
+            <a href="#top" aria-label="Home">A.S.</a>
+        </div>
+        <button class="rd-nav-toggle" id="rd-nav-toggle" aria-label="Open menu" aria-expanded="false">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+        <ul class="rd-nav-links" id="rd-nav-links">
+            <li><a href="#about"><span class="nav-num">01.</span> about</a></li>
+            <li><a href="#experience"><span class="nav-num">02.</span> experience</a></li>
+            <li><a href="#projects"><span class="nav-num">03.</span> projects</a></li>
+            <li><a href="#contact"><span class="nav-num">04.</span> contact</a></li>
+            <li><a class="rd-resume-btn" href="documents/AmanSingh_Resume-feb2026.pdf" target="_blank" rel="noopener noreferrer">resume</a></li>
+        </ul>
+    </nav>
+
+    <!-- ================= Side rails ================= -->
+    <div class="rd-rail rd-rail-left" aria-label="Social links">
+        <a href="https://github.com/amanm007" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/aman-singh-aa985a195/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="https://www.artstation.com/sssn1pee" target="_blank" rel="noopener noreferrer" aria-label="ArtStation"><i class="fab fa-artstation" aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com/@amanmatharu24/videos" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/AmanSin86175493" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+    </div>
+    <div class="rd-rail rd-rail-right">
+        <a href="mailto:matharu689@gmail.com">matharu689@gmail.com</a>
+    </div>
+
+    <main class="rd-main" id="top">
+
+        <!-- ================= Hero ================= -->
+        <section class="rd-hero" aria-label="Introduction">
+            <div class="rd-hero-text">
+                <h1 class="rd-hero-title">hi, <span class="typed-name" id="typed-name"></span><span class="cursor">|</span></h1>
+                <p class="rd-hero-tagline">I build combat systems.</p>
+                <p class="rd-hero-bio">
+                    <span class="hl">Gameplay Engineer</span> building combat systems, AI, and movement
+                    architecture in Unreal Engine 5 (C++ &amp; Blueprints) and Unity (C#). Recent work: a
+                    GAS-driven melee combat system with Behavior Tree and EQS enemy AI, and an 8-state FPS
+                    movement architecture built around a custom C++ async force plugin. Based in Vancouver, BC.
+                </p>
+                <a class="rd-cta" href="mailto:matharu689@gmail.com"><i class="far fa-envelope" aria-hidden="true"></i> Say hi!</a>
+            </div>
+                        <div class="rd-avatar-stage" id="avatar-stage">
+                <div class="rd-avatar-blob" aria-hidden="true"></div>
+                <div class="rd-avatar-ring" aria-hidden="true"></div>
+                <div class="rd-tilt">
+                    <figure class="rd-avatar">
+                        <img id="avatar-img" src="images/avatar.png"
+                             alt="3D avatar of Aman Singh, a gameplay programmer in a maroon turban, glasses, and Portugal jersey">
+                    </figure>
+                </div>
+                <div class="rd-avatar-shadow" aria-hidden="true"></div>
+
+                <!-- about -->
+                <div class="rd-ax rd-ax-about">
+                    <span class="rd-ax-label">Gameplay Programmer based in Vancouver, BC.</span>
+                    <span class="rd-ax-spark s1" aria-hidden="true"></span>
+                    <span class="rd-ax-spark s2" aria-hidden="true"></span>
+                    <span class="rd-ax-spark s3" aria-hidden="true"></span>
                 </div>
 
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="game.html">Games</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                <!-- experience -->
+                <div class="rd-ax rd-ax-experience">
+                    <div class="rd-ax-card">
+                        <p class="rd-ax-title">Experience</p>
+                        <p class="rd-ax-sub">Gameplay systems &bull; AI &bull; Movement &bull; Combat</p>
+                        <div class="rd-ax-timeline" aria-hidden="true">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- projects -->
+                <div class="rd-ax rd-ax-projects">
+                    <span class="rd-ax-label">Explore systems I've built.</span>
+                    <span class="rd-ax-chip c1" aria-hidden="true"><i class="fas fa-gamepad"></i></span>
+                    <span class="rd-ax-chip c2" aria-hidden="true"><i class="fas fa-rocket"></i></span>
+                    <span class="rd-ax-chip c3" aria-hidden="true"><i class="fas fa-brain"></i></span>
+                    <span class="rd-ax-chip c4" aria-hidden="true"><i class="fas fa-code"></i></span>
+                </div>
+
+                <!-- contact -->
+                <div class="rd-ax rd-ax-contact">
+                    <div class="rd-ax-bubble"><i class="far fa-envelope" aria-hidden="true"></i> Let's build something cool.</div>
+                </div>
+
+                <!-- resume -->
+                <div class="rd-ax rd-ax-resume">
+                    <div class="rd-ax-card rd-ax-doc">
+                        <p class="rd-ax-title"><i class="far fa-file-lines" aria-hidden="true"></i> Resume</p>
+                        <p class="rd-ax-sub">Gameplay Programmer</p>
+                        <p class="rd-ax-mono">C++ &bull; C# &bull; Unreal &bull; Unity</p>
+                        <span class="rd-ax-dl" aria-hidden="true"><i class="fas fa-arrow-down"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= About ================= -->
+        <section id="about" class="rd-section fade-in-section" aria-label="About me">
+            <h2 class="rd-section-heading"><span class="slash">/</span> about me</h2>
+            <div class="rd-about-grid">
+                <div class="rd-about-text">
+                    <p>
+                        I'm a Gameplay Engineer specializing in systems programming across
+                        <span class="hl">Unreal Engine</span> (C++, Blueprints, GAS) and
+                        <span class="hl">Unity</span> (C#). I build combat pipelines, AI architectures
+                        (Behavior Trees, EQS, FSMs), and physics-based movement systems, grounded in 3D vector
+                        math and frame-rate-independent design, and built to stay modular as scope grows.
+                    </p>
+                    <p>
+                        Recent work includes a full <a class="link" href="gasmelee.html">GAS-based melee combat
+                        system</a> and an <a class="link" href="jetpackfps.html">8-state FPS movement
+                        architecture</a>, both in Unreal Engine 5.
+                    </p>
+                    <p>Here are some technologies I work with:</p>
+                    <ul class="rd-tech-list">
+                        <li>C++ &amp; Blueprints</li>
+                        <li>Unreal Engine 5 / GAS</li>
+                        <li>C#</li>
+                        <li>Unity3D</li>
+                        <li>Behavior Trees &amp; EQS</li>
+                        <li>Java &amp; Python</li>
                     </ul>
-                </nav>
-            </header>
-        </div>
-    </div>
-
-   
-
-    <div class="content">
-        <div class="intro">
-            <h1>Aman Singh</h1>
-            <p class="title">GAMEPLAY ENGINEER</p>
-            <p class="game-description-text">Hey! I'm a Gameplay Engineer specializing in C++ and C# system development across Unreal Engine and Unity — building combat systems, traversal mechanics, and FSM-driven AI. Currently based in Vancouver, B.C.</p>
-        </div>
-        <!-- Add your 'Latest Work' section here -->
-        <!--
-        <div class="latest-work-section">
-            <h2 class="latest-work-title">Showcase Reel</h2>
-            <div class="latest-work-content">
-                <div class="latest-work-image">
-                    <img src="images/demo.png" alt="Showcase Reel" loading="lazy" decoding="async">
                 </div>
-                <div class="latest-work-details">
-                    <h3>Gameplay Programmer Demo Reel | 2024</h3>
-                    <a href="https://youtu.be/l49dprzF_OA" target="_blank" rel="noopener noreferrer">
-                        <button>Watch Demo Reel</button>
-                    </a>
+                <div class="rd-photo">
+                    <img src="images/aman photo.jpg" alt="Aman Singh">
                 </div>
             </div>
-        </div>
-        -->
-        <div class="latest-work-section">
-            <h2 class="latest-work-title">Latest Work</h2>
-            <div class="latest-work-content">
-                <div class="latest-work-image">
-                    <video width="100%" height="auto" controls muted playsinline poster="images/gasmeele.png">
-                        <source src="videos/Sonic_GAS_FinalDraft.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+        </section>
+
+        <!-- ================= Experience ================= -->
+        <section id="experience" class="rd-section fade-in-section" aria-label="Experience">
+            <h2 class="rd-section-heading"><span class="slash">/</span> experience</h2>
+            <div class="rd-exp">
+                <div class="rd-exp-tabs" role="tablist" aria-label="Experience">
+                    <button class="rd-exp-tab is-active" role="tab" aria-selected="true" aria-controls="panel-solo" id="tab-solo">SOLO DEV</button>
+                    <button class="rd-exp-tab" role="tab" aria-selected="false" aria-controls="panel-teams" id="tab-teams">SIAT TEAMS</button>
+                    <button class="rd-exp-tab" role="tab" aria-selected="false" aria-controls="panel-sfu" id="tab-sfu">SFU</button>
                 </div>
-                <div class="latest-work-details">
-                    <h3>GAS Melee Combat System | Unreal Engine 5 | Apr 2026 - Jun 2026</h3>
-                    <form action="gasmelee.html">
-                        <button>Go to project</button>
-                    </form>
+                <div class="rd-exp-panels">
+                    <div class="rd-exp-panel is-active" role="tabpanel" id="panel-solo" aria-labelledby="tab-solo">
+                        <h3>Gameplay Programmer <span class="at">@ Independent</span></h3>
+                        <p class="rd-exp-date">2025 &mdash; PRESENT</p>
+                        <ul>
+                            <li>Designed and shipped a complete GAS-based melee combat system in Unreal Engine 5 &mdash; 6-hit combo chains, a 0.4s perfect-parry window, directional hit reactions, and motion-warping combat magnetism, all built on one centralized damage pipeline.</li>
+                            <li>Built a five-state enemy AI on Behavior Trees, AI Perception, and EQS strafing, synchronized with combat abilities through gameplay-event handshakes.</li>
+                            <li>Engineered an advanced-movement FPS prototype (Jetpack FPS) with an 8-state locomotion machine and a custom C++ async root-motion plugin for curve-driven, cancellable movement forces.</li>
+                        </ul>
+                    </div>
+                    <div class="rd-exp-panel" role="tabpanel" id="panel-teams" aria-labelledby="tab-teams">
+                        <h3>Gameplay Programmer <span class="at">@ SIAT team projects</span></h3>
+                        <p class="rd-exp-date">2023 &mdash; 2024</p>
+                        <ul>
+                            <li>Lead mechanics gameplay programmer on <em>Slow &amp; Steady</em>, a rogue-like 2D shooter &mdash; player movement, shooting, a signature slow-down mechanic, and A*-driven enemy AI with multiple enemy types.</li>
+                            <li>Lead mechanics programmer and sound designer on <em>Storge</em>, a narrative horror game &mdash; player systems, AI patrol/chase behavior, and full sound design.</li>
+                            <li>VR interaction developer on <em>Paradox Rift</em> &mdash; XR rig configuration, physics-based character controller, grabbable-object systems, and custom teleportation.</li>
+                        </ul>
+                    </div>
+                    <div class="rd-exp-panel" role="tabpanel" id="panel-sfu" aria-labelledby="tab-sfu">
+                        <h3>BA, Double Minor <span class="at">@ Simon Fraser University</span></h3>
+                        <p class="rd-exp-date">2019 &mdash; 2024</p>
+                        <ul>
+                            <li>Double minor in Computing Science and Interactive Arts &amp; Technology (SIAT), Vancouver, B.C.</li>
+                            <li>Coursework spanning data structures &amp; algorithms, 3D modelling and animation, UX/UI design, and game development.</li>
+                            <li>Shipped three team game projects through the SIAT curriculum &mdash; each one playable in the projects below.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    <!-- <div class="home">
-        <div class="about1_img">
-            <img src="images/slowsteady1.png" alt="Slow and Steady">
-        </div>
-        <div class="headings">
-            <h2 style=font-size:5vh>Slow and Steady</h2>
-            <h3 class="role">Lead Gameplay Programmer</h3>
+        </section>
 
-            <div class="description">
-                <p>Our goal was to create an engaging horde-based 2D shooting game with 
-                    interesting gameplay mechanics. Key features include interesting shooting mechanics,
-                     challenging enemy types, and progressive waves of enemies. Player strategy
-                      and skill progression are central to the game's design, 
-                      providing a satisfying and replayable gaming experience.
-                      We aimed for a game that would not only captivate but also offer depth
-                       and variety in its play styles</p>
+        <!-- ================= Projects ================= -->
+        <section id="projects" class="rd-section" aria-label="Projects">
+            <h2 class="rd-section-heading fade-in-section"><span class="slash">/</span> projects</h2>
+
+                        <!-- Featured project slider -->
+            <div class="rd-slider-wrap fade-in-section">
+                <div class="rd-slider" id="project-slider" aria-roledescription="carousel" aria-label="Featured projects">
+                    <button class="rd-slider-arrow prev" id="slider-prev" aria-label="Previous project">&#10094;</button>
+                    <button class="rd-slider-arrow next" id="slider-next" aria-label="Next project">&#10095;</button>
+
+                    <div class="rd-slide is-active">
+                        <img src="images/gasmeele.png" alt="" loading="lazy" decoding="async">
+                        <div class="rd-slide-content">
+                            <h3><a href="gasmelee.html">GAS Melee Combat System</a></h3>
+                            <p>A character-action melee combat system on UE5's Gameplay Ability System &mdash; combo chains, a 0.4s perfect parry, motion-warping magnetism, and BT/EQS enemy AI on one attribute pipeline.</p>
+                            <p class="rd-slide-tech">Unreal Engine 5 (GAS, C++ &amp; Blueprints)</p>
+                            <a class="rd-slide-link" href="gasmelee.html" aria-label="GAS Melee Combat System breakdown"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="rd-slide">
+                        <img src="images/jetpackfps.png" alt="" loading="lazy" decoding="async">
+                        <div class="rd-slide-content">
+                            <h3><a href="jetpackfps.html">Jetpack FPS</a></h3>
+                            <p>An advanced-movement FPS with an 8-state locomotion machine &mdash; sprint, slide, wallrun, jetpack &mdash; powered by a custom C++ async root-motion force plugin.</p>
+                            <p class="rd-slide-tech">Unreal Engine 5 (C++ &amp; Blueprints)</p>
+                            <a class="rd-slide-link" href="jetpackfps.html" aria-label="Jetpack FPS breakdown"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="rd-slide">
+                        <img src="images/slowsteady1.png" alt="" loading="lazy" decoding="async">
+                        <div class="rd-slide-content">
+                            <h3><a href="slowandsteady.html">Slow and Steady</a></h3>
+                            <p>A horde-based twin-stick shooter built around a slow-motion mechanic tied to hit accuracy, five enemy archetypes, and a multi-phase boss.</p>
+                            <p class="rd-slide-tech">C# (Unity)</p>
+                            <a class="rd-slide-link" href="slowandsteady.html" aria-label="Slow and Steady breakdown"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="rd-slide">
+                        <img src="images/storge1.png" alt="" loading="lazy" decoding="async">
+                        <div class="rd-slide-content">
+                            <h3><a href="storge.html">Storge</a></h3>
+                            <p>A 2D pixel survival-horror game adapting a fixed narrative script &mdash; waypoint patrol AI with chase states, proximity-scaled audio, and real-time health feedback.</p>
+                            <p class="rd-slide-tech">C# (Unity)</p>
+                            <a class="rd-slide-link" href="storge.html" aria-label="Storge breakdown"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="rd-slide">
+                        <img src="images/Paradox_Title.png" alt="" loading="lazy" decoding="async">
+                        <div class="rd-slide-content">
+                            <h3><a href="paradoxrift.html">Paradox Rift</a></h3>
+                            <p>A VR puzzle game built on one rule: objects moved in the past move in the present. XR rig, grabbable-object systems, and custom teleportation.</p>
+                            <p class="rd-slide-tech">C# (Unity, VR/XR)</p>
+                            <a class="rd-slide-link" href="paradoxrift.html" aria-label="Paradox Rift breakdown"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rd-slider-dots" id="slider-dots" role="tablist" aria-label="Project slides"></div>
             </div>
-            <div class="butn">
-                <!-- <a href="products.html"><button type="button">Order now</button></a> -->
-                <!-- <form action="game.html">
-                    <button>Go to project</button>
-                </form>
+
+            <!-- Grid: remaining projects -->
+            <div class="rd-grid fade-in-section">
+                <div class="rd-card">
+                    <div class="rd-card-top">
+                        <i class="far fa-folder-open folder" aria-hidden="true"></i>
+                        <i class="fas fa-arrow-up-right-from-square out" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="rd-card-title"><a href="slowandsteady.html">Slow and Steady</a></h3>
+                    <p class="rd-card-desc">
+                        A rogue-like 2D shooter with a signature slow-down mechanic. Lead mechanics gameplay
+                        programmer &mdash; player systems, A* enemy AI with multiple enemy types, and combat feel.
+                    </p>
+                    <ul class="rd-card-tags">
+                        <li>Unity</li>
+                        <li>C#</li>
+                        <li>A* Pathfinding</li>
+                    </ul>
+                </div>
+                <div class="rd-card">
+                    <div class="rd-card-top">
+                        <i class="far fa-folder-open folder" aria-hidden="true"></i>
+                        <i class="fas fa-arrow-up-right-from-square out" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="rd-card-title"><a href="storge.html">Storge</a></h3>
+                    <p class="rd-card-desc">
+                        A narrative horror game built for a senior storytelling course. Lead mechanics programmer
+                        and sound designer &mdash; player systems, patrol/chase enemy AI, and full audio design.
+                    </p>
+                    <ul class="rd-card-tags">
+                        <li>Unity</li>
+                        <li>C#</li>
+                        <li>Sound Design</li>
+                    </ul>
+                </div>
+                <div class="rd-card">
+                    <div class="rd-card-top">
+                        <i class="far fa-folder-open folder" aria-hidden="true"></i>
+                        <i class="fas fa-arrow-up-right-from-square out" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="rd-card-title"><a href="paradoxrift.html">Paradox Rift</a></h3>
+                    <p class="rd-card-desc">
+                        An immersive VR experience. VR interaction developer &mdash; XR rig setup, physics-based
+                        character controller, grabbable objects, and custom teleportation systems.
+                    </p>
+                    <ul class="rd-card-tags">
+                        <li>Unity</li>
+                        <li>VR / XR</li>
+                        <li>C#</li>
+                    </ul>
+                </div>
             </div>
+        </section>
 
+        <!-- ================= Contact ================= -->
+        <section id="contact" class="rd-contact fade-in-section" aria-label="Contact">
+            <p class="rd-overline">04. what's next?</p>
+            <h2>Get In Touch</h2>
+            <p>
+                I'm looking for my first gameplay programming role in the games industry &mdash; if you're
+                hiring, have a question about any of the systems on this site, or just want to talk shop
+                about combat design, my inbox is always open.
+            </p>
+            <a class="rd-cta" href="mailto:matharu689@gmail.com"><i class="far fa-envelope" aria-hidden="true"></i> Say hi!</a>
+        </section>
+
+    </main>
+
+    <!-- ================= Footer ================= -->
+    <footer class="rd-footer">
+        <div class="rd-footer-social">
+            <a href="https://github.com/amanm007" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/aman-singh-aa985a195/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="https://www.artstation.com/sssn1pee" target="_blank" rel="noopener noreferrer" aria-label="ArtStation"><i class="fab fa-artstation" aria-hidden="true"></i></a>
+            <a href="https://www.youtube.com/@amanmatharu24/videos" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/AmanSin86175493" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
         </div>
-    </div>
+        <p>Designed &amp; built by Aman Singh &mdash; SFU, School of Interactive Arts and Technology</p>
+    </footer>
 
-    <div class="home">
-        <div class="about1_img">
-            <img src="images/storge1.png" alt="Storge 1">
-        </div>
-        <div class="headings">
-            <h2 style=font-size:5vh>Storge</h2>
-            <h3 class="role">Lead Gameplay Programmer and SFX Design</h3>
-
-            <div class="description">
-                <p>Our goal was to create an engaging horde-based 2D shooting game with 
-                    interesting gameplay mechanics. Key features include interesting shooting mechanics,
-                     challenging enemy types, and progressive waves of enemies. Player strategy
-                      and skill progression are central to the game's design, 
-                      providing a satisfying and replayable gaming experience.
-                      We aimed for a game that would not only captivate but also offer depth
-                       and variety in its play styles</p>
-            </div>
-            <div class="butn">
-                <a href="products.html"><button type="button">Order now</button></a> -->
-                <!-- <form action="game.html">
-                    <button>Go to project</button>
-                </form>
-            </div>
-
-        </div>
-    </div> --> 
+    <!-- ================= Game mode ================= -->
+    <button class="rd-game-toggle" id="game-toggle" aria-pressed="false">&#9876; game mode: off</button>
 
 
-
-    </div>
-    
-    <!-- Footer Referred from https://www.youtube.com/watch?v=YOb67OKw62s -->
-   <!-- Footer Referred from https://www.youtube.com/watch?v=YOb67OKw62s -->
-   <footer class="site-footer">
-    <div class="footer-social">
-        <!-- Social Icons -->
-        <a href="https://www.artstation.com/sssn1pee" class="fab fa-artstation" aria-label="ArtStation profile"></a>
-        <a href="https://www.linkedin.com/in/aman-singh-aa985a195/" class="fab fa-linkedin" aria-label="LinkedIn profile"></a>
-        <a href="https://twitter.com/AmanSin86175493" class="fab fa-twitter" aria-label="Twitter profile"></a>
-        <a href="https://www.youtube.com/@amanmatharu24/videos" class="fab fa-youtube" aria-label="YouTube channel"></a>
-        <a href="https://github.com/amanm007/P03-IAT-339" class="fab fa-github" aria-label="GitHub repository"></a>
-    </div>
-    <div class="footer-links">
-        <!-- Navigation Links -->
-        <a href="index.html">Home</a>
-        <a href="game.html">Games</a>
-        <a href="about.html">About Me</a>
-        <a href="Styleguide.html">Styleguide</a>
-        <a href="contact.html">Contact</a>
-        <a href="citations.html">Citations</a>
-        
-        
-    </div>
-    <div class="footer-bottom">
-        <a>  Aman Singh &copy; Simon Fraser University  |  School of Interactive Arts and Technology </a>
-    </div>
-</footer>
-        <script src="js/spider-bg.js"></script>
-
+    <script src="js/redesign.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/combo-game.js"></script>
 </body>
-
 </html>
-
-
-

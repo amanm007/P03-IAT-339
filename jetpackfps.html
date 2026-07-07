@@ -16,48 +16,41 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=NTR&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/redesign.css" rel="stylesheet">
+    <link href="css/project.css" rel="stylesheet">
 </head>
 <body>
-    <canvas id="drawingCanvas"></canvas>
     
     <!-- Section  Header Start -->
 
-    <div class="container-navbar">
-       <div id="header-wrapper">
-           <header>
-               <div class="logo">
-                   <a href="index.html">
-                       <h2>A.S. </h2>
-                   </a>
-
-               </div>
-
-               <nav class="navbar">
-                   <ul>
-                    <li><a href="game.html">Games</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                   </ul>
-               </nav>
-           </header>
-       </div>
-   </div>
-   <section class="games-container">
-    <a class="game-box" href="jetpackfps.html" aria-label="Jetpack FPS project overview">
-        <video width="100%" height="auto" autoplay muted loop playsinline>
-            <source src="https://media.githubusercontent.com/media/amanm007/P03-IAT-339/Feb2026/images/JetPackFPS/WallRun.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="game-info">
-            <h3>Jetpack FPS (2026)</h3>
-            <p><strong>Duration:</strong> October 2025 - Present</p>
-            <p><strong>Type:</strong> Personal Project</p>
-            <p><strong>Role:</strong> Gameplay Programmer</p>
-            <p><strong>Engine and Tools:</strong> Unreal Engine 5, C++ & Blueprints</p>
-            <!-- Add more details here -->
+    <nav class="rd-nav" aria-label="Primary">
+        <div class="rd-nav-logo">
+            <a href="index.html" aria-label="Home">A.S.</a>
         </div>
-    </a>
-</section>
+        <ul class="rd-nav-links">
+            <li><a href="index.html#about"><span class="nav-num">01.</span> about</a></li>
+            <li><a href="index.html#experience"><span class="nav-num">02.</span> experience</a></li>
+            <li><a href="index.html#projects"><span class="nav-num">03.</span> projects</a></li>
+            <li><a href="index.html#contact"><span class="nav-num">04.</span> contact</a></li>
+            <li><a class="rd-resume-btn" href="documents/AmanSingh_Resume-feb2026.pdf" target="_blank" rel="noopener noreferrer">resume</a></li>
+        </ul>
+    </nav>
+   <div class="pl-top">
+        <a class="pl-back" href="index.html#projects"><span class="arrow" aria-hidden="true">&larr;</span> <span class="slash">/</span> project log</a>
+    </div>
+    <header class="pl-header">
+        <h1 class="pl-title">Jetpack FPS</h1>
+        <div class="pl-hero">
+            <video width="100%" height="auto" autoplay muted loop playsinline>
+                <source src="https://media.githubusercontent.com/media/amanm007/P03-IAT-339/Feb2026/images/JetPackFPS/WallRun.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <p class="pl-sub">An advanced-movement FPS with an 8-state locomotion machine &mdash; sprint, slide, wallrun, jetpack &mdash; powered by a custom C++ async root-motion force plugin.</p>
+        <p class="pl-date">November 2025 &mdash; Present</p>
+        <p class="pl-meta">Personal Project &bull; Gameplay Programmer &bull; Unreal Engine 5 / C++ &amp; Blueprints</p>
+    </header>
 <section id="game-details">
    
 
@@ -78,7 +71,7 @@
           
             <!-- Video slides -->
             <div class="video-slide">
-                <div class="video-title">Combact Loop</div>
+                <div class="video-title">Combat Loop</div>
                 <video width="100%" height="auto" autoplay muted loop controls>
                     <source src="https://media.githubusercontent.com/media/amanm007/P03-IAT-339/Feb2026/images/JetPackFPS/Combact.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -235,29 +228,8 @@
 
 
      <!-- Footer Referred from https://www.youtube.com/watch?v=YOb67OKw62s -->
-     <footer class="site-footer">
-        <div class="footer-social">
-            <!-- Social Icons -->
-            <a href="https://www.artstation.com/sssn1pee" class="fab fa-artstation" aria-label="ArtStation profile"></a>
-            <a href="https://www.linkedin.com/in/aman-singh-aa985a195/" class="fab fa-linkedin" aria-label="LinkedIn profile"></a>
-            <a href="https://twitter.com/AmanSin86175493" class="fab fa-twitter" aria-label="Twitter profile"></a>
-            <a href="https://www.youtube.com/@amanmatharu24/videos" class="fab fa-youtube" aria-label="YouTube channel"></a>
-            <a href="https://github.com/amanm007/P03-IAT-339" class="fab fa-github" aria-label="GitHub repository"></a>
-        </div>
-        <div class="footer-links">
-            <!-- Navigation Links -->
-            <a href="index.html">Home</a>
-            <a href="game.html">Games</a>
-            <a href="about.html">About Me</a>
-            <a href="Styleguide.html">Styleguide</a>
-            <a href="contact.html">Contact</a>
-            <a href="citations.html">Citations</a>
-            
-            
-        </div>
-        <div class="footer-bottom">
-            <a>  Aman Singh &copy; Simon Fraser University  |  School of Interactive Arts and Technology </a>
-        </div>
+     <footer class="rd-footer">
+        <p>Designed &amp; built by Aman Singh</p>
     </footer>
     <script>
     var sliderIndexes = {};
@@ -310,7 +282,7 @@
     initSlider("slider-wallrun");
     </script>
     <script src="js/slider-enhance.js?v=2"></script>
-    <script src="js/particles-bg.js"></script>
+    <script src="js/cursor.js"></script>
 </body>
 </html>
 

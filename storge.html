@@ -16,46 +16,38 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=NTR&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/redesign.css" rel="stylesheet">
+    <link href="css/project.css" rel="stylesheet">
 </head>
 <body>
-    <canvas id="drawingCanvas"></canvas>
     
     <!-- Section  Header Start -->
 
-    <div class="container-navbar">
-       <div id="header-wrapper">
-           <header>
-               <div class="logo">
-                   <a href="index.html">
-                       <h2>A.S. </h2>
-                   </a>
-
-               </div>
-
-               <nav class="navbar">
-                   <ul>
-                    <li><a href="game.html">Games</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                   </ul>
-               </nav>
-           </header>
-       </div>
-   </div>
-   <section class="games-container">
-    <a class="game-box" href="storge.html" aria-label="Storge project overview">
-        <img src="images/storge1.png" alt="The Storge" decoding="async">
-        <div class="game-info">
-            <h3>Storge (2023)</h3>
-            <p>Duration: September 2023-January 2024</p>
-            <p>Type: Univeristy Project</p>
-            <p>Role: Lead mechanics gameplay programmer and SFX designer</p>
-            <p>Engine and Tools: Unity </p>
-            <!-- Add more details here -->
+    <nav class="rd-nav" aria-label="Primary">
+        <div class="rd-nav-logo">
+            <a href="index.html" aria-label="Home">A.S.</a>
         </div>
-    </a>
-    <!-- ... more games here ... -->
-</section>
+        <ul class="rd-nav-links">
+            <li><a href="index.html#about"><span class="nav-num">01.</span> about</a></li>
+            <li><a href="index.html#experience"><span class="nav-num">02.</span> experience</a></li>
+            <li><a href="index.html#projects"><span class="nav-num">03.</span> projects</a></li>
+            <li><a href="index.html#contact"><span class="nav-num">04.</span> contact</a></li>
+            <li><a class="rd-resume-btn" href="documents/AmanSingh_Resume-feb2026.pdf" target="_blank" rel="noopener noreferrer">resume</a></li>
+        </ul>
+    </nav>
+   <div class="pl-top">
+        <a class="pl-back" href="index.html#projects"><span class="arrow" aria-hidden="true">&larr;</span> <span class="slash">/</span> project log</a>
+    </div>
+    <header class="pl-header">
+        <h1 class="pl-title">Storge</h1>
+        <div class="pl-hero">
+            <img src="images/storge1.png" alt="Storge" decoding="async">
+        </div>
+        <p class="pl-sub">A 2D pixel survival-horror game adapting a fixed narrative script &mdash; waypoint patrol AI with chase states, proximity-scaled audio, and real-time health feedback.</p>
+        <p class="pl-date">September 2023 &mdash; January 2024</p>
+        <p class="pl-meta">University Project &bull; Lead Mechanics Programmer &amp; SFX Designer &bull; Unity / C#</p>
+    </header>
 
 
      
@@ -66,18 +58,17 @@
 
     <div class="game-description">
         <h2 class="game-description-title">What is Storge?</h2>
-        <p class="game-description-text">Storge was created for senior level narrative based course, IAT 313, at SFU. The project brief was to create an multi-media project based on a narrative script, where the script formed the spine of the story and our game intend to engage as the medium for engagement. </p>
+        <p class="game-description-text">Storge was built for IAT 313, a senior narrative-design course at SFU. The brief: adapt a narrative script into a playable medium, with the game itself carrying the story rather than illustrating it.</p>
             <div class="video-wrapper">
                 <video width="100%" height="auto" autoplay muted loop controls>
                     <source src="https://media.githubusercontent.com/media/amanm007/P03-IAT-339/Feb2026/videos/storge_playthrough.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <p class="game-description-text">Storge is a 2D pixel survival horror game in which the player takes on the role of
-                June, a detective who must uncover the truth of the mysterious disappearances of her
-                old orphanage. Taking inspiration from games such as Ib, the game involves exploration,
-                simple puzzles, and avoiding enemies. The game mainly takes place in the Veil, which is
-                an alternate nightmarish realm within the orphanage. </p>
+            <p class="game-description-text">Storge is a 2D pixel survival-horror game where the player, June, a detective,
+                investigates a string of disappearances tied to her old orphanage. Inspired by Ib, it's built
+                around exploration, light puzzle-solving, and enemy avoidance, largely set in the Veil &mdash;
+                an alternate, nightmarish version of the orphanage.</p>
 
         <!-- Video or image showcase -->
     </div>
@@ -95,12 +86,12 @@
     <div class="contribution-summary">
         <h2 class="game-description-title">Summary of Contributions</h2>
         <p class="game-description-text"> <strong>Core Gameplay Mechanics; Player and NPCS: </strong>
-             Utilized Unity's Rigidbody2D to create fluid, responsive player movements responsive to arrow keys or other input controls, including diagonal movement with speed consistency.</p>
+             Built player movement on Unity's Rigidbody2D, normalizing diagonal input so movement speed stays consistent regardless of direction &mdash; avoids the classic diagonal-speed bug where unnormalized input makes diagonal movement faster than cardinal movement.</p>
             <p class="game-description-text"> <strong>Animations: </strong>
-                Developed animations for walking and idle states, enhancing visual appeal by flipping the sprite when changing directions.</p>
-           
+                Implemented walk and idle animation states with directional sprite flipping driven by input direction, keeping the character oriented correctly without doubling the sprite sheet for left/right variants.</p>
+
                 <p class="game-description-text"> <strong>Health System: </strong>
-                    Implemented a robust health system with a dynamic health bar UI, updating in real-time as the player takes damage, enhancing gameplay realism and feedback.</p>
+                    Built a health system with a UI bar bound directly to the player's current HP value, so damage feedback updates immediately on hit rather than being polled per frame.</p>
 
                  <div id="video-slider">
                     <!-- Buttons for navigation -->
@@ -140,19 +131,17 @@
                   </div>
 
                  <p class="game-description-text"> <strong>The Beast/Antagonist/Enemy :</strong>
-                    Engineered a sophisticated AI system allowing The Beast to patrol using predefined waypoints, with dynamic obstacle avoidance and pathfinding.
-                    Integrated sensors for player detection triggering behavior changes from patrolling to chasing, enhancing the game's challenge.
-                    Configured the enemy to inflict damage upon contact, with a continuous damage system when the player remains in proximity, intensifying survival strategies.
-                    Incorporated methods for controlling sound effect pitch and volume, allowing for immersive audio experiences.
-
-
+                    Built the Beast's AI on a waypoint-based patrol system with obstacle avoidance and pathfinding,
+                    transitioning to a chase state once player-detection sensors trigger. Contact damage escalates
+                    the longer the player stays in range, and attack/footstep SFX pitch and volume scale with
+                    proximity to reinforce how close the threat actually is.
                 </p>
 
 
                 <p class="game-description-text"> <strong> Sound Effects: </strong>
-                    Implemented varied footstep sound effects and synchronized damage sounds with player-enemy interactions, enhancing auditory feedback.
-                    Added rich background music and state-specific sounds for The Beast, contributing to an immersive audio landscape.
-
+                    Layered footstep SFX, damage feedback synced to hit frames, and state-specific audio cues for
+                    the Beast on top of ambient background scoring, so audio state tracks gameplay state rather
+                    than playing on a fixed loop.
                 </p>
 
                  
@@ -164,34 +153,23 @@
         <div class="image-wrapper">
             <img src="images/process_storge.png" alt="Process">
         </div>
-        <p class="game-description-text"> After adapting the script, our team set out to design the characters and game
-            world. We settled on using a 32x32 size for our pixel art, as it is a size that allows for
-            both simplicity and detail depending on what is being drawn. Characters were designed
-            using concept art drawn for the original script, and then reimagined in pixel form. This
-            involved simplifying some of the original details as well as creating a dedicated colour
-            pallet for each of the characters. This also gave us the opportunity to make sure that the
-            characters matched the setting's identified time period: the 80's. Most of the character
-            designs remained similar to the original concept images, however changes were made
-            to the Beast and new concepts were made for supporting characters to fit the new script
-            while keeping the established world of a small North American town in the 80's. We also
-            took the opportunity to add symbolic elements to the character designs (such as flowers
-            with symbolic meanings) to further tie them into the story.</p>
+        <p class="game-description-text">We settled on 32x32 pixel art for a balance of simplicity and detail, translating
+            the original concept art for each character into pixel form with a dedicated color palette per
+            character. Designs stayed close to the source material to preserve the story's 1980s small-town
+            setting, with revisions made to the Beast and new designs created for supporting characters. We
+            also worked in symbolic detail &mdash; like flower meanings &mdash; tying character design back
+            into the narrative.</p>
     </div>
 
     <div class="reflection">
         <h2 class="game-description-title">Reflection</h2>
-        <p class="game-description-text"> In the course of developing "The Storge", I embarked on a journey
-            that not only expanded my technical skills but also deepened my
-            understanding of game development as a whole. This immersive experience
-            allowed me to grasp the intricacies of player interaction, sound design, and
-            health management within a game. The implementation of player
-            movement, complete with animations and footsteps, brought life to my
-            virtual world, offering players a responsive and engaging gameplay
-            experience.This project has not only honed my Unity skills but also
-            deepened my passion for game development. It has been a remarkable
-            journey of creativity, problem-solving, and continuous learning, leaving me
-            eager to explore and create even more captivating game experiences in the
-            future.</p>
+        <p class="game-description-text">Storge was my first time building a complete interactive system around someone
+            else's fixed narrative rather than an original concept &mdash; the story already being locked
+            forced tighter integration between gameplay pacing and story beats than a from-scratch design
+            would have. Wiring together player movement, an AI-driven antagonist, and a real-time
+            health/audio feedback loop was an early rep at getting separate systems (movement, AI, UI,
+            audio) to work as one coherent player experience &mdash; the same integration problem I later
+            solved at a much larger scale in the GAS Melee Combat System.</p>
     </div>
 
     <div class="link-build ">
@@ -214,29 +192,8 @@
 
 
      <!-- Footer Referred from https://www.youtube.com/watch?v=YOb67OKw62s -->
-     <footer class="site-footer">
-        <div class="footer-social">
-            <!-- Social Icons -->
-            <a href="https://www.artstation.com/sssn1pee" class="fab fa-artstation" aria-label="ArtStation profile"></a>
-            <a href="https://www.linkedin.com/in/aman-singh-aa985a195/" class="fab fa-linkedin" aria-label="LinkedIn profile"></a>
-            <a href="https://twitter.com/AmanSin86175493" class="fab fa-twitter" aria-label="Twitter profile"></a>
-            <a href="https://www.youtube.com/@amanmatharu24/videos" class="fab fa-youtube" aria-label="YouTube channel"></a>
-            <a href="https://github.com/amanm007/P03-IAT-339" class="fab fa-github" aria-label="GitHub repository"></a>
-        </div>
-        <div class="footer-links">
-            <!-- Navigation Links -->
-            <a href="index.html">Home</a>
-            <a href="game.html">Games</a>
-            <a href="about.html">About Me</a>
-            <a href="Styleguide.html">Styleguide</a>
-            <a href="contact.html">Contact</a>
-            <a href="citations.html">Citations</a>
-            
-            
-        </div>
-        <div class="footer-bottom">
-            <a>  Aman Singh &copy; Simon Fraser University  |  School of Interactive Arts and Technology </a>
-        </div>
+     <footer class="rd-footer">
+        <p>Designed &amp; built by Aman Singh</p>
     </footer>
    <script>
     var slideIndex = 0; // start with the first slide
@@ -268,7 +225,7 @@
 
 
     <script src="js/slider-enhance.js?v=2"></script>
-    <script src="js/particles-bg.js"></script>
+    <script src="js/cursor.js"></script>
 </body>
 </html>
 
