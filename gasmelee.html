@@ -67,6 +67,14 @@
         </div>
     </div>
 
+    <div class="design-principles">
+        <h2 class="game-description-title">Design Principles</h2>
+        <p class="game-description-text"><strong>1. One shared pipeline, not isolated features:</strong> Combat, AI, and UI all react to the same attribute and event pipeline instead of being built as three separate systems that happen to coexist.</p>
+        <p class="game-description-text"><strong>2. Damage is a decision, not a modifier:</strong> Damage never touches Health directly. It's a meta-attribute evaluated once, centrally, before anything else happens, so every consumer (block-checking, hit reactions, AI perception) reads from the same decision instead of re-deciding it independently.</p>
+        <p class="game-description-text"><strong>3. Reuse over duplication:</strong> The same arrow components that drive hit-reaction direction also drive motion-warping targets. The same animation-overlay state machine that handles idle and ready poses handles the block pose. When two systems need the same kind of spatial or state data, they share the component instead of each getting their own.</p>
+        <p class="game-description-text"><strong>4. Architecture follows what's actually built:</strong> Systems get scrapped mid-design the moment the authored content stops matching the assumption they were built on. The shipped architecture reflects what the content actually supports, not a hypothetical future version of it.</p>
+    </div>
+
     <div class="game-mechanics">
         <h2 class="game-description-title">Mechanics and Gameplay</h2>
         <div id="slider-mechanics">
@@ -111,6 +119,15 @@
                 </video>
             </div>
         </div>
+    </div>
+
+    <div class="gas-powers">
+        <h2 class="game-description-title">How GAS Powers This</h2>
+        <p class="game-description-text"><strong>Gameplay Ability System at the core.</strong> Every attack, block, and dodge is a Gameplay Ability, granted and activated through the Ability System Component.</p>
+        <p class="game-description-text"><strong>Attribute Sets &amp; Gameplay Effects.</strong> Health, stamina, and the Damage meta-attribute live in a custom Attribute Set, modified only through Gameplay Effects rather than direct value changes, so state stays clean and replication-ready.</p>
+        <p class="game-description-text"><strong>Gameplay Tags for state.</strong> Blocking, cooldowns, and ability-activation gating all run through Gameplay Tags rather than boolean flags scattered across classes.</p>
+        <p class="game-description-text"><strong>Gameplay Cues for feedback.</strong> Hit VFX, sound, and camera shake fire through Gameplay Cues, keeping presentation fully decoupled from gameplay logic.</p>
+        <p class="game-description-text"><strong>C++ where it counts.</strong> The damage interception point, the attribute set, and the AI perception reporting hook are C++. Everything that benefits from visual iteration (combo sequencing, montage timing, Behavior Tree logic) is Blueprint.</p>
     </div>
 
     <div class="contribution-summary">
@@ -208,6 +225,7 @@
     <div class="reflection">
         <h2 class="game-description-title">Reflection</h2>
         <p class="game-description-text">GAS has a reputation for being opaque, and this project taught me why - and how to work with it anyway. The lessons that cost the most hours are now standing rules: Set By Caller magnitudes silently read as zero during cost checks, so cost effects must use baked values; tag-based ability activation carries no event payload, so anything that needs to know who hit it or how hard must be triggered through a Gameplay Event with populated data; Execute and Add GameplayCue are not interchangeable. The single best debugging story was an editor that froze on every second play session - the root cause, found by copying the log file out of a frozen process and reading the last lines before silence, was duplicate MetaSound assets sharing an internal GUID from being file-copied instead of editor-duplicated. Building combat, AI, and UI against one shared pipeline - rather than as three separate features - is the thing I'd carry into any production codebase.</p>
+        <p class="game-description-text">My first two shipped projects, Storge and Slow &amp; Steady, both worked, but each system - movement, AI, audio, UI - was built and wired up on its own. That was fine at university-project scope, but it meant every new feature meant new one-off glue code connecting things that had never been designed to talk to each other. This project was built the other way around: architecture first, one shared pipeline, before a single ability existed. The setup cost more time in week one than either of those earlier projects took to get moving at all. But every system after that - a new enemy type, a new UI element, a new ability - plugged into existing infrastructure instead of fighting it. That's the tradeoff I'd make again on anything bigger than a weekend prototype.</p>
     </div>
 
     <div class="link-build ">
