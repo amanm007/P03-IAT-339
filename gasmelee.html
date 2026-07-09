@@ -33,7 +33,7 @@
             <li><a href="index.html#experience"><span class="nav-num">02.</span> experience</a></li>
             <li><a href="index.html#projects"><span class="nav-num">03.</span> projects</a></li>
             <li><a href="index.html#contact"><span class="nav-num">04.</span> contact</a></li>
-            <li><a class="rd-resume-btn" href="documents/AmanSingh_Resume-feb2026.pdf" target="_blank" rel="noopener noreferrer">resume</a></li>
+            <li><a class="rd-resume-btn" href="documents/AmanSingh_Resume_GAS_v3_July2026.pdf" target="_blank" rel="noopener noreferrer">resume</a></li>
         </ul>
     </nav>
    <div class="pl-top">
@@ -58,13 +58,6 @@
         <h2 class="game-description-title">What is the GAS Melee Combat System?</h2>
         <p class="game-description-text">This is a solo-built, character-action melee combat prototype in Unreal Engine 5, built entirely on the Gameplay Ability System (GAS) using both Blueprints and C++. Locomotion comes from Epic's Game Animation Sample, extended with the community GASPALS plugin for weapon-pose overlay layering; everything on top of that - the combat, the enemy AI, and the UI - is my own architecture and implementation. The goal was not a collection of isolated feature demos, but one integrated system where combat, AI, and UI all react to a single attribute and event pipeline.</p>
             <p class="game-description-text">The shipped feature set: 6-hit light-attack combo chains with escalating stamina costs, hold-to-charge heavy attacks with a sprint-triggered slam-dunk variant, hold-to-block with a 0.4-second perfect-parry window that rewards counter-damage and slow motion, directional root-motion hit reactions, motion-warping combat magnetism that keeps combos connected, a five-state enemy AI driven by Behavior Trees and EQS, and a fully event-driven reactive HUD - health and stamina bars with a delayed-drain "ghost bar" damage indicator, and an ability bar that builds itself from granted abilities.</p>
-
-        <div class="video-wrapper">
-            <video width="100%" height="auto" muted loop controls>
-                <source src="videos/Sonic_GAS_FinalDraft.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
     </div>
 
     <div class="design-principles">
@@ -85,36 +78,36 @@
             <!-- Video slides -->
             <div class="video-slide">
                 <div class="video-title">Light Attacks - 6-Hit Combo Chain</div>
-                <video width="100%" height="auto" autoplay muted loop controls poster="images/gasmeele.png">
-                    <source src="videos/LightAttacks.mp4" type="video/mp4">
+                <video width="100%" height="auto" preload="none" muted loop controls poster="images/gasmeele.png">
+                    <source data-src="videos/LightAttacks.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
             <div class="video-slide">
                 <div class="video-title">Heavy Attacks - Charged &amp; Slam-Dunk Variant</div>
-                <video width="100%" height="auto" autoplay muted loop controls poster="images/gasmeele.png">
-                    <source src="videos/HeavyAttacks.mp4" type="video/mp4">
+                <video width="100%" height="auto" preload="none" muted loop controls poster="images/gasmeele.png">
+                    <source data-src="videos/HeavyAttacks.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
             <div class="video-slide">
                 <div class="video-title">Block &amp; Perfect Parry - The 0.4s Window</div>
-                <video width="100%" height="auto" autoplay muted loop controls poster="images/gasmeele.png">
-                    <source src="videos/BlockandParry.mp4" type="video/mp4">
+                <video width="100%" height="auto" preload="none" muted loop controls poster="images/gasmeele.png">
+                    <source data-src="videos/BlockandParry.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
             <div class="video-slide">
                 <div class="video-title">Enemy AI - Behavior Tree Debug View</div>
-                <video width="100%" height="auto" autoplay muted loop controls poster="images/gasmeele.png">
-                    <source src="videos/EnemyAI.mp4" type="video/mp4">
+                <video width="100%" height="auto" preload="none" muted loop controls poster="images/gasmeele.png">
+                    <source data-src="videos/EnemyAI.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
             <div class="video-slide">
                 <div class="video-title">Motion Warping - Combat Magnetism</div>
-                <video width="100%" height="auto" autoplay muted loop controls poster="images/gasmeele.png">
-                    <source src="videos/MotionWarping.mp4" type="video/mp4">
+                <video width="100%" height="auto" preload="none" muted loop controls poster="images/gasmeele.png">
+                    <source data-src="videos/MotionWarping.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -299,6 +292,7 @@
     initSlider("slider-ai");
     </script>
     <script src="js/slider-enhance.js?v=2"></script>
+    <script src="js/lazy-video.js"></script>
     <script src="js/cursor.js"></script>
 </body>
 </html>

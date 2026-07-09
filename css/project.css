@@ -24,6 +24,14 @@
     --pl-serif: Georgia, "Times New Roman", serif;
 }
 
+/* legacy css/index.css sets a bare "nav { text-transform: uppercase }"
+   rule that leaks onto .rd-nav (it's a <nav> element too); override it
+   so project-log pages match the homepage's lowercase nav */
+.rd-nav-links a,
+.rd-nav-logo a {
+    text-transform: none;
+}
+
 body {
     background-color: var(--navy, #0f0a1f);
     color: var(--slate, #8e89a8);
