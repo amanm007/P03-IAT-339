@@ -1140,6 +1140,50 @@ button:focus-visible {
    Contact + footer
    -------------------------------------------------------------------------- */
 
+/* YouTube */
+
+.rd-yt-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: var(--light-navy);
+    border-radius: 8px;
+    padding: 44px 48px;
+    box-shadow: 0 10px 30px -15px var(--shadow);
+    transition: var(--transition);
+}
+
+.rd-yt-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 30px -15px var(--shadow);
+}
+
+.rd-yt-icon {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: var(--accent-tint);
+    color: var(--accent);
+    font-size: 44px;
+}
+
+.rd-yt-title {
+    font-size: 24px;
+    color: var(--white);
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.rd-yt-desc {
+    color: var(--light-slate);
+    margin-bottom: 24px;
+    max-width: 560px;
+}
+
 .rd-contact {
     text-align: center;
     max-width: 620px;
@@ -1276,6 +1320,9 @@ button:focus-visible {
 
     .rd-about-grid { grid-template-columns: 1fr; }
     .rd-photo { margin: 10px auto 0; }
+
+    .rd-yt-card { flex-direction: column; text-align: center; padding: 36px 28px; }
+    .rd-yt-desc { max-width: none; }
 
     .rd-exp { flex-direction: column; }
     .rd-exp-tabs {
