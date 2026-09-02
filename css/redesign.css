@@ -1143,12 +1143,11 @@ button:focus-visible {
 /* YouTube */
 
 .rd-yt-card {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+    max-width: 720px;
+    margin: 0 auto;
     background: var(--light-navy);
     border-radius: 8px;
-    padding: 44px 48px;
+    overflow: hidden;
     box-shadow: 0 10px 30px -15px var(--shadow);
     transition: var(--transition);
 }
@@ -1158,30 +1157,50 @@ button:focus-visible {
     box-shadow: 0 20px 30px -15px var(--shadow);
 }
 
-.rd-yt-icon {
-    flex: none;
+.rd-yt-banner {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.rd-yt-body {
+    padding: 32px 40px 40px;
+}
+
+.rd-yt-heading {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 96px;
-    height: 96px;
-    border-radius: 50%;
-    background: var(--accent-tint);
-    color: var(--accent);
-    font-size: 44px;
+    gap: 14px;
+    margin-bottom: 8px;
 }
 
 .rd-yt-title {
     font-size: 24px;
     color: var(--white);
     font-weight: 400;
-    margin-bottom: 10px;
+}
+
+.rd-yt-badge {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.03em;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    padding: 4px 12px;
+}
+
+.rd-yt-meta {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--slate);
+    margin-bottom: 18px;
 }
 
 .rd-yt-desc {
     color: var(--light-slate);
     margin-bottom: 24px;
-    max-width: 560px;
 }
 
 .rd-contact {
@@ -1321,8 +1340,8 @@ button:focus-visible {
     .rd-about-grid { grid-template-columns: 1fr; }
     .rd-photo { margin: 10px auto 0; }
 
-    .rd-yt-card { flex-direction: column; text-align: center; padding: 36px 28px; }
-    .rd-yt-desc { max-width: none; }
+    .rd-yt-body { padding: 24px 24px 32px; text-align: center; }
+    .rd-yt-heading { flex-direction: column; gap: 8px; }
 
     .rd-exp { flex-direction: column; }
     .rd-exp-tabs {
