@@ -1177,6 +1177,22 @@ button:focus-visible {
         rgba(15, 10, 31, 0) 32%);
 }
 
+.rd-yt-platform {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(15, 10, 31, 0.55);
+    color: var(--accent);
+    font-size: 18px;
+}
+
 .rd-yt-content {
     position: absolute;
     left: 50%;
