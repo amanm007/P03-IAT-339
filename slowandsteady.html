@@ -47,6 +47,7 @@
         <p class="pl-sub">A horde-based twin-stick shooter built around a slow-motion mechanic tied to hit accuracy, five enemy archetypes, and a multi-phase boss.</p>
         <p class="pl-date">January &mdash; April 2024</p>
         <p class="pl-meta">University Capstone (Team of 4) &bull; Lead Gameplay Programmer &amp; QA Tester &bull; Unity / C#</p>
+        <p class="pl-meta"><a href="https://www.sfu.ca/siat/showcase/spring-2024-project-showcase/iat-410-slow-and-steady.html" target="_blank" rel="noopener noreferrer">Featured in the SFU SIAT Spring 2024 Project Showcase &rarr;</a></p>
     </header>
 <section id="game-details">
    
@@ -80,6 +81,7 @@
 
     <div class="contribution-summary">
         <h2 class="game-description-title">Summary of Contributions</h2>
+        <p class="game-description-text"><em>[DRAFT &mdash; please review]</em> Lead programmer and QA tester on a four-person team (alongside a project manager/media specialist, a designer/level designer, and a support programmer/visual artist). I wrote the large majority of the game's code: movement and aiming, hitscan shooting, the shared enemy health system, enemy AI, and the slow-motion mechanic, and I handled QA testing for the team.</p>
         <p class="game-description-text"> <strong>Core Gameplay Mechanics and Responsive Design: </strong>
             Built the core movement and aiming systems: WASD/arrow-key movement decoupled from mouse-driven
             aim direction, so the player can strafe and shoot independently &mdash; the foundation every
@@ -149,9 +151,15 @@
         <p class="game-description-text">Development started with the core movement and aiming loop, then layered in enemy AI with A* pathfinding, a health/damage system shared across enemy types, and a wave spawner to structure encounters. The slow-motion mechanic and its accuracy-based recharge came later, once the base combat loop was solid enough to build a skill-expression system on top of. Final weeks went into performance work (projectile pooling) and the Cybertruck boss fight, a multi-phase encounter built to stress-test every system built up to that point. Art, UI, and audio were built in parallel by the rest of the team.</p>
     </div>
 
+    <div class="playtesting">
+        <h2 class="game-description-title">What Playtesting Changed</h2>
+        <p class="game-description-text"><em>[DRAFT &mdash; please review]</em> Our playtests followed a fixed five-question script (movement responsiveness, shooting precision, kill satisfaction, enemy AI behavior, and camera perspective), run over Discord with screen-share and in person. Testers called the shooting clean but too easy: with nothing to dodge, the sniper felt unstoppable and enemies posed no threat. That drove the next build: enemies that fire dodgeable bullets, more varied enemy types, enemies that face different directions instead of gliding, objective and remaining-enemy indicators, a customizable minimap, and a fix so the slow-motion bar stops charging once it has been fully consumed.</p>
+        <p class="game-description-text" style="border-left: 3px solid #ff6b6b; padding-left: 14px; color: #ff6b6b; font-weight: 600;">TODO (Aman): write the slow-motion rework story here &mdash; the world slows through Time.timeScale while the aim line trace stays at full speed.</p>
+    </div>
+
     <div class="reflection">
         <h2 class="game-description-title">Reflection</h2>
-        <p class="game-description-text">The biggest technical lesson was keeping combat systems modular enough that a late addition &mdash; the slow-motion mechanic &mdash; could plug into player movement, camera, and enemy AI without a rewrite of any of them. That meant designing the original systems with hooks for time-scale changes from the start, before slow-motion was even a confirmed feature. Debugging combat feel was mostly about instrumentation: the hit-marker and kill-confirmation audio came directly out of watching playtesters and noticing they couldn't tell when a shot had landed without it.</p>
+        <p class="game-description-text">The biggest technical lesson was keeping combat systems modular enough that a late addition &mdash; the slow-motion mechanic &mdash; could plug into player movement, camera, and enemy AI without a rewrite of any of them. That meant designing the original systems with hooks for time-scale changes from the start, before slow-motion was even a confirmed feature. <em>[DRAFT &mdash; please review]</em> Debugging combat feel was mostly about instrumentation: the hit-marker and kill-confirmation audio started as class feedback on our proposal pitch (make every kill feel satisfying), and watching playtesters confirmed it: without it, they couldn't tell when a shot had landed.</p>
     </div>
 
     <div class="link-build ">
