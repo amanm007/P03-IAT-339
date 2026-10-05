@@ -88,7 +88,7 @@ section {
     width: auto;
     padding: 5px 10px;
     background-color: var(--color-accent);
-    color: var(--color-text);
+    color: var(--navy, #0f0a1f);
     text-align: center;
     font-size: 1.5em;
     z-index: 2;
@@ -105,7 +105,7 @@ section {
     cursor: pointer;
     background-color: var(--color-accent);
     border: none;
-    color: var(--color-text);
+    color: var(--navy, #0f0a1f);
     padding: 10px;
     font-size: 18px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;

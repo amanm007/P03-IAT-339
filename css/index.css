@@ -10,6 +10,7 @@
     --color-surface-elevated: #222;
     --color-text: #fff;
     --color-accent: #7f4dff;
+    --color-accent-text: #8a5cff; /* lightened for WCAG AA 4.5:1 on dark backgrounds when used as foreground text */
     --color-accent-hover: #9a75ff;
     --color-accent-rgb: 127, 77, 255;
     --color-accent-glow: rgba(127, 77, 255, 0.38);

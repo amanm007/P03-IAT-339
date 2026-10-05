@@ -156,7 +156,7 @@ body {
 
 .sg-glass-card h4 {
     margin-bottom: 0.55rem;
-    color: var(--color-accent);
+    color: var(--color-accent-text, var(--color-accent));
 }
 
 .sg-glass-card p {
